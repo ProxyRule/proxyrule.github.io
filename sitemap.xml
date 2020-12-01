@@ -200,20 +200,6 @@
   </url>
   
   <url>
-    <loc>https://www.iamzs.top/tags/Docker/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.iamzs.top/tags/Windows/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.iamzs.top/tags/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
@@ -235,7 +221,14 @@
   </url>
   
   <url>
-    <loc>https://www.iamzs.top/tags/Office/</loc>
+    <loc>https://www.iamzs.top/tags/Docker/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.iamzs.top/tags/Windows/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -250,6 +243,13 @@
   
   <url>
     <loc>https://www.iamzs.top/tags/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.iamzs.top/tags/Office/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -298,6 +298,13 @@
   </url>
   
   <url>
+    <loc>https://www.iamzs.top/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.iamzs.top/tags/IPv6/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
@@ -306,13 +313,6 @@
   
   <url>
     <loc>https://www.iamzs.top/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.iamzs.top/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
