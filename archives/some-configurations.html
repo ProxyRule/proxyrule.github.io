@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.iamzs.top","root":"/","images":"/images","scheme":"Muse","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+<meta name="description" content="代理设置CMD# 设置 set http_proxy&#x3D;http:&#x2F;&#x2F;127.0.0.1:1080 set https_proxy&#x3D;http:&#x2F;&#x2F;127.0.0.1:1080 # 取消 set http_proxy&#x3D; set https_proxy&#x3D;  PowerShell$env:http_proxy&#x3D;&quot;127.0.0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用设置及一些镜像站">
+<meta property="og:url" content="https://www.iamzs.top/archives/some-configurations.html">
+<meta property="og:site_name" content="IamZS">
+<meta property="og:description" content="代理设置CMD# 设置 set http_proxy&#x3D;http:&#x2F;&#x2F;127.0.0.1:1080 set https_proxy&#x3D;http:&#x2F;&#x2F;127.0.0.1:1080 # 取消 set http_proxy&#x3D; set https_proxy&#x3D;  PowerShell$env:http_proxy&#x3D;&quot;127.0.0">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-27T11:39:29.000Z">
+<meta property="article:modified_time" content="2020-12-01T15:05:08.435Z">
+<meta property="article:author" content="Zheng Shuai">
+<meta property="article:tag" content="环境配置">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.iamzs.top/archives/some-configurations.html">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>常用设置及一些镜像站 | IamZS</title>
+  
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="IamZS" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">IamZS</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Zheng Shuai's blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">代理设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CMD"><span class="nav-number">1.1.</span> <span class="nav-text">CMD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PowerShell"><span class="nav-number">1.2.</span> <span class="nav-text">PowerShell</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git-Bash"><span class="nav-number">1.3.</span> <span class="nav-text">Git Bash</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#All-APPs"><span class="nav-number">1.4.</span> <span class="nav-text">All APPs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BA-Git-%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86"><span class="nav-number">1.5.</span> <span class="nav-text">为 Git 设置代理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Clone-with-HTTPS"><span class="nav-number">1.5.1.</span> <span class="nav-text">Clone with HTTPS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Clone-with-SSH"><span class="nav-number">1.5.2.</span> <span class="nav-text">Clone with SSH</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%85%B1-DNS"><span class="nav-number">2.</span> <span class="nav-text">公共 DNS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BD%E5%86%85"><span class="nav-number">2.1.</span> <span class="nav-text">国内</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BD%E5%A4%96"><span class="nav-number">2.2.</span> <span class="nav-text">国外</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB"><span class="nav-number">2.3.</span> <span class="nav-text">推荐阅读</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pypi"><span class="nav-number">3.</span> <span class="nav-text">pypi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NPM"><span class="nav-number">4.</span> <span class="nav-text">NPM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Anaconda"><span class="nav-number">5.</span> <span class="nav-text">Anaconda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MSYS2"><span class="nav-number">6.</span> <span class="nav-text">MSYS2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RubyGems"><span class="nav-number">7.</span> <span class="nav-text">RubyGems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Go"><span class="nav-number">8.</span> <span class="nav-text">Go</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CTAN"><span class="nav-number">9.</span> <span class="nav-text">CTAN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker-CE"><span class="nav-number">10.</span> <span class="nav-text">Docker CE</span></a></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zheng Shuai"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zheng Shuai</p>
+  <div class="site-description" itemprop="description">读书、写作、思考，或许有点技术。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/FDUZS" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;FDUZS" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:i@iamzs.win" title="E-Mail → mailto:i@iamzs.win" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+<div>
+	<img src="https://img.shields.io/static/v1?label=Host&message=GitHub&color=yellowgreen&style=flat-square&link=&link=https://github.com" alt="GitHub" style="width: 80px; display: inline; vertical-align: middle;" />
+
+	<img src="https://img.shields.io/static/v1?label=CDN&message=Upyun&color=yellowgreen&style=flat-square&link=&link=https://console.upyun.com/register/?invite=ByYk_9gS-" alt="又拍云" style="width: 80px; display: inline; vertical-align: middle;" />
+</div>
+
+<div>
+	<img src="https://img.shields.io/static/v1?label=Host&message=Coding&color=yellowgreen&style=flat-square&link=&link=https://coding.net" alt="Coding" style="width: 80px; display: inline; vertical-align: middle;" />
+
+	<img src="https://img.shields.io/static/v1?label=CDN&message=Tencent&color=yellowgreen&style=flat-square&link=&link=https://cloud.tencent.com" alt="腾讯云" style="width: 80px; display: inline; vertical-align: middle;" />
+</div>
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.iamzs.top/archives/some-configurations.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zheng Shuai">
+      <meta itemprop="description" content="读书、写作、思考，或许有点技术。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IamZS">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          常用设置及一些镜像站
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-12-27 19:39:29" itemprop="dateCreated datePublished" datetime="2019-12-27T19:39:29+08:00">2019-12-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-12-01 23:05:08" itemprop="dateModified" datetime="2020-12-01T23:05:08+08:00">2020-12-01</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="代理设置"><a href="#代理设置" class="headerlink" title="代理设置"></a>代理设置</h3><h4 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h4><pre class="language-shell" data-language="shell"><code class="language-shell"># 设置
+set http_proxy&#x3D;http:&#x2F;&#x2F;127.0.0.1:1080
+set https_proxy&#x3D;http:&#x2F;&#x2F;127.0.0.1:1080
+# 取消
+set http_proxy&#x3D;
+set https_proxy&#x3D;</code></pre>
+
+<h4 id="PowerShell"><a href="#PowerShell" class="headerlink" title="PowerShell"></a>PowerShell</h4><pre class="language-powershell" data-language="powershell"><code class="language-powershell"><span class="token variable">$env</span>:http_proxy=<span class="token string">"127.0.0.1:1080"</span>
+<span class="token variable">$env</span>:https_proxy=<span class="token string">"127.0.0.1:1080"</span></code></pre>
+
+<a id="more"></a>
+
+<p>为了方便，将下面函数添加到 <code>$PROFILE</code> 中就可以通过 proxy 和 unproxy 来实现设置与取消代理了。</p>
+<pre class="language-powershell" data-language="powershell"><code class="language-powershell"><span class="token comment"># Set and unset proxy for PowerShell</span>
+<span class="token keyword">function</span> proxy <span class="token punctuation">&#123;</span>
+    <span class="token keyword">param</span> <span class="token punctuation">(</span>
+        <span class="token variable">$ssr</span> = <span class="token string">"127.0.0.1:1080"</span>
+    <span class="token punctuation">)</span>
+    <span class="token function">New-Item</span> <span class="token operator">-</span>Path Env: <span class="token operator">-</span>Name http_proxy <span class="token operator">-</span>Value <span class="token variable">$ssr</span>
+    <span class="token function">New-Item</span> <span class="token operator">-</span>Path Env: <span class="token operator">-</span>Name https_proxy <span class="token operator">-</span>Value <span class="token variable">$ssr</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> unproxy <span class="token punctuation">&#123;</span>
+    <span class="token function">Remove-Item</span> <span class="token operator">-</span>Path Env:\http_proxy
+    <span class="token function">Remove-Item</span> <span class="token operator">-</span>Path Env:\https_proxy
+<span class="token punctuation">&#125;</span></code></pre>
+
+<h4 id="Git-Bash"><a href="#Git-Bash" class="headerlink" title="Git Bash"></a>Git Bash</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 设置</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">http_proxy</span><span class="token operator">=</span>http://127.0.0.1:1080
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">https_proxy</span><span class="token operator">=</span>http://127.0.0.1:1080
+<span class="token comment"># 取消</span>
+<span class="token builtin class-name">unset</span> http_proxy https_proxy</code></pre>
+
+<h4 id="All-APPs"><a href="#All-APPs" class="headerlink" title="All APPs"></a>All APPs</h4><pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token comment"># 设置</span>
+netsh winhttp <span class="token function">import</span> proxy <span class="token assign-left variable">source</span><span class="token operator">=</span>ie
+<span class="token comment"># 取消</span>
+netsh winhttp reset proxy</code></pre>
+
+<h4 id="为-Git-设置代理"><a href="#为-Git-设置代理" class="headerlink" title="为 Git 设置代理"></a>为 Git 设置代理</h4><p>众所周知，<code>git clone</code> 有两种方式，代理设置方式也不一样：</p>
+<h5 id="Clone-with-HTTPS"><a href="#Clone-with-HTTPS" class="headerlink" title="Clone with HTTPS"></a>Clone with HTTPS</h5><p>设置代理：</p>
+<pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token comment"># 如果是 socks5 代理的话</span>
+<span class="token function">git</span> config --global http.proxy socks5h://127.0.0.1:1080
+<span class="token comment"># http 代理仅需将 socks5h 改为 http</span>
+<span class="token function">git</span> config --global http.proxy http://127.0.0.1:1080</code></pre>
+
+<p>取消代理：</p>
+<pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> config --global --unset http.proxy</code></pre>
+
+<p>也可以仅为 GitHub 设置代理</p>
+<pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> config --global http.https://github.com.proxy socks5h://127.0.0.1:1080</code></pre>
+
+<p>socks5h 和 socks5 的区别：</p>
+<blockquote>
+<p>In a proxy string, socks5h:// and socks4a:// mean that the hostname is<br>resolved by the SOCKS server. socks5:// and socks4:// mean that the<br>hostname is resolved locally. socks4a:// means to use SOCKS4a, which is<br>an extension of SOCKS4.</p>
+</blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://github.com/urllib3/urllib3/issues/1035">Differentiate socks5h from socks5 and socks4a from socks4 when handling proxy string</a></p>
+<h5 id="Clone-with-SSH"><a href="#Clone-with-SSH" class="headerlink" title="Clone with SSH"></a>Clone with SSH</h5><p>需要修改 <code>~/.ssh/config</code> 文件</p>
+<p>如果仅为 GitHub 设置代理，且使用 socks5 代理的话</p>
+<pre class="language-text" data-language="text"><code class="language-text">Host github.com
+    User git
+    ProxyCommand connect -S 127.0.0.1:1080 %h %p</code></pre>
+
+<p>这里 <code>-S</code> 表示使用 socks5 代理，如果是 http 代理则为 <code>-H</code>。connect 工具 git 自带。</p>
+<p>我自己的话，则是设置成这样：</p>
+<pre class="language-text" data-language="text"><code class="language-text"># Reference: https:&#x2F;&#x2F;bitbucket.org&#x2F;gotoh&#x2F;connect&#x2F;wiki&#x2F;Home
+
+Host github.com
+    User git
+    Hostname github.com
+    Port 22
+    ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p
+
+Host ssh.github.com
+    User git
+    Hostname ssh.github.com
+    Port 443
+    ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p
+
+Host *
+    IdentityFile &quot;C:\Users\Zheng\.ssh\id_rsa&quot;
+    ServerAliveInterval 30
+    TCPKeepAlive yes</code></pre>
+
+<p>来源：<a target="_blank" rel="noopener" href="https://gist.github.com/laispace/666dd7b27e9116faece6">laispace/git 设置和取消代理</a></p>
+<h3 id="公共-DNS"><a href="#公共-DNS" class="headerlink" title="公共 DNS"></a>公共 DNS</h3><h4 id="国内"><a href="#国内" class="headerlink" title="国内"></a>国内</h4><table>
+<thead>
+<tr>
+<th></th>
+<th>阿里云公共 DNS</th>
+<th>腾讯 Public DNS</th>
+<th>114 DNS</th>
+<th>百度公共 DNS</th>
+<th>360 公共 DNS</th>
+<th>红鱼 DNS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>IPv4</td>
+<td>223.5.5.5 <br /> 223.6.6.6</td>
+<td>119.29.29.29</td>
+<td>114.114.114.114 <br /> 114.114.115.115</td>
+<td>180.76.76.76</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6</td>
+<td>2400:3200::1 <br /> 2400:3200:baba::1</td>
+<td></td>
+<td></td>
+<td>2400:da00::6666</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DoT</td>
+<td>IP <br /> dns.alidns.com</td>
+<td>dns.pub <br /> doh.pub</td>
+<td></td>
+<td></td>
+<td>dot.360.cn</td>
+<td>rubyfish.cn</td>
+</tr>
+<tr>
+<td>DoH</td>
+<td><a target="_blank" rel="noopener" href="https://www.alidns.com/faqs/#dns-safe">阿里公共 DNS 安全传输服务</a></td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1668074">DoH 和 DoT 开始公测</a></td>
+<td></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://dns.360.cn/dnsPublic.html">DoH 接入方法</a></td>
+<td><a target="_blank" rel="noopener" href="https://www.rubyfish.cn/dns/solutions/">面向普通消费者</a></td>
+</tr>
+<tr>
+<td>备注</td>
+<td></td>
+<td>首页和帮助文档中都只给出了这一个 IP</td>
+<td>其余几组暂时不管</td>
+<td></td>
+<td>传统 DNS 接入的先不管了</td>
+<td></td>
+</tr>
+</tbody></table>
+<h4 id="国外"><a href="#国外" class="headerlink" title="国外"></a>国外</h4><table>
+<thead>
+<tr>
+<th></th>
+<th>Google Public DNS</th>
+<th>OpenDNS</th>
+<th>Cloudflare DNS</th>
+<th>DNS.SB</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>IPv4</td>
+<td>8.8.8.8 <br /> 8.8.4.4</td>
+<td>208.67.222.222 <br /> 208.67.220.220</td>
+<td>1.1.1.1 <br /> 1.0.0.1</td>
+<td>185.222.222.222 <br /> 185.184.222.222</td>
+</tr>
+<tr>
+<td>IPv6</td>
+<td>2001:4860:4860::8888 <br /> 2001:4860:4860::8844</td>
+<td>2620:119:35::35 <br /> 2620:119:53::53</td>
+<td>2606:4700:4700::1111 <br /> 2606:4700:4700::1001</td>
+<td>2a09:: <br /> 2a09::1</td>
+</tr>
+<tr>
+<td>DoT</td>
+<td>dns.google</td>
+<td></td>
+<td>IP <br /> one.one.one.one <br /> 1dot1dot1dot1.cloudflare-dns.com</td>
+<td>IP <br /> dns.sb</td>
+</tr>
+<tr>
+<td>DoH</td>
+<td><a target="_blank" rel="noopener" href="https://developers.google.com/speed/public-dns/docs/doh">DNS-over-HTTPS (DoH)</a></td>
+<td><a target="_blank" rel="noopener" href="https://support.opendns.com/hc/en-us/articles/360038086532-Using-DNS-over-HTTPS-DoH-with-OpenDNS">Using DNS over HTTPS (DoH) with OpenDNS</a></td>
+<td><a target="_blank" rel="noopener" href="https://developers.cloudflare.com/1.1.1.1/dns-over-https/request-structure/">Making Requests</a></td>
+<td><a target="_blank" rel="noopener" href="https://dns.sb/doh/">DNS OVER HTTPS</a></td>
+</tr>
+<tr>
+<td>备注</td>
+<td></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://www.cloudflare.com/learning/dns/dns-over-tls/">DNS over TLS vs. DNS over HTTPS | Secure DNS</a></td>
+<td><a target="_blank" rel="noopener" href="https://dns.sb/">主页</a></td>
+</tr>
+</tbody></table>
+<h4 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.skk.moe/post/which-public-dns-to-use">如何选择适合的公共 DNS？[2020]</a></li>
+<li><a target="_blank" rel="noopener" href="https://sspai.com/post/56783">想要上网体验有保障，如何设置一个更安全的 DNS？</a></li>
+</ul>
+<h3 id="pypi"><a href="#pypi" class="headerlink" title="pypi"></a>pypi</h3><table>
+<thead>
+<tr>
+<th align="center">镜像站</th>
+<th align="center">帮助页</th>
+<th align="center">是否在用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">清华</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://mirror.tuna.tsinghua.edu.cn/help/pypi/">pypi 镜像使用帮助</a></td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">阿里云</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/pypi">使用帮助</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">网易</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://mirrors.163.com/.help/pypi.html">使用帮助</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">腾讯</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://mirrors.cloud.tencent.com/help/pypi.html">使用帮助</a></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h3 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h3><table>
+<thead>
+<tr>
+<th align="center">镜像站</th>
+<th align="center">帮助页</th>
+<th align="center">是否在用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">淘宝</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://npm.taobao.org/">首页</a></td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">腾讯</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://mirrors.cloud.tencent.com/help/npm.html">使用帮助</a></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h3 id="Anaconda"><a href="#Anaconda" class="headerlink" title="Anaconda"></a>Anaconda</h3><table>
+<thead>
+<tr>
+<th align="center">镜像站</th>
+<th align="center">帮助页</th>
+<th align="center">是否在用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">清华</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">使用帮助</a></td>
+<td align="center">是</td>
+</tr>
+</tbody></table>
+<h3 id="MSYS2"><a href="#MSYS2" class="headerlink" title="MSYS2"></a>MSYS2</h3><table>
+<thead>
+<tr>
+<th align="center">镜像站</th>
+<th align="center">帮助页</th>
+<th align="center">是否在用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">清华</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/msys2/">使用帮助</a></td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">中科大</td>
+<td align="center"><a target="_blank" rel="noopener" href="http://mirrors.ustc.edu.cn/help/msys2.html">使用帮助</a></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h3 id="RubyGems"><a href="#RubyGems" class="headerlink" title="RubyGems"></a>RubyGems</h3><table>
+<thead>
+<tr>
+<th align="center">镜像站</th>
+<th align="center">帮助页</th>
+<th align="center">是否在用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Ruby China 社区</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://gems.ruby-china.com/">首页</a></td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">清华</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/rubygems/">使用帮助</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">阿里云</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/rubygems">使用帮助</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">中科大</td>
+<td align="center"><a target="_blank" rel="noopener" href="http://mirrors.ustc.edu.cn/help/rubygems.html">使用帮助</a></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h3 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h3><table>
+<thead>
+<tr>
+<th align="center">镜像站</th>
+<th align="center">帮助页</th>
+<th align="center">是否在用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Goproxy China</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://goproxy.cn/">首页</a></td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">GOPROXY.IO</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://goproxy.io/">首页</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">腾讯</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://mirrors.cloud.tencent.com/help/go.html">使用帮助</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">阿里云</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/goproxy">使用帮助</a></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h3 id="CTAN"><a href="#CTAN" class="headerlink" title="CTAN"></a>CTAN</h3><table>
+<thead>
+<tr>
+<th align="center">镜像站</th>
+<th align="center">帮助页</th>
+<th align="center">是否在用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">清华</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://mirror.tuna.tsinghua.edu.cn/help/CTAN/">使用帮助</a></td>
+<td align="center">是</td>
+</tr>
+</tbody></table>
+<h3 id="Docker-CE"><a href="#Docker-CE" class="headerlink" title="Docker CE"></a>Docker CE</h3><table>
+<thead>
+<tr>
+<th align="center">镜像站</th>
+<th align="center">帮助页</th>
+<th align="center">是否在用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">清华</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://mirror.tuna.tsinghua.edu.cn/help/docker-ce/">使用帮助</a></td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">中科大</td>
+<td align="center"><a target="_blank" rel="noopener" href="http://mirrors.ustc.edu.cn/help/docker-ce.html">使用帮助</a></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="Zheng Shuai 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Zheng Shuai 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zheng Shuai
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.iamzs.top/archives/some-configurations.html" title="常用设置及一些镜像站">https://www.iamzs.top/archives/some-configurations.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+          <span class="icon">
+            <i class="fab fa-weixin"></i>
+          </span>
+
+          <span class="label">WeChat</span>
+        </a>
+      </div>
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="tag"><i class="fa fa-tag"></i> 环境配置</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/archives/start-over.html" rel="prev" title="重头再来">
+                  <i class="fa fa-chevron-left"></i> 重头再来
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/archives/scoop-is-not-that-good.html" rel="next" title="Scoop 并没有那么好">
+                  Scoop 并没有那么好 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">京ICP备16047477号 </a>
+  </div>
+
+<div class="copyright">
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zheng Shuai</span>
+</div>
+<div class="powered-by">
+	本网站由
+	<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="border-bottom: none;">
+		<img src="/images/upyun.svg" alt="又拍云" style="width: 80px; display: inline; vertical-align: middle;" />
+	</a>
+	提供 CDN 加速 / 云存储服务
+</div>
+
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+<script>
+if (document.querySelectorAll('.pdf-container').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+    document.querySelectorAll('.pdf-container').forEach(element => {
+      PDFObject.embed(element.dataset.target, element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height   : element.dataset.height
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+<script>
+if (document.querySelectorAll('.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js', () => {
+    mermaid.init({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    }, '.mermaid');
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+
+
+
+
+
+</body>
+</html>
