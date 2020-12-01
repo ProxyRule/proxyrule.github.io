@@ -23,15 +23,15 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"www.iamzs.top","root":"/","images":"/images","scheme":"Muse","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content="以下基本上都是对 Wiki 的整理，调整顺序的同时加入一些自己的理解，无语言障碍可直接到 GitHub 或官方文档阅读。   Scoop 是什么借用 Mike Zick 对 Cygwin 和 MSYS 的描述，他对 Scoop 作了一个类比描述：  Scoop is an installer The goal of Scoop is to let you use Unix-y programs i">
+<meta name="description" content="以下基本上都是对 Wiki 的整理，调整顺序的同时加入一些自己的理解，无语言障碍可直接到 GitHub 或官方文档阅读。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Scoop 不完全上手指南">
 <meta property="og:url" content="https://www.iamzs.top/archives/scoop-guidebook.html">
 <meta property="og:site_name" content="IamZS">
-<meta property="og:description" content="以下基本上都是对 Wiki 的整理，调整顺序的同时加入一些自己的理解，无语言障碍可直接到 GitHub 或官方文档阅读。   Scoop 是什么借用 Mike Zick 对 Cygwin 和 MSYS 的描述，他对 Scoop 作了一个类比描述：  Scoop is an installer The goal of Scoop is to let you use Unix-y programs i">
+<meta property="og:description" content="以下基本上都是对 Wiki 的整理，调整顺序的同时加入一些自己的理解，无语言障碍可直接到 GitHub 或官方文档阅读。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-01-03T05:11:06.000Z">
-<meta property="article:modified_time" content="2020-12-01T15:04:17.385Z">
+<meta property="article:modified_time" content="2020-12-01T16:36:21.482Z">
 <meta property="article:author" content="Zheng Shuai">
 <meta property="article:tag" content="利器">
 <meta property="article:tag" content="Scoop">
@@ -293,7 +293,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-12-01 23:04:17" itemprop="dateModified" datetime="2020-12-01T23:04:17+08:00">2020-12-01</time>
+        <time title="修改时间：2020-12-02 00:36:21" itemprop="dateModified" datetime="2020-12-02T00:36:21+08:00">2020-12-02</time>
       </span>
 
   
@@ -309,6 +309,8 @@
         <div class="note info"><p>以下基本上都是对 <a target="_blank" rel="noopener" href="https://github.com/lukesampson/scoop/wiki">Wiki</a> 的整理，调整顺序的同时加入一些自己的理解，无语言障碍可直接到 GitHub 或<a target="_blank" rel="noopener" href="https://scoop.netlify.com/">官方文档</a>阅读。</p>
 </div>
 
+<a id="more"></a>
+
 <h3 id="Scoop-是什么"><a href="#Scoop-是什么" class="headerlink" title="Scoop 是什么"></a>Scoop 是什么</h3><p>借用 Mike Zick 对 Cygwin 和 MSYS 的<a target="_blank" rel="noopener" href="http://sourceforge.net/mailarchive/forum.php?thread_name=200506130821.11185.mszick@morethan.org&forum_name=mingw-msys">描述</a>，他对 Scoop 作了一个类比描述：</p>
 <blockquote>
 <p>Scoop is an installer</p>
@@ -316,8 +318,6 @@
 </blockquote>
 <p>并且他也称，Scoop 并不是一个包管理器，而是通过读取 JSON 描述文件来安装程序及其依赖。Scoop 专注于开源和命令行开发工具，不符合其标准的不可能进入 main bucket（Scoop 安装后便自带的），因而虽然通过 <code>scoop install skype</code> 也能安装 Skype，但是只能放在 extra bucket 中。</p>
 <p>在与 <a target="_blank" rel="noopener" href="https://chocolatey.org/">Chocolatey</a> 对比时，他提到了 Scoop 的一些特性，其中不乏吸引我选择使用它而非前者的因素。</p>
-<a id="more"></a>
-
 <ol>
 <li><p>Scoop 默认安装在用户文件夹下（<code>~/scoop/</code>），那么在权限方面就很友好，安装程序时不会跳出 UAC 提醒，不需要管理员权限。</p>
 </li>
