@@ -193,13 +193,6 @@
   </url>
   
   <url>
-    <loc>https://www.iamzs.top/tags/%E5%AD%97%E4%BD%93/</loc>
-    <lastmod>2020-12-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.iamzs.top/tags/Docker/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
@@ -208,6 +201,13 @@
   
   <url>
     <loc>https://www.iamzs.top/tags/Windows/</loc>
+    <lastmod>2020-12-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.iamzs.top/tags/%E5%AD%97%E4%BD%93/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
