@@ -200,6 +200,27 @@
   </url>
   
   <url>
+    <loc>https://www.iamzs.top/tags/%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2020-12-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.iamzs.top/tags/%E9%A9%BE%E7%85%A7/</loc>
+    <lastmod>2020-12-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.iamzs.top/tags/%E8%80%83%E8%AF%95/</loc>
+    <lastmod>2020-12-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.iamzs.top/tags/Docker/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
@@ -221,21 +242,14 @@
   </url>
   
   <url>
-    <loc>https://www.iamzs.top/tags/%E6%97%A5%E5%B8%B8/</loc>
+    <loc>https://www.iamzs.top/tags/Hexo/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.iamzs.top/tags/%E9%A9%BE%E7%85%A7/</loc>
-    <lastmod>2020-12-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.iamzs.top/tags/%E8%80%83%E8%AF%95/</loc>
+    <loc>https://www.iamzs.top/tags/NexT/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -264,20 +278,6 @@
   
   <url>
     <loc>https://www.iamzs.top/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2020-12-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.iamzs.top/tags/Hexo/</loc>
-    <lastmod>2020-12-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.iamzs.top/tags/NexT/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
