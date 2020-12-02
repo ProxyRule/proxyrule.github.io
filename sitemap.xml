@@ -193,7 +193,7 @@
   </url>
   
   <url>
-    <loc>https://www.iamzs.top/tags/%E5%AD%97%E4%BD%93/</loc>
+    <loc>https://www.iamzs.top/tags/Docker/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -201,6 +201,13 @@
   
   <url>
     <loc>https://www.iamzs.top/tags/Windows/</loc>
+    <lastmod>2020-12-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.iamzs.top/tags/%E5%AD%97%E4%BD%93/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -235,13 +242,6 @@
   </url>
   
   <url>
-    <loc>https://www.iamzs.top/tags/Docker/</loc>
-    <lastmod>2020-12-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.iamzs.top/tags/Zotero/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
@@ -270,6 +270,13 @@
   </url>
   
   <url>
+    <loc>https://www.iamzs.top/tags/Scoop/</loc>
+    <lastmod>2020-12-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.iamzs.top/tags/Python/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
@@ -284,7 +291,7 @@
   </url>
   
   <url>
-    <loc>https://www.iamzs.top/tags/Scoop/</loc>
+    <loc>https://www.iamzs.top/tags/SSH/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -299,13 +306,6 @@
   
   <url>
     <loc>https://www.iamzs.top/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/</loc>
-    <lastmod>2020-12-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.iamzs.top/tags/SSH/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
