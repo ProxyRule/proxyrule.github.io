@@ -172,6 +172,13 @@
 
   
   <url>
+    <loc>https://www.iamzs.top/tags/%E5%AD%97%E4%BD%93/</loc>
+    <lastmod>2020-12-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.iamzs.top/tags/%E5%88%A9%E5%99%A8/</loc>
     <lastmod>2020-12-05</lastmod>
     <changefreq>daily</changefreq>
@@ -193,20 +200,6 @@
   </url>
   
   <url>
-    <loc>https://www.iamzs.top/tags/%E5%AD%97%E4%BD%93/</loc>
-    <lastmod>2020-12-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.iamzs.top/tags/Docker/</loc>
-    <lastmod>2020-12-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.iamzs.top/tags/Windows/</loc>
     <lastmod>2020-12-05</lastmod>
     <changefreq>daily</changefreq>
@@ -214,14 +207,7 @@
   </url>
   
   <url>
-    <loc>https://www.iamzs.top/tags/Hexo/</loc>
-    <lastmod>2020-12-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.iamzs.top/tags/NexT/</loc>
+    <loc>https://www.iamzs.top/tags/Docker/</loc>
     <lastmod>2020-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -249,6 +235,13 @@
   </url>
   
   <url>
+    <loc>https://www.iamzs.top/tags/Office/</loc>
+    <lastmod>2020-12-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.iamzs.top/tags/Zotero/</loc>
     <lastmod>2020-12-05</lastmod>
     <changefreq>daily</changefreq>
@@ -257,6 +250,20 @@
   
   <url>
     <loc>https://www.iamzs.top/tags/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2020-12-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.iamzs.top/tags/Hexo/</loc>
+    <lastmod>2020-12-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.iamzs.top/tags/NexT/</loc>
     <lastmod>2020-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -284,14 +291,14 @@
   </url>
   
   <url>
-    <loc>https://www.iamzs.top/tags/Office/</loc>
+    <loc>https://www.iamzs.top/tags/SSH/</loc>
     <lastmod>2020-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.iamzs.top/tags/SSH/</loc>
+    <loc>https://www.iamzs.top/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2020-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -306,13 +313,6 @@
   
   <url>
     <loc>https://www.iamzs.top/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/</loc>
-    <lastmod>2020-12-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.iamzs.top/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2020-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
