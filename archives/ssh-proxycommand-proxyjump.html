@@ -315,12 +315,12 @@
 <ul>
 <li>写法一</li>
 </ul>
-<pre class="language-shell" data-language="shell"><code class="language-shell">ssh -o &quot;ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p&quot; root@1.1.1.1</code></pre>
+<pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">ssh</span> -o <span class="token string">"ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p"</span> root@1.1.1.1</code></pre>
 
 <ul>
 <li>写法二</li>
 </ul>
-<pre class="language-shell" data-language="shell"><code class="language-shell">ssh -o ProxyCommand&#x3D;&quot;connect -S 127.0.0.1:1080 -a none %h %p&quot; root@1.1.1.1</code></pre>
+<pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">ssh</span> -o <span class="token assign-left variable">ProxyCommand</span><span class="token operator">=</span><span class="token string">"connect -S 127.0.0.1:1080 -a none %h %p"</span> root@1.1.1.1</code></pre>
 
 <ul>
 <li>写法三</li>
@@ -336,19 +336,19 @@
 <h3 id="借助跳板机连接"><a href="#借助跳板机连接" class="headerlink" title="借助跳板机连接"></a>借助跳板机连接</h3><p>太详细的我也懒得写了，目前只写一下 Windows 如何实现。ProxyJump 和 ProxyCommand 都是可以的，并且如果同时写在配置文件中，只能是最先匹配到的那个生效。</p>
 <p>假定跳板机和真正要登录的远程主机用户都为 <code>root</code>，跳板机 IP 为 <code>8.8.8.8</code>，要登录的主机 IP 为 <code>1.1.1.1</code>。</p>
 <p>各参数含义与第一部分一致，<code>-W</code> 表示将客户端的标准输入输出转发到相应端口的远程主机上。</p>
-<h4 id="ProxyJump"><a href="#ProxyJump" class="headerlink" title="ProxyJump"></a>ProxyJump</h4><pre class="language-shell" data-language="shell"><code class="language-shell">ssh -o &quot;ProxyJump root@8.8.8.8&quot; root@1.1.1.1</code></pre>
+<h4 id="ProxyJump"><a href="#ProxyJump" class="headerlink" title="ProxyJump"></a>ProxyJump</h4><pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">ssh</span> -o <span class="token string">"ProxyJump root@8.8.8.8"</span> root@1.1.1.1</code></pre>
 
 <h4 id="ProxyCommand"><a href="#ProxyCommand" class="headerlink" title="ProxyCommand"></a>ProxyCommand</h4><ul>
 <li>写法一</li>
 </ul>
 <p><mark>注意</mark>：<code>%h</code> 和 <code>%p</code> 之间是 <code>:</code> 而不是空格。</p>
-<pre class="language-shell" data-language="shell"><code class="language-shell">ssh -o &quot;ProxyCommand ssh root@8.8.8.8 -W %h:%p&quot; root@1.1.1.1</code></pre>
+<pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">ssh</span> -o <span class="token string">"ProxyCommand ssh root@8.8.8.8 -W %h:%p"</span> root@1.1.1.1</code></pre>
 
 <ul>
 <li>写法二</li>
 </ul>
 <p>使用这条命令，必须先安装 <a target="_blank" rel="noopener" href="https://eternallybored.org/misc/netcat/">netcat</a> 并将其添加至环境变量。</p>
-<pre class="language-shell" data-language="shell"><code class="language-shell">ssh -o &quot;ProxyCommand ssh root@8.8.8.8 nc %h %p&quot; root@1.1.1.1</code></pre>
+<pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">ssh</span> -o <span class="token string">"ProxyCommand ssh root@8.8.8.8 nc %h %p"</span> root@1.1.1.1</code></pre>
 
 <h4 id="写入配置文件"><a href="#写入配置文件" class="headerlink" title="写入配置文件"></a>写入配置文件</h4><p>即写入到 <code>~/.ssh/config</code> 文件中，这个我目前没有需求，同样可以查看这篇<a target="_blank" rel="noopener" href="https://www.xiebruce.top/650.html#i-9">文章</a>获取详细内容。</p>
 
