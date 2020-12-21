@@ -183,9 +183,9 @@
     
     
     
-    <category term="Windows" scheme="https://www.iamzs.top/tags/Windows/"/>
-    
     <category term="软件" scheme="https://www.iamzs.top/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="Windows" scheme="https://www.iamzs.top/tags/Windows/"/>
     
   </entry>
   
@@ -296,11 +296,11 @@
     
     
     
-    <category term="Zotero" scheme="https://www.iamzs.top/tags/Zotero/"/>
-    
     <category term="利器" scheme="https://www.iamzs.top/tags/%E5%88%A9%E5%99%A8/"/>
     
     <category term="软件" scheme="https://www.iamzs.top/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="Zotero" scheme="https://www.iamzs.top/tags/Zotero/"/>
     
     <category term="文献管理" scheme="https://www.iamzs.top/tags/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/"/>
     

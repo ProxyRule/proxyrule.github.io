@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.3.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -312,7 +312,6 @@
 
 // 简写形式
 &#123;% cq %&#125;最好只有一行文字&#123;% endcq %&#125;</code></pre>
-
 <h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><blockquote class="blockquote-center">
 <p>最好只有一行文字</p>
 
@@ -328,9 +327,7 @@ text    : 按钮显示的文字。text 和 icon 至少指定一个。
 icon    : Font Awesome icon 名。text 和 icon 至少指定一个。
 [class] : 可选参数。icon 样式：fa-fw | fa-lg | fa-2x | fa-3x | fa-4x | fa-5x
 [title] : 可选参数。鼠标悬停时显示的文字。</code></pre>
-
 <h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% button https://www.iamzs.top, IamZS, home fa-fw fa-lg, Zheng Shuai's blog %&#125;</code></pre>
-
 <a class="btn" href="https://www.iamzs.top" title="Zheng Shuai's blog"><i class="fa fa-home fa-fw fa-lg"></i>IamZS</a>
 
 <p>更多示例可查阅该<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/tag-plugins/button.html">文档</a>。</p>
@@ -338,7 +335,6 @@ icon    : Font Awesome icon 名。text 和 icon 至少指定一个。
 
 [class] : 可选参数，未指定则使用浏览器默认样式。支持的值有：default | primary | success | info | warning | danger
 text    : 'success @text' 和 'success@text' 的效果是一样的。</code></pre>
-
 <h4 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% label default @default %&#125;
 &#123;% label primary @primary %&#125;
 &#123;% label success @success %&#125;
@@ -346,7 +342,6 @@ text    : 'success @text' 和 'success@text' 的效果是一样的。</code></pr
 <span class="token bold"><span class="token punctuation">**</span><span class="token content">&#123;% label warning @bold + warning %&#125;</span><span class="token punctuation">**</span></span>
 <span class="token strike"><span class="token punctuation">~~</span><span class="token content">&#123;% label danger @strikethrough + danger %&#125;</span><span class="token punctuation">~~</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mark</span><span class="token punctuation">></span></span>mark<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mark</span><span class="token punctuation">></span></span></code></pre>
-
 <ul>
 <li><mark class="label default">default</mark></li>
 <li><mark class="label primary">primary</mark></li>
@@ -362,14 +357,12 @@ something
 &#123;% endmermaid %&#125;
 
 type : 类型</code></pre>
-
 <p>可以在<a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/">这里</a>查阅支持哪些图及其详细用法。</p>
 <h4 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% mermaid pie %&#125;
 "Dogs" : 386
 "Cats" : 85
 "Rats" : 15
 &#123;% endmermaid %&#125;</code></pre>
-
 <div class="mermaid">
 pie
 &quot;Dogs&quot; : 386
@@ -384,53 +377,45 @@ pie
 [class]   : 可选参数。支持的值有：default | primary | success | info | warning | danger
 [no-icon] : 可选参数。不显示 icon
 [summary] : 可选参数。</code></pre>
-
 <h4 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note %&#125;
 假装是四级标题，&#123;% label @未定义 %&#125;样式
 &#123;% endnote %&#125;</code></pre>
-
 <div class="note "><p>假装是四级标题，<mark class="label ">未定义</mark>样式</p>
 </div>
 
 <pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note default %&#125;
 假装是四级标题，&#123;% label default @default %&#125; 样式
 &#123;% endnote %&#125;</code></pre>
-
 <div class="note default"><p>假装是四级标题，<mark class="label default">default</mark> 样式</p>
 </div>
 
 <pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note primary %&#125;
 假装是四级标题，&#123;% label primary @primary %&#125; 样式
 &#123;% endnote %&#125;</code></pre>
-
 <div class="note primary"><p>假装是四级标题，<mark class="label primary">primary</mark> 样式</p>
 </div>
 
 <pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note success %&#125;
 假装是四级标题，&#123;% label success @success %&#125; 样式
 &#123;% endnote %&#125;</code></pre>
-
 <div class="note success"><p>假装是四级标题，<mark class="label success">success</mark> 样式</p>
 </div>
 
 <pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note info %&#125;
 假装是四级标题，&#123;% label info @info %&#125; 样式
 &#123;% endnote %&#125;</code></pre>
-
 <div class="note info"><p>假装是四级标题，<mark class="label info">info</mark> 样式</p>
 </div>
 
 <pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note warning %&#125;
 假装是四级标题，&#123;% label warning @warning %&#125; 样式
 &#123;% endnote %&#125;</code></pre>
-
 <div class="note warning"><p>假装是四级标题，<mark class="label warning">warning</mark> 样式</p>
 </div>
 
 <pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note danger %&#125;
 假装是四级标题，&#123;% label danger @danger %&#125; 样式
 &#123;% endnote %&#125;</code></pre>
-
 <div class="note danger"><p>假装是四级标题，<mark class="label danger">danger</mark> 样式</p>
 </div>
 
@@ -438,7 +423,6 @@ pie
 
 url      : PDF 文件的绝对路径。
 [height] : 可选参数。高度（单位：px）。</code></pre>
-
 <h4 id="示例-5"><a href="#示例-5" class="headerlink" title="示例"></a>示例</h4><p>暂无</p>
 
     </div>

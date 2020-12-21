@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.3.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -373,7 +373,6 @@
 </li>
 </ol>
 <pre class="language-text" data-language="text"><code class="language-text">HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers</code></pre>
-
 <ol start="3">
 <li>删除 <code>igfxDTCM</code> 和 <code>igfxcui</code> 两个项目</li>
 </ol>
@@ -411,12 +410,10 @@
 <li>如果是要删除系统开机启动项（影响所有用户），注册表定位到</li>
 </ul>
 <pre class="language-text" data-language="text"><code class="language-text">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run</code></pre>
-
 <ul>
 <li>如果要删除当前用户的开机启动项，注册表定位到</li>
 </ul>
 <pre class="language-text" data-language="text"><code class="language-text">HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run</code></pre>
-
 <p>像我的就是属于第二种情况，进入注册表后找到已删除软件的残余启动项</p>
 <p><img data-src="https://upyun.iamzs.top/2001/Registry.png" alt="Registry"></p>
 <p>接下来当然是右键直接删除该键值了</p>
@@ -441,7 +438,6 @@ list volume
 <span class="token keyword">select</span> volume x    （x 表示卷号）
 
 remove <span class="token assign-left variable">letter</span><span class="token operator">=</span>x    （x 表示盘符）</code></pre>
-
 <p><img data-src="https://upyun.iamzs.top/2001/DiskPart.png" alt="DiskPart"></p>
 <h4 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h4><p><img data-src="https://upyun.iamzs.top/2001/This-PC-After.png" alt="This-PC-After"></p>
 <p><img data-src="https://upyun.iamzs.top/2001/Disk-Management-After.png" alt="Disk-Management-After"></p>
@@ -455,7 +451,6 @@ remove <span class="token assign-left variable">letter</span><span class="token 
 <p><img data-src="https://upyun.iamzs.top/2001/CPU.png" alt="CPU"></p>
 <h3 id="更改无线网络名称"><a href="#更改无线网络名称" class="headerlink" title="更改无线网络名称"></a>更改无线网络名称</h3><p>注册表地址如下：</p>
 <pre class="language-text" data-language="text"><code class="language-text">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles</code></pre>
-
 <h3 id="Windows-10-无法进入休眠状态"><a href="#Windows-10-无法进入休眠状态" class="headerlink" title="Windows 10 无法进入休眠状态"></a>Windows 10 无法进入休眠状态</h3><p>系统是 Windows 专业版 1909，电源计划是默认的平衡模式。有时候晚上合盖后第二天早上笔记本发烫，揭开盖子直接进入解锁登录界面。这次又遇到了，寻找解决方法，并稍作记录。</p>
 <p><img data-src="https://upyun.iamzs.top/2002/powercfg.png" alt="powercfg"></p>
 <p>如图，我的笔记本支持 Standby (S3)、Hibernate、Hybrid Sleep、Fast Startup 这四种 sleep states。其中第一种就相当于 Sleep，中文翻译为睡眠；第二种则叫做休眠；第三种叫做混合睡眠；第四种是 Windows 8 时引入的快速关机。</p>
@@ -486,7 +481,6 @@ remove <span class="token assign-left variable">letter</span><span class="token 
 list disk
 <span class="token keyword">select</span> disk <span class="token operator">&lt;</span>number<span class="token operator">></span>  <span class="token comment"># &lt;number> 为实际磁盘编号</span>
 clean</code></pre>
-
 <p><img data-src="https://upyun.iamzs.top/2011/diskpart.png" alt="diskpart"></p>
 <p>第二步，在磁盘管理器中创建</p>
 <p><img data-src="https://upyun.iamzs.top/2011/disk-management.png" alt="disk-management"></p>

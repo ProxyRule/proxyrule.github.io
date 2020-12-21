@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.3.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -333,7 +333,6 @@
 <li>如果是想安装在默认位置，即 <code>C:/Users/&lt;username&gt;/scoop</code> 的话，直接运行</li>
 </ul>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell"><span class="token function">Invoke-Expression</span> <span class="token punctuation">(</span><span class="token function">New-Object</span> System<span class="token punctuation">.</span>Net<span class="token punctuation">.</span>WebClient<span class="token punctuation">)</span><span class="token punctuation">.</span>DownloadString<span class="token punctuation">(</span><span class="token string">'https://get.scoop.sh'</span><span class="token punctuation">)</span></code></pre>
-
 <p>或者 <code>iwr -useb get.scoop.sh | iex</code> 即可。</p>
 <ul>
 <li>如果是想自定义安装位置，如 <code>D:/Scoop</code>，那么逐条运行下面命令</li>
@@ -341,87 +340,63 @@
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell"><span class="token variable">$env</span>:SCOOP=<span class="token string">'D:\Scoop'</span>
 <span class="token namespace">[environment]</span>::setEnvironmentVariable<span class="token punctuation">(</span><span class="token string">'SCOOP'</span><span class="token punctuation">,</span><span class="token variable">$env</span>:SCOOP<span class="token punctuation">,</span><span class="token string">'User'</span><span class="token punctuation">)</span>
 <span class="token function">iwr</span> <span class="token operator">-</span>useb get<span class="token punctuation">.</span>scoop<span class="token punctuation">.</span>sh <span class="token punctuation">|</span> <span class="token function">iex</span></code></pre>
-
 <p>至于如何安装全局应用到自定义目录就先不说了。至此，如无报错信息，Scoop 安装完成。</p>
 <h3 id="卸载-Scoop"><a href="#卸载-Scoop" class="headerlink" title="卸载 Scoop"></a>卸载 Scoop</h3><p>卸载非常简单，只需运行 <code>scoop uninstall scoop</code> 即可。</p>
 <h3 id="使用-Scoop"><a href="#使用-Scoop" class="headerlink" title="使用 Scoop"></a>使用 Scoop</h3><p>记得随时使用 <code>scoop help</code> 查看帮助信息</p>
 <h4 id="scoop-search"><a href="#scoop-search" class="headerlink" title="scoop search"></a>scoop search</h4><p>查找软件，通常是想看看某个程序是否可以通过 Scoop 安装</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop search &lt;app></code></pre>
-
 <p>如</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop search python</code></pre>
-
 <h4 id="scoop-install"><a href="#scoop-install" class="headerlink" title="scoop install"></a>scoop install</h4><p>安装应用程序，分两种情况：</p>
 <ul>
 <li>只为当前用户安装，安装在 Scoop 目录下的 apps 文件夹</li>
 </ul>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop install &lt;app></code></pre>
-
 <p>如</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop install python</code></pre>
-
 <ul>
 <li>为所有用户安装，默认安装在 <code>C:/ProgramData/scoop</code> 或者是上文提到的自定义的全局应用安装目录，并且需要以管理员身份运行</li>
 </ul>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop install &lt;app> <span class="token operator">-</span>g</code></pre>
-
 <p>如</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop install python <span class="token operator">-</span>g</code></pre>
-
 <p>如果要安装特定版本的应用，比如说 <code>curl 7.56.1</code>，则应该这样</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop install curl@7<span class="token punctuation">.</span>56<span class="token punctuation">.</span>1</code></pre>
-
 <h4 id="scoop-uninstall"><a href="#scoop-uninstall" class="headerlink" title="scoop uninstall"></a>scoop uninstall</h4><p>卸载某一程序</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop uninstall &lt;app></code></pre>
-
 <p>如</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop uninstall python</code></pre>
-
 <p>卸载程序并移除所有配置文件</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop uninstall &lt;app> <span class="token operator">-</span>p</code></pre>
-
 <p>如</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop uninstall python <span class="token operator">-</span>p</code></pre>
-
 <p>卸载全局安装的应用程序，需以管理员身份运行</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop uninstall &lt;app> <span class="token operator">-</span>g</code></pre>
-
 <p>如</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop uninstall python <span class="token operator">-</span>g</code></pre>
-
 <h4 id="scoop-update"><a href="#scoop-update" class="headerlink" title="scoop update"></a>scoop update</h4><p>更新 Scoop 及所有 bucket 但不更新 app</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop update</code></pre>
-
 <p>更新某一特定程序</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop update &lt;app></code></pre>
-
 <p>如</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop update python</code></pre>
-
 <p>更新 Scoop、bucket 及所有程序</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop update <span class="token operator">*</span></code></pre>
-
 <p>更新全局安装的程序，需要以管理员身份运行</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop update &lt;app> <span class="token operator">-</span>g</code></pre>
-
 <p>如</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop update python <span class="token operator">-</span>g</code></pre>
-
 <h4 id="scoop-list"><a href="#scoop-list" class="headerlink" title="scoop list"></a>scoop list</h4><p>查看已安装的程序</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop list</code></pre>
-
 <h4 id="scoop-status"><a href="#scoop-status" class="headerlink" title="scoop status"></a>scoop status</h4><p>查看哪些程序可以升级</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop status</code></pre>
-
 <h4 id="scoop-config"><a href="#scoop-config" class="headerlink" title="scoop config"></a>scoop config</h4><p>需要设置的一般也就是两个，aria2 开关以及 proxy 设置</p>
 <p>开闭 aria2 <code>scoop config aria2-enabled true</code> or <code>scoop config aria2-enabled false</code>，但不建议开启，经常有各种奇奇怪怪的问题。同时，启用 aria2 前需要先安装 <code>scoop install aria2</code></p>
 <p>proxy 设置，如 <code>scoop config proxy 127.0.0.1:1080</code></p>
 <h4 id="scoop-home"><a href="#scoop-home" class="headerlink" title="scoop home"></a>scoop home</h4><p>查看某一程序的主页</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop home &lt;app></code></pre>
-
 <p>如</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop home python</code></pre>
-
 <p>便唤起浏览器，打开 Python <a target="_blank" rel="noopener" href="https://www.python.org/">官网</a></p>
 <h4 id="scoop-reset"><a href="#scoop-reset" class="headerlink" title="scoop reset"></a>scoop reset</h4><p>借用 Wiki <a target="_blank" rel="noopener" href="https://github.com/lukesampson/scoop/wiki/Switching-Ruby-And-Python-Versions">例子</a></p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell"><span class="token comment"># 先添加 versions bucket</span>
@@ -435,41 +410,31 @@ scoop reset python27
 
 <span class="token comment"># 切换到 Python 3.x</span>
 scoop reset python</code></pre>
-
 <h4 id="scoop-cleanup"><a href="#scoop-cleanup" class="headerlink" title="scoop cleanup"></a>scoop cleanup</h4><p>删除已安装软件的旧版本，如删除所有软件旧版本</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop cleanup <span class="token operator">*</span></code></pre>
-
 <h4 id="scoop-cache"><a href="#scoop-cache" class="headerlink" title="scoop cache"></a>scoop cache</h4><p>清理软件缓存，通常是下载的软件安装包。以下命令清除所有缓存，即清空 Scoop 目录下的 cache 文件夹</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop cache <span class="token function">rm</span> <span class="token operator">*</span></code></pre>
-
 <h4 id="scoop-bucket"><a href="#scoop-bucket" class="headerlink" title="scoop bucket"></a>scoop bucket</h4><p>查看「已知库」</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop bucket known</code></pre>
-
 <p>查看已经添加的库</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop bucket list</code></pre>
-
 <p>删除已经添加的库</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop bucket <span class="token function">rm</span> &lt;bucket></code></pre>
-
 <p>添加库，分两种情况：</p>
 <ul>
 <li>添加「已知库」</li>
 </ul>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop bucket add &lt;bucket></code></pre>
-
 <p>如添加上文提到的 versions 库</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop bucket add versions</code></pre>
-
 <ul>
 <li>添加第三方库</li>
 </ul>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop bucket add &lt;bucket> &lt;bucket_url></code></pre>
-
 <p>如添加 Ash258、chawyehsu 和我的库</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell">scoop bucket add Ash258 https:<span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>Ash258<span class="token operator">/</span>Scoop<span class="token operator">-</span>Ash258<span class="token punctuation">.</span>git
 scoop bucket add dorado https:<span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>chawyehsu<span class="token operator">/</span>dorado<span class="token punctuation">.</span>git
 scoop bucket add spoon https:<span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>FDUZS<span class="token operator">/</span>spoon<span class="token punctuation">.</span>git</code></pre>
-
 <h3 id="Scoop-进阶"><a href="#Scoop-进阶" class="headerlink" title="Scoop 进阶"></a>Scoop 进阶</h3><p>看完以上内容，入门足够。我也刚使用不到半年，认为进阶需要搞懂以下几点：</p>
 <ol>
 <li><p>App Manifest 创建并可以实现「自动更新」</p>
