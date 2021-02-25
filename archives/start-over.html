@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -16,11 +16,11 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.iamzs.top","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"www.iamzs.top","root":"/","images":"/images","scheme":"Muse","version":"8.2.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
 <meta name="description" content="一次在玩的时候，我把 rm -rf .&#x2F;etc 敲成了 rm -rf &#x2F;etc 然后把服务器的配置文件全给误删了。现在想来，其实当时还是有补救的办法的，因为我之前把 &#x2F;etc 目录 zip 到 root 用户的家目录了，只要当时我不 exit ssh 把文件恢复回去就没事，然而……">
 <meta property="og:type" content="article">
@@ -290,7 +290,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>一次在玩的时候，我把 <code>rm -rf ./etc</code> 敲成了 <code>rm -rf /etc</code> 然后把服务器的配置文件全给误删了。现在想来，其实当时还是有补救的办法的，因为我之前把 <code>/etc</code> 目录 zip 到 root 用户的家目录了，只要当时我不 <code>exit ssh</code> 把文件恢复回去就没事，然而……</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <p>不记得这是第几次「搬家」了，从之前的另一个域名到这个 top 域名，从 WordPress 到 Typecho 再到 WordPress。这次，我决定使用 Hugo/Hexo + GitHub/Coding 来搭建静态博客，主动注销网站备案也是不可避免的了。</p>
 <p>说来惭愧，虽然写了几十篇博文，但我感觉似乎并没有输出多少有价值的东西，一是积淀太少，二是表达与写作能力还需提高。另外，我一直有通过 Google Search Console 查看大家都是通过哪些关键词进入本站的，发现最多的是 <code>SSR</code>、<code>IPv6</code>、<code>Proxifier</code>、<code>校园网</code>、<code>免流</code> 之类的，我觉得没多大意思也并非我写博客的本意。</p>
@@ -454,10 +454,10 @@
   </footer>
 
   
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
@@ -466,7 +466,7 @@
 
 <script>
 if (document.querySelectorAll('.pdf-container').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
     document.querySelectorAll('.pdf-container').forEach(element => {
       PDFObject.embed(element.dataset.target, element, {
         pdfOpenParams: {
@@ -486,7 +486,7 @@ if (document.querySelectorAll('.pdf-container').length) {
 
 <script>
 if (document.querySelectorAll('.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8.8.4/dist/mermaid.min.js', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/mermaid@8.9.0/dist/mermaid.min.js', () => {
     mermaid.init({
       theme    : 'forest',
       logLevel : 3,

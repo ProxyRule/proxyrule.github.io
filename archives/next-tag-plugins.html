@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -16,11 +16,11 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.iamzs.top","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"www.iamzs.top","root":"/","images":"/images","scheme":"Muse","version":"8.2.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
 <meta name="description" content="NexT 主题通过一些标签「插件」来增强页面显示效果和提供额外信息，如按钮、标注、流程图等。以下是我所需要的部分，完整文档可查阅这里。">
 <meta property="og:type" content="article">
@@ -291,12 +291,13 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>NexT 主题通过一些标签「插件」来增强页面显示效果和提供额外信息，如按钮、标注、流程图等。以下是我所需要的部分，完整文档可查阅<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/tag-plugins/">这里</a>。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h3 id="居中引用"><a href="#居中引用" class="headerlink" title="居中引用"></a>居中引用</h3><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% centerquote %&#125;最好只有一行文字&#123;% endcenterquote %&#125;
 
 // 简写形式
 &#123;% cq %&#125;最好只有一行文字&#123;% endcq %&#125;</code></pre>
+
 <h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><blockquote class="blockquote-center">
 <p>最好只有一行文字</p>
 
@@ -312,7 +313,9 @@ text    : 按钮显示的文字。text 和 icon 至少指定一个。
 icon    : Font Awesome icon 名。text 和 icon 至少指定一个。
 [class] : 可选参数。icon 样式：fa-fw | fa-lg | fa-2x | fa-3x | fa-4x | fa-5x
 [title] : 可选参数。鼠标悬停时显示的文字。</code></pre>
+
 <h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% button https://www.iamzs.top, IamZS, home fa-fw fa-lg, Zheng Shuai's blog %&#125;</code></pre>
+
 <a class="btn" href="https://www.iamzs.top" title="Zheng Shuai's blog"><i class="fa fa-home fa-fw fa-lg"></i>IamZS</a>
 
 <p>更多示例可查阅该<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/tag-plugins/button.html">文档</a>。</p>
@@ -320,6 +323,7 @@ icon    : Font Awesome icon 名。text 和 icon 至少指定一个。
 
 [class] : 可选参数，未指定则使用浏览器默认样式。支持的值有：default | primary | success | info | warning | danger
 text    : 'success @text' 和 'success@text' 的效果是一样的。</code></pre>
+
 <h4 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% label default @default %&#125;
 &#123;% label primary @primary %&#125;
 &#123;% label success @success %&#125;
@@ -327,6 +331,7 @@ text    : 'success @text' 和 'success@text' 的效果是一样的。</code></pr
 <span class="token bold"><span class="token punctuation">**</span><span class="token content">&#123;% label warning @bold + warning %&#125;</span><span class="token punctuation">**</span></span>
 <span class="token strike"><span class="token punctuation">~~</span><span class="token content">&#123;% label danger @strikethrough + danger %&#125;</span><span class="token punctuation">~~</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mark</span><span class="token punctuation">></span></span>mark<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mark</span><span class="token punctuation">></span></span></code></pre>
+
 <ul>
 <li><mark class="label default">default</mark></li>
 <li><mark class="label primary">primary</mark></li>
@@ -342,12 +347,14 @@ something
 &#123;% endmermaid %&#125;
 
 type : 类型</code></pre>
+
 <p>可以在<a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/">这里</a>查阅支持哪些图及其详细用法。</p>
 <h4 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% mermaid pie %&#125;
 "Dogs" : 386
 "Cats" : 85
 "Rats" : 15
 &#123;% endmermaid %&#125;</code></pre>
+
 <div class="mermaid">
 pie
 &quot;Dogs&quot; : 386
@@ -362,45 +369,53 @@ pie
 [class]   : 可选参数。支持的值有：default | primary | success | info | warning | danger
 [no-icon] : 可选参数。不显示 icon
 [summary] : 可选参数。</code></pre>
+
 <h4 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note %&#125;
 假装是四级标题，&#123;% label @未定义 %&#125;样式
 &#123;% endnote %&#125;</code></pre>
+
 <div class="note "><p>假装是四级标题，<mark class="label ">未定义</mark>样式</p>
 </div>
 
 <pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note default %&#125;
 假装是四级标题，&#123;% label default @default %&#125; 样式
 &#123;% endnote %&#125;</code></pre>
+
 <div class="note default"><p>假装是四级标题，<mark class="label default">default</mark> 样式</p>
 </div>
 
 <pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note primary %&#125;
 假装是四级标题，&#123;% label primary @primary %&#125; 样式
 &#123;% endnote %&#125;</code></pre>
+
 <div class="note primary"><p>假装是四级标题，<mark class="label primary">primary</mark> 样式</p>
 </div>
 
 <pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note success %&#125;
 假装是四级标题，&#123;% label success @success %&#125; 样式
 &#123;% endnote %&#125;</code></pre>
+
 <div class="note success"><p>假装是四级标题，<mark class="label success">success</mark> 样式</p>
 </div>
 
 <pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note info %&#125;
 假装是四级标题，&#123;% label info @info %&#125; 样式
 &#123;% endnote %&#125;</code></pre>
+
 <div class="note info"><p>假装是四级标题，<mark class="label info">info</mark> 样式</p>
 </div>
 
 <pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note warning %&#125;
 假装是四级标题，&#123;% label warning @warning %&#125; 样式
 &#123;% endnote %&#125;</code></pre>
+
 <div class="note warning"><p>假装是四级标题，<mark class="label warning">warning</mark> 样式</p>
 </div>
 
 <pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note danger %&#125;
 假装是四级标题，&#123;% label danger @danger %&#125; 样式
 &#123;% endnote %&#125;</code></pre>
+
 <div class="note danger"><p>假装是四级标题，<mark class="label danger">danger</mark> 样式</p>
 </div>
 
@@ -408,6 +423,7 @@ pie
 
 url      : PDF 文件的绝对路径。
 [height] : 可选参数。高度（单位：px）。</code></pre>
+
 <h4 id="示例-5"><a href="#示例-5" class="headerlink" title="示例"></a>示例</h4><p>暂无</p>
 
     </div>
@@ -561,10 +577,10 @@ url      : PDF 文件的绝对路径。
   </footer>
 
   
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
@@ -573,7 +589,7 @@ url      : PDF 文件的绝对路径。
 
 <script>
 if (document.querySelectorAll('.pdf-container').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
     document.querySelectorAll('.pdf-container').forEach(element => {
       PDFObject.embed(element.dataset.target, element, {
         pdfOpenParams: {
@@ -593,7 +609,7 @@ if (document.querySelectorAll('.pdf-container').length) {
 
 <script>
 if (document.querySelectorAll('.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8.8.4/dist/mermaid.min.js', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/mermaid@8.9.0/dist/mermaid.min.js', () => {
     mermaid.init({
       theme    : 'forest',
       logLevel : 3,

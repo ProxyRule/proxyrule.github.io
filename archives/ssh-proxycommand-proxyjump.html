@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -16,11 +16,11 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.iamzs.top","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"www.iamzs.top","root":"/","images":"/images","scheme":"Muse","version":"8.2.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
 <meta name="description" content="有时候，你想通过 SSH 连接花重金购买的远在大洋彼岸的虚拟服务器进行诸如编译固件、跑程序等操作的时候，而你发现本地网络与远程服务器的连接并不是那么稳定，那么可以通过以下两种方式提升 SSH 连接速度和稳定性。">
 <meta property="og:type" content="article">
@@ -291,7 +291,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>有时候，你想通过 SSH 连接花重金购买的远在大洋彼岸的虚拟服务器进行诸如编译固件、跑程序等操作的时候，而你发现本地网络与远程服务器的连接并不是那么稳定，那么可以通过以下两种方式提升 SSH 连接速度和稳定性。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h3 id="通过代理连接"><a href="#通过代理连接" class="headerlink" title="通过代理连接"></a>通过代理连接</h3><p>其实就是借助 <a target="_blank" rel="noopener" href="https://man.openbsd.org/ssh_config.5#ProxyCommand">ProxyCommand</a> 这个选项来实现的，并且有几种不同的写法。而且，Windows 和 macOS 下的实现方式也不一样。</p>
 <p>假定本地代理地址为 <code>127.0.0.1</code>，端口为 <code>1080</code>，代理方式为 <code>socks5</code>，要连接的远程主机用户为 <code>root</code>，主机 IP 为 <code>1.1.1.1</code>。</p>
@@ -301,10 +301,12 @@
 <li>写法一</li>
 </ul>
 <pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">ssh</span> -o <span class="token string">"ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p"</span> root@1.1.1.1</code></pre>
+
 <ul>
 <li>写法二</li>
 </ul>
 <pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">ssh</span> -o <span class="token assign-left variable">ProxyCommand</span><span class="token operator">=</span><span class="token string">"connect -S 127.0.0.1:1080 -a none %h %p"</span> root@1.1.1.1</code></pre>
+
 <ul>
 <li>写法三</li>
 </ul>
@@ -314,21 +316,25 @@
     Hostname github.com
     Port 22
     ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p</code></pre>
+
 <h4 id="macOS-netcat"><a href="#macOS-netcat" class="headerlink" title="macOS - netcat"></a>macOS - netcat</h4><p>macOS 下可以直接看这篇<a target="_blank" rel="noopener" href="https://www.xiebruce.top/650.html#i">文章</a>。</p>
 <h3 id="借助跳板机连接"><a href="#借助跳板机连接" class="headerlink" title="借助跳板机连接"></a>借助跳板机连接</h3><p>太详细的我也懒得写了，目前只写一下 Windows 如何实现。ProxyJump 和 ProxyCommand 都是可以的，并且如果同时写在配置文件中，只能是最先匹配到的那个生效。</p>
 <p>假定跳板机和真正要登录的远程主机用户都为 <code>root</code>，跳板机 IP 为 <code>8.8.8.8</code>，要登录的主机 IP 为 <code>1.1.1.1</code>。</p>
 <p>各参数含义与第一部分一致，<code>-W</code> 表示将客户端的标准输入输出转发到相应端口的远程主机上。</p>
 <h4 id="ProxyJump"><a href="#ProxyJump" class="headerlink" title="ProxyJump"></a>ProxyJump</h4><pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">ssh</span> -o <span class="token string">"ProxyJump root@8.8.8.8"</span> root@1.1.1.1</code></pre>
+
 <h4 id="ProxyCommand"><a href="#ProxyCommand" class="headerlink" title="ProxyCommand"></a>ProxyCommand</h4><ul>
 <li>写法一</li>
 </ul>
 <p><mark>注意</mark>：<code>%h</code> 和 <code>%p</code> 之间是 <code>:</code> 而不是空格。</p>
 <pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">ssh</span> -o <span class="token string">"ProxyCommand ssh root@8.8.8.8 -W %h:%p"</span> root@1.1.1.1</code></pre>
+
 <ul>
 <li>写法二</li>
 </ul>
 <p>使用这条命令，必须先安装 <a target="_blank" rel="noopener" href="https://eternallybored.org/misc/netcat/">netcat</a> 并将其添加至环境变量。</p>
 <pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">ssh</span> -o <span class="token string">"ProxyCommand ssh root@8.8.8.8 nc %h %p"</span> root@1.1.1.1</code></pre>
+
 <h4 id="写入配置文件"><a href="#写入配置文件" class="headerlink" title="写入配置文件"></a>写入配置文件</h4><p>即写入到 <code>~/.ssh/config</code> 文件中，这个我目前没有需求，同样可以查看这篇<a target="_blank" rel="noopener" href="https://www.xiebruce.top/650.html#i-9">文章</a>获取详细内容。</p>
 
     </div>
@@ -482,10 +488,10 @@
   </footer>
 
   
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
@@ -494,7 +500,7 @@
 
 <script>
 if (document.querySelectorAll('.pdf-container').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
     document.querySelectorAll('.pdf-container').forEach(element => {
       PDFObject.embed(element.dataset.target, element, {
         pdfOpenParams: {
@@ -514,7 +520,7 @@ if (document.querySelectorAll('.pdf-container').length) {
 
 <script>
 if (document.querySelectorAll('.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8.8.4/dist/mermaid.min.js', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/mermaid@8.9.0/dist/mermaid.min.js', () => {
     mermaid.init({
       theme    : 'forest',
       logLevel : 3,

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -16,11 +16,11 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.iamzs.top","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"www.iamzs.top","root":"/","images":"/images","scheme":"Muse","version":"8.2.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
 <meta name="description" content="一些常用的代理设置方式，公共 DNS 记录以及软件镜像源，记录备用。">
 <meta property="og:type" content="article">
@@ -290,7 +290,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>一些常用的代理设置方式，公共 DNS 记录以及软件镜像源，记录备用。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h3 id="代理设置"><a href="#代理设置" class="headerlink" title="代理设置"></a>代理设置</h3><h4 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h4><pre class="language-shell" data-language="shell"><code class="language-shell"># 设置
 set http_proxy&#x3D;http:&#x2F;&#x2F;127.0.0.1:1080
@@ -298,8 +298,10 @@ set https_proxy&#x3D;http:&#x2F;&#x2F;127.0.0.1:1080
 # 取消
 set http_proxy&#x3D;
 set https_proxy&#x3D;</code></pre>
+
 <h4 id="PowerShell"><a href="#PowerShell" class="headerlink" title="PowerShell"></a>PowerShell</h4><pre class="language-powershell" data-language="powershell"><code class="language-powershell"><span class="token variable">$env</span>:http_proxy=<span class="token string">"127.0.0.1:1080"</span>
 <span class="token variable">$env</span>:https_proxy=<span class="token string">"127.0.0.1:1080"</span></code></pre>
+
 <p>为了方便，将下面函数添加到 <code>$PROFILE</code> 中就可以通过 proxy 和 unproxy 来实现设置与取消代理了。</p>
 <pre class="language-powershell" data-language="powershell"><code class="language-powershell"><span class="token comment"># Set and unset proxy for PowerShell</span>
 <span class="token keyword">function</span> proxy <span class="token punctuation">&#123;</span>
@@ -314,25 +316,31 @@ set https_proxy&#x3D;</code></pre>
     <span class="token function">Remove-Item</span> <span class="token operator">-</span>Path Env:\http_proxy
     <span class="token function">Remove-Item</span> <span class="token operator">-</span>Path Env:\https_proxy
 <span class="token punctuation">&#125;</span></code></pre>
+
 <h4 id="Git-Bash"><a href="#Git-Bash" class="headerlink" title="Git Bash"></a>Git Bash</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 设置</span>
 <span class="token builtin class-name">export</span> <span class="token assign-left variable">http_proxy</span><span class="token operator">=</span>http://127.0.0.1:1080
 <span class="token builtin class-name">export</span> <span class="token assign-left variable">https_proxy</span><span class="token operator">=</span>http://127.0.0.1:1080
 <span class="token comment"># 取消</span>
 <span class="token builtin class-name">unset</span> http_proxy https_proxy</code></pre>
+
 <h4 id="All-APPs"><a href="#All-APPs" class="headerlink" title="All APPs"></a>All APPs</h4><pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token comment"># 设置</span>
 netsh winhttp <span class="token function">import</span> proxy <span class="token assign-left variable">source</span><span class="token operator">=</span>ie
 <span class="token comment"># 取消</span>
 netsh winhttp reset proxy</code></pre>
+
 <h4 id="为-Git-设置代理"><a href="#为-Git-设置代理" class="headerlink" title="为 Git 设置代理"></a>为 Git 设置代理</h4><p>众所周知，<code>git clone</code> 有两种方式，代理设置方式也不一样：</p>
 <h5 id="Clone-with-HTTPS"><a href="#Clone-with-HTTPS" class="headerlink" title="Clone with HTTPS"></a>Clone with HTTPS</h5><p>设置代理：</p>
 <pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token comment"># 如果是 socks5 代理的话</span>
 <span class="token function">git</span> config --global http.proxy socks5h://127.0.0.1:1080
 <span class="token comment"># http 代理仅需将 socks5h 改为 http</span>
 <span class="token function">git</span> config --global http.proxy http://127.0.0.1:1080</code></pre>
+
 <p>取消代理：</p>
 <pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> config --global --unset http.proxy</code></pre>
+
 <p>也可以仅为 GitHub 设置代理</p>
 <pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> config --global http.https://github.com.proxy socks5h://127.0.0.1:1080</code></pre>
+
 <p>socks5h 和 socks5 的区别：</p>
 <blockquote>
 <p>In a proxy string, socks5h:// and socks4a:// mean that the hostname is<br>resolved by the SOCKS server. socks5:// and socks4:// mean that the<br>hostname is resolved locally. socks4a:// means to use SOCKS4a, which is<br>an extension of SOCKS4.</p>
@@ -343,6 +351,7 @@ netsh winhttp reset proxy</code></pre>
 <pre class="language-text" data-language="text"><code class="language-text">Host github.com
     User git
     ProxyCommand connect -S 127.0.0.1:1080 %h %p</code></pre>
+
 <p>这里 <code>-S</code> 表示使用 socks5 代理，如果是 http 代理则为 <code>-H</code>。connect 工具 git 自带。</p>
 <p>我自己的话，则是设置成这样：</p>
 <pre class="language-text" data-language="text"><code class="language-text"># Reference: https:&#x2F;&#x2F;bitbucket.org&#x2F;gotoh&#x2F;connect&#x2F;wiki&#x2F;Home
@@ -363,6 +372,7 @@ Host *
     IdentityFile &quot;C:\Users\Zheng\.ssh\id_rsa&quot;
     ServerAliveInterval 30
     TCPKeepAlive yes</code></pre>
+
 <p>来源：<a target="_blank" rel="noopener" href="https://gist.github.com/laispace/666dd7b27e9116faece6">laispace/git 设置和取消代理</a></p>
 <h3 id="公共-DNS"><a href="#公共-DNS" class="headerlink" title="公共 DNS"></a>公共 DNS</h3><h4 id="国内"><a href="#国内" class="headerlink" title="国内"></a>国内</h4><table>
 <thead>
@@ -795,10 +805,10 @@ Host *
   </footer>
 
   
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
@@ -807,7 +817,7 @@ Host *
 
 <script>
 if (document.querySelectorAll('.pdf-container').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
     document.querySelectorAll('.pdf-container').forEach(element => {
       PDFObject.embed(element.dataset.target, element, {
         pdfOpenParams: {
@@ -827,7 +837,7 @@ if (document.querySelectorAll('.pdf-container').length) {
 
 <script>
 if (document.querySelectorAll('.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8.8.4/dist/mermaid.min.js', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/mermaid@8.9.0/dist/mermaid.min.js', () => {
     mermaid.init({
       theme    : 'forest',
       logLevel : 3,
