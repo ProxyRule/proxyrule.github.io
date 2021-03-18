@@ -14,7 +14,7 @@ inputs:
     index: index.html
     error: index.html
   region: ap-shanghai
-  bucketName: sls-website-ap-shanghai-gblfri-1252517621
+  bucketName: blog-bucket
   protocol: https
   replace: true # 是否覆盖式部署
   disableErrorStatus: false # 是否禁用错误码，默认 false
@@ -92,24 +92,24 @@ inputs:
         switch: on
         redirectType: https
         redirectStatusCode: 301
-  cors:
-    # - allowedOrigins:
-    #     - '*.tencent.com'
-    #     - '*.qcloud.com'
-    #   allowedMethods:
-    #     - PUT
-    #     - POST
-    #     - DELETE
-    #     - HEAD
-    #   allowedHeaders: '*'
-    #   maxAgeSeconds: 0
-    - allowedOrigins:
-        - '*'
-      allowedMethods:
-        - GET
-        - PUT
-        - POST
-        - DELETE
-        - HEAD
-      allowedHeaders: '*'
-      maxAgeSeconds: 0
+  # cors:
+  #   # - allowedOrigins:
+  #   #     - '*.tencent.com'
+  #   #     - '*.qcloud.com'
+  #   #   allowedMethods:
+  #   #     - PUT
+  #   #     - POST
+  #   #     - DELETE
+  #   #     - HEAD
+  #   #   allowedHeaders: '*'
+  #   #   maxAgeSeconds: 0
+  #   - allowedOrigins:
+  #       - '*'
+  #     allowedMethods:
+  #       - GET
+  #       - PUT
+  #       - POST
+  #       - DELETE
+  #       - HEAD
+  #     allowedHeaders: '*'
+  #     maxAgeSeconds: 0
