@@ -21,12 +21,6 @@ GPG 公钥：{% button https://github.com/FDUZS.gpg, FDUZS, key fa-fw fa-lg %}
 
 ***
 
-- 嗜辣、喜食香菜
-
-- 正在努力学做饭
-
-***
-
 目前主要设备有 <img src="https://img.shields.io/static/v1?label=小米&logo=Xiaomi&message=Air-13.3&color=FA6709&style=flat-square" alt="小米 Air 13.3" style="display: inline; margin-bottom: 0px; vertical-align: middle;" /> 笔记本、<img src="https://img.shields.io/static/v1?label=Apple&logo=Apple&message=iPhone-XR&color=999999&style=flat-square" alt="iPhone XR" style="display: inline; margin-bottom: 0px; vertical-align: middle;" /><img src="https://img.shields.io/static/v1?label=红米&logo=Xiaomi&message=K30S-Ultra&color=FA6709&style=flat-square" alt="红米 K30S 至尊纪念版" style="display: inline; margin-bottom: 0px; vertical-align: middle;" /> 手机、<img src="https://img.shields.io/static/v1?label=Apple&logo=Apple&message=iPad-mini5&color=999999&style=flat-square" alt="iPad mini5" style="display: inline; margin-bottom: 0px; vertical-align: middle;" /> 平板
 
 桌面端使用 <img src="https://img.shields.io/static/v1?label=Microsoft&logo=Microsoft&message=Windows-10&color=0078D6&style=flat-square" alt="Windows 10" style="display: inline; margin-bottom: 0px; vertical-align: middle;" /> 和 <img src="https://img.shields.io/static/v1?label=Linux&logo=Linux&message=Manjaro&color=35BF5C&style=flat-square" alt="Manjaro" style="display: inline; margin-bottom: 0px; vertical-align: middle;" /> 操作系统，服务器上最近喜欢使用 <img src="https://img.shields.io/static/v1?label=Linux&logo=Linux&message=Debian&color=A81D33&style=flat-square" alt="Debian" style="display: inline; margin-bottom: 0px; vertical-align: middle;" />
