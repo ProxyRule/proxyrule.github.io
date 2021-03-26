@@ -33,14 +33,14 @@ inputs:
         http2: on
         certInfo:
           certId: 'hcSRLnBs'
-      # cache:
-      #   simpleCache:
-      #     followOrigin: on
-      #     cacheRules:
-      #       - cacheType: all
-      #         cacheContents:
-      #           - '*'
-      #         cacheTime: 1000
+      cache:
+        simpleCache:
+          followOrigin: on
+          cacheRules:
+            - cacheType: all
+              cacheContents:
+                - '*'
+              cacheTime: 1000
       # cacheKey:
       #   fullUrlCache: on
       # referer:
@@ -74,6 +74,14 @@ inputs:
         http2: on
         certInfo:
           certId: 'hcSRaCHP'
+      cache:
+        simpleCache:
+          followOrigin: on
+          cacheRules:
+            - cacheType: all
+              cacheContents:
+                - '*'
+              cacheTime: 1000
       forceRedirect:
         switch: on
         redirectType: https
@@ -88,6 +96,14 @@ inputs:
         http2: on
         certInfo:
           certId: 'hcSR9hVm'
+      cache:
+        simpleCache:
+          followOrigin: on
+          cacheRules:
+            - cacheType: all
+              cacheContents:
+                - '*'
+              cacheTime: 1000
       forceRedirect:
         switch: on
         redirectType: https
