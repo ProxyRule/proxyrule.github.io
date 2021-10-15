@@ -23,50 +23,9 @@ inputs:
   # env: # 配置前端环境变量
   #   API_URL: https://api.com
   hosts:
-    - host: www.iamzs.cn
-      async: true # 是否同步等待 CDN 配置。配置为 false 时，参数 autoRefresh 自动刷新才会生效，如果关联多域名时，为防止超时建议配置为 true
-      area: global
-      autoRefresh: true #开启自动 CDN 刷新，用于快速更新和同步加速域名中展示的站点内容
-      onlyRefresh: false #建议首次部署后，将此参数配置为 true，即忽略其他 CDN 配置，只进行刷新操作
-      https:
-        switch: on
-        http2: on
-        certInfo:
-          certId: 'hcSRLnBs'
-      cache:
-        simpleCache:
-          followOrigin: on
-          cacheRules:
-            - cacheType: all
-              cacheContents:
-                - '*'
-              cacheTime: 1000
-      # cacheKey:
-      #   fullUrlCache: on
-      # referer:
-      #   switch: on
-      #   refererRules:
-      #     - ruleType: all
-      #       rulePaths:
-      #         - '*'
-      #       refererType: blacklist
-      #       allowEmpty: true
-      #       referers:
-      #         - 'qq.baidu.com'
-      #         - '*.baidu.com'
-      # ipFilter:
-      #   switch: on
-      #   filterType: blacklist
-      #   filters:
-      #     - '1.2.3.4'
-      #     - '2.3.4.5'
-      forceRedirect:
-        switch: on
-        redirectType: https
-        redirectStatusCode: 301
     - host: www.iamzs.com
       async: true # 是否同步等待 CDN 配置。配置为 false 时，参数 autoRefresh 自动刷新才会生效，如果关联多域名时，为防止超时建议配置为 true
-      area: global
+      area: overseas # mainland, overseas, global
       autoRefresh: true #开启自动 CDN 刷新，用于快速更新和同步加速域名中展示的站点内容
       onlyRefresh: false #建议首次部署后，将此参数配置为 true，即忽略其他 CDN 配置，只进行刷新操作
       https:
@@ -88,7 +47,7 @@ inputs:
         redirectStatusCode: 301
     - host: www.iamzs.top
       async: true # 是否同步等待 CDN 配置。配置为 false 时，参数 autoRefresh 自动刷新才会生效，如果关联多域名时，为防止超时建议配置为 true
-      area: global
+      area: overseas
       autoRefresh: true #开启自动 CDN 刷新，用于快速更新和同步加速域名中展示的站点内容
       onlyRefresh: false #建议首次部署后，将此参数配置为 true，即忽略其他 CDN 配置，只进行刷新操作
       https:
