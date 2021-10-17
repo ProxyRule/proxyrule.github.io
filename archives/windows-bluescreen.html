@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iamzs.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="之前一直在折腾 Docker for Windows，但是网络方面的坑太深了我跨不过去，最终只得作罢。如果只是这样那还好，好聚好散、不合适就分，最恼人的是在我卸载完 Docker 到「Windows 功能」中关闭 Hyper-V 重启时竟然蓝屏了，停止代码为 SYSTEM THREAD EXCEPTION NOT HANDLED，且之后时不时会蓝屏一下，只能通过还原点还原系统。要是放以前，我应该早">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记一次 Windows 蓝屏修复？">
+<meta property="og:url" content="https://www.iamzs.top/archives/windows-bluescreen.html">
+<meta property="og:site_name" content="IamZS">
+<meta property="og:description" content="之前一直在折腾 Docker for Windows，但是网络方面的坑太深了我跨不过去，最终只得作罢。如果只是这样那还好，好聚好散、不合适就分，最恼人的是在我卸载完 Docker 到「Windows 功能」中关闭 Hyper-V 重启时竟然蓝屏了，停止代码为 SYSTEM THREAD EXCEPTION NOT HANDLED，且之后时不时会蓝屏一下，只能通过还原点还原系统。要是放以前，我应该早">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://upyun.iamzs.top/2001/BlueScreenView.png">
+<meta property="og:image" content="https://upyun.iamzs.top/2001/SCANNOW.png">
+<meta property="article:published_time" content="2020-01-16T15:47:18.000Z">
+<meta property="article:modified_time" content="2021-10-17T03:36:33.587Z">
+<meta property="article:author" content="Zheng Shuai">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upyun.iamzs.top/2001/BlueScreenView.png">
+
+
+<link rel="canonical" href="https://www.iamzs.top/archives/windows-bluescreen.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.iamzs.top/archives/windows-bluescreen.html","path":"archives/windows-bluescreen.html","title":"记一次 Windows 蓝屏修复？"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>记一次 Windows 蓝屏修复？ | IamZS</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="IamZS" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">IamZS</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Zheng Shuai's blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">查找问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">解决问题？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0"><span class="nav-number">3.</span> <span class="nav-text">更新</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zheng Shuai"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zheng Shuai</p>
+  <div class="site-description" itemprop="description">读书、写作、思考，或许有点技术。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/FDUZS" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;FDUZS" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.iamzs.top/archives/windows-bluescreen.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zheng Shuai">
+      <meta itemprop="description" content="读书、写作、思考，或许有点技术。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IamZS">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          记一次 Windows 蓝屏修复？
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-01-16 23:47:18" itemprop="dateCreated datePublished" datetime="2020-01-16T23:47:18+08:00">2020-01-16</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-10-17 11:36:33" itemprop="dateModified" datetime="2021-10-17T11:36:33+08:00">2021-10-17</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>之前一直在折腾 Docker for Windows，但是网络方面的坑太深了我跨不过去，最终只得作罢。如果只是这样那还好，好聚好散、不合适就分，最恼人的是在我卸载完 Docker 到「Windows 功能」中关闭 Hyper-V 重启时竟然蓝屏了，停止代码为 <code>SYSTEM THREAD EXCEPTION NOT HANDLED</code>，且之后时不时会蓝屏一下，只能通过还原点还原系统。要是放以前，我应该早就掏出 U 盘重装了，但我实在不想折腾了，一想到那些大型软件又得重装一遍就头疼。所以，本着能修就修的想法，暂时找到以下解决办法（或许不是）。</p>
+<span id="more"></span>
+
+<h3 id="查找问题"><a href="#查找问题" class="headerlink" title="查找问题"></a>查找问题</h3><p>通过使用 BlueScreenView 查看 dump 文件，确定是由 <code>winhvr.sys</code> 驱动引起的 <code>ntoskrnl.exe</code> 崩溃，然后再看下面的文件描述，应该是 Hyper-V 跟网络虚拟服务导致的系统内核损坏，其他的就看不出什么名堂了。见下图：</p>
+<p><img data-src="https://upyun.iamzs.top/2001/BlueScreenView.png" alt="BlueScreenView"></p>
+<p>另外，dmp 文件我放在这里了：<a target="_blank" rel="noopener" href="https://upyun.iamzs.top/2001/011620-8250-01.dmp">011620-8250-01.dmp</a>，大佬可以帮忙看看，有遇到类似问题的也可以作为参考。</p>
+<p>有了以上基本信息，大致知道该往哪个方向查找资料了。</p>
+<h3 id="解决问题？"><a href="#解决问题？" class="headerlink" title="解决问题？"></a>解决问题？</h3><p>我是以 <code>winhvr.sys ntoskrnl.exe 蓝屏</code> 为关键词进行谷歌搜索的，查到的<a target="_blank" rel="noopener" href="https://social.technet.microsoft.com/Forums/zh-CN/b95905a4-5b9a-4936-9d65-b7f68df089d6/ntoskrnlexe3401323631-277142116165281240501997820256dmp?forum=win10itprogeneralCN">这篇</a>我认为是最有帮助的，虽然也有一点小错误。</p>
+<p>参照上面回复中提供的解决方法，操作如下：</p>
+<ol>
+<li><p>首先以管理员身份运行 CMD，输入 <code>sfc /SCANNOW</code> 进行系统扫描验证并尝试修复，扫描结果发现确实存在损坏文件。</p>
+</li>
+<li><p>接着，运行 <code>DISM /Online /Cleanup-Image /RestoreHealth</code> 应该会自动运行什么还原操作。</p>
+</li>
+<li><p>待上述操作完成后，输入 <code>sfc /VERIFYONLY</code> 再进行系统扫描验证，发现已经可以了，不存在完整性冲突。</p>
+</li>
+</ol>
+<p><img data-src="https://upyun.iamzs.top/2001/SCANNOW.png" alt="SCANNOW"></p>
+<p>不过，至于是否真的解决了问题，我也不确定，后续没再更新的话就是没问题了。</p>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>似乎并没有用，之后 <code>sfc /VERIFYONLY</code> 虽然扫描验证说不存在完整性冲突但还是蓝屏了几次。而且，一个奇怪的现象是，关机后启动不会蓝屏，选择重启大概率会蓝屏。这是之后两次的 dmp 文件：<a target="_blank" rel="noopener" href="https://upyun.iamzs.top/2001/011720-10140-01.dmp">011720-10140-01.dmp</a> 和 <a target="_blank" rel="noopener" href="https://upyun.iamzs.top/2001/011720-10281-01.dmp">011720-10281-01.dmp</a></p>
+<p>受不了了，我太菜了，实在找不到办法解决了，最后决定重装系统了。另外，我后来复盘发现，极有可能是 VMware 和 Hyper-V 冲突的原因，然而当时没有意识到。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="Zheng Shuai 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Zheng Shuai 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zheng Shuai
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.iamzs.top/archives/windows-bluescreen.html" title="记一次 Windows 蓝屏修复？">https://www.iamzs.top/archives/windows-bluescreen.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+          <span class="icon">
+            <i class="fab fa-weixin"></i>
+          </span>
+
+          <span class="label">WeChat</span>
+        </a>
+      </div>
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/archives/docker-tutorial.html" rel="prev" title="Docker for Windows 网络方面的坑">
+                  <i class="fa fa-chevron-left"></i> Docker for Windows 网络方面的坑
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/archives/early-start.html" rel="next" title="如何让应用在进入桌面前启动">
+                  如何让应用在进入桌面前启动 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zheng Shuai</span>
+</div>
+<div class="powered-by">
+	本网站由
+	<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="border-bottom: none;">
+		<img src="/images/upyun.svg" alt="又拍云" style="width: 80px; display: inline; vertical-align: middle;" />
+	</a>
+	提供 CDN 加速 / 云存储服务
+</div>
+
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdn.jsdelivr.net/npm/pdfobject@2.2.6/pdfobject.min.js","integrity":"sha256-77geM50MfxCD17eqyJR+Dag1svjJOLN+BJ2F/DMqMEY="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.13.2/dist/mermaid.min.js","integrity":"sha256-UIQPVkGifpwMvDH5yGgORJ9sSTDq38zz6BGU6dNaKhM="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

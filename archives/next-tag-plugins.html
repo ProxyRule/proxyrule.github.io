@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iamzs.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="NexT 主题通过一些标签「插件」来增强页面显示效果和提供额外信息，如按钮、标注、流程图等。以下是我所需要的部分，完整文档可查阅这里。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NexT 主题之 Tag Plugins">
+<meta property="og:url" content="https://www.iamzs.top/archives/next-tag-plugins.html">
+<meta property="og:site_name" content="IamZS">
+<meta property="og:description" content="NexT 主题通过一些标签「插件」来增强页面显示效果和提供额外信息，如按钮、标注、流程图等。以下是我所需要的部分，完整文档可查阅这里。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-26T03:50:01.000Z">
+<meta property="article:modified_time" content="2021-10-17T03:36:33.583Z">
+<meta property="article:author" content="Zheng Shuai">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="NexT">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.iamzs.top/archives/next-tag-plugins.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.iamzs.top/archives/next-tag-plugins.html","path":"archives/next-tag-plugins.html","title":"NexT 主题之 Tag Plugins"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>NexT 主题之 Tag Plugins | IamZS</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="IamZS" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">IamZS</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Zheng Shuai's blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%85%E4%B8%AD%E5%BC%95%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">居中引用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.2.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%89%E9%92%AE"><span class="nav-number">2.</span> <span class="nav-text">按钮</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%B3%95-1"><span class="nav-number">2.1.</span> <span class="nav-text">用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B-1"><span class="nav-number">2.2.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E6%B3%A8"><span class="nav-number">3.</span> <span class="nav-text">标注</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%B3%95-2"><span class="nav-number">3.1.</span> <span class="nav-text">用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B-2"><span class="nav-number">3.2.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mermaid"><span class="nav-number">4.</span> <span class="nav-text">Mermaid</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%B3%95-3"><span class="nav-number">4.1.</span> <span class="nav-text">用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B-3"><span class="nav-number">4.2.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A%E8%AF%B4%E6%98%8E"><span class="nav-number">5.</span> <span class="nav-text">注释说明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%B3%95-4"><span class="nav-number">5.1.</span> <span class="nav-text">用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B-4"><span class="nav-number">5.2.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5-PDF"><span class="nav-number">6.</span> <span class="nav-text">嵌入 PDF</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%B3%95-5"><span class="nav-number">6.1.</span> <span class="nav-text">用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B-5"><span class="nav-number">6.2.</span> <span class="nav-text">示例</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zheng Shuai"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zheng Shuai</p>
+  <div class="site-description" itemprop="description">读书、写作、思考，或许有点技术。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/FDUZS" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;FDUZS" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.iamzs.top/archives/next-tag-plugins.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zheng Shuai">
+      <meta itemprop="description" content="读书、写作、思考，或许有点技术。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IamZS">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          NexT 主题之 Tag Plugins
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-08-26 11:50:01" itemprop="dateCreated datePublished" datetime="2020-08-26T11:50:01+08:00">2020-08-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-10-17 11:36:33" itemprop="dateModified" datetime="2021-10-17T11:36:33+08:00">2021-10-17</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>NexT 主题通过一些标签「插件」来增强页面显示效果和提供额外信息，如按钮、标注、流程图等。以下是我所需要的部分，完整文档可查阅<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/tag-plugins/">这里</a>。</p>
+<span id="more"></span>
+
+<h3 id="居中引用"><a href="#居中引用" class="headerlink" title="居中引用"></a>居中引用</h3><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% centerquote %&#125;最好只有一行文字&#123;% endcenterquote %&#125;
+
+// 简写形式
+&#123;% cq %&#125;最好只有一行文字&#123;% endcq %&#125;</code></pre>
+
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><blockquote class="blockquote-center">
+<p>最好只有一行文字</p>
+
+</blockquote>
+
+<h3 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h3><h4 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% button url, text, icon [class], [title] %&#125;
+
+// 简写形式
+&#123;% btn url, text, icon [class], [title] %&#125;
+
+url     : URL 绝对或者相对路径。
+text    : 按钮显示的文字。text 和 icon 至少指定一个。
+icon    : Font Awesome icon 名。text 和 icon 至少指定一个。
+[class] : 可选参数。icon 样式：fa-fw | fa-lg | fa-2x | fa-3x | fa-4x | fa-5x
+[title] : 可选参数。鼠标悬停时显示的文字。</code></pre>
+
+<h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% button https://www.iamzs.top, IamZS, home fa-fw fa-lg, Zheng Shuai's blog %&#125;</code></pre>
+
+<a class="btn" href="https://www.iamzs.top" title="Zheng Shuai's blog"><i class="fa fa-home fa-fw fa-lg"></i>IamZS</a>
+
+<p>更多示例可查阅该<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/tag-plugins/button.html">文档</a>。</p>
+<h3 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h3><h4 id="用法-2"><a href="#用法-2" class="headerlink" title="用法"></a>用法</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% label [class]@text %&#125;
+
+[class] : 可选参数，未指定则使用浏览器默认样式。支持的值有：default | primary | success | info | warning | danger
+text    : 'success @text' 和 'success@text' 的效果是一样的。</code></pre>
+
+<h4 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% label default @default %&#125;
+&#123;% label primary @primary %&#125;
+&#123;% label success @success %&#125;
+<span class="token italic"><span class="token punctuation">*</span><span class="token content">&#123;% label info @italic + info %&#125;</span><span class="token punctuation">*</span></span>
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">&#123;% label warning @bold + warning %&#125;</span><span class="token punctuation">**</span></span>
+<span class="token strike"><span class="token punctuation">~~</span><span class="token content">&#123;% label danger @strikethrough + danger %&#125;</span><span class="token punctuation">~~</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mark</span><span class="token punctuation">></span></span>mark<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mark</span><span class="token punctuation">></span></span></code></pre>
+
+<ul>
+<li><mark class="label default">default</mark></li>
+<li><mark class="label primary">primary</mark></li>
+<li><mark class="label success">success</mark></li>
+<li><em><mark class="label info">italic + info</mark></em></li>
+<li><strong><mark class="label warning">bold + warning</mark></strong></li>
+<li><del><mark class="label danger">strikethrough + danger</mark></del></li>
+<li><mark>mark</mark></li>
+</ul>
+<h3 id="Mermaid"><a href="#Mermaid" class="headerlink" title="Mermaid"></a>Mermaid</h3><p>Mermaid 是一个用于画流程图、状态图、时序图、甘特图等的库，使用 JS 进行本地渲染。</p>
+<h4 id="用法-3"><a href="#用法-3" class="headerlink" title="用法"></a>用法</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% mermaid type %&#125;
+something
+&#123;% endmermaid %&#125;
+
+type : 类型</code></pre>
+
+<p>可以在<a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/">这里</a>查阅支持哪些图及其详细用法。</p>
+<h4 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% mermaid pie %&#125;
+"Dogs" : 386
+"Cats" : 85
+"Rats" : 15
+&#123;% endmermaid %&#125;</code></pre>
+
+<pre class="mermaid">
+pie
+&quot;Dogs&quot; : 386
+&quot;Cats&quot; : 85
+&quot;Rats&quot; : 15
+</pre>
+
+<h3 id="注释说明"><a href="#注释说明" class="headerlink" title="注释说明"></a>注释说明</h3><h4 id="用法-4"><a href="#用法-4" class="headerlink" title="用法"></a>用法</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note <span class="token url">[<span class="token content">class</span>] [<span class="token variable">no-icon</span>]</span> [summary] %&#125;
+任何内容
+&#123;% endnote %&#125;
+
+[class]   : 可选参数。支持的值有：default | primary | success | info | warning | danger
+[no-icon] : 可选参数。不显示 icon
+[summary] : 可选参数。</code></pre>
+
+<h4 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note %&#125;
+假装是四级标题，&#123;% label @未定义 %&#125;样式
+&#123;% endnote %&#125;</code></pre>
+
+<div class="note "><p>假装是四级标题，<mark class="label ">未定义</mark>样式</p>
+</div>
+
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note default %&#125;
+假装是四级标题，&#123;% label default @default %&#125; 样式
+&#123;% endnote %&#125;</code></pre>
+
+<div class="note default"><p>假装是四级标题，<mark class="label default">default</mark> 样式</p>
+</div>
+
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note primary %&#125;
+假装是四级标题，&#123;% label primary @primary %&#125; 样式
+&#123;% endnote %&#125;</code></pre>
+
+<div class="note primary"><p>假装是四级标题，<mark class="label primary">primary</mark> 样式</p>
+</div>
+
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note success %&#125;
+假装是四级标题，&#123;% label success @success %&#125; 样式
+&#123;% endnote %&#125;</code></pre>
+
+<div class="note success"><p>假装是四级标题，<mark class="label success">success</mark> 样式</p>
+</div>
+
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note info %&#125;
+假装是四级标题，&#123;% label info @info %&#125; 样式
+&#123;% endnote %&#125;</code></pre>
+
+<div class="note info"><p>假装是四级标题，<mark class="label info">info</mark> 样式</p>
+</div>
+
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note warning %&#125;
+假装是四级标题，&#123;% label warning @warning %&#125; 样式
+&#123;% endnote %&#125;</code></pre>
+
+<div class="note warning"><p>假装是四级标题，<mark class="label warning">warning</mark> 样式</p>
+</div>
+
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% note danger %&#125;
+假装是四级标题，&#123;% label danger @danger %&#125; 样式
+&#123;% endnote %&#125;</code></pre>
+
+<div class="note danger"><p>假装是四级标题，<mark class="label danger">danger</mark> 样式</p>
+</div>
+
+<h3 id="嵌入-PDF"><a href="#嵌入-PDF" class="headerlink" title="嵌入 PDF"></a>嵌入 PDF</h3><h4 id="用法-5"><a href="#用法-5" class="headerlink" title="用法"></a>用法</h4><pre class="language-markdown" data-language="markdown"><code class="language-markdown">&#123;% pdf url [height] %&#125;
+
+url      : PDF 文件的绝对路径。
+[height] : 可选参数。高度（单位：px）。</code></pre>
+
+<h4 id="示例-5"><a href="#示例-5" class="headerlink" title="示例"></a>示例</h4><p>暂无</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="Zheng Shuai 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Zheng Shuai 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zheng Shuai
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.iamzs.top/archives/next-tag-plugins.html" title="NexT 主题之 Tag Plugins">https://www.iamzs.top/archives/next-tag-plugins.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+          <span class="icon">
+            <i class="fab fa-weixin"></i>
+          </span>
+
+          <span class="label">WeChat</span>
+        </a>
+      </div>
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+              <a href="/tags/NexT/" rel="tag"><i class="fa fa-tag"></i> NexT</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/archives/driver-license.html" rel="prev" title="迟来的驾照">
+                  <i class="fa fa-chevron-left"></i> 迟来的驾照
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/archives/python-vc-14-0-error.html" rel="next" title="Microsoft Visual C++ 14.0 or greater is required">
+                  Microsoft Visual C++ 14.0 or greater is required <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zheng Shuai</span>
+</div>
+<div class="powered-by">
+	本网站由
+	<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="border-bottom: none;">
+		<img src="/images/upyun.svg" alt="又拍云" style="width: 80px; display: inline; vertical-align: middle;" />
+	</a>
+	提供 CDN 加速 / 云存储服务
+</div>
+
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdn.jsdelivr.net/npm/pdfobject@2.2.6/pdfobject.min.js","integrity":"sha256-77geM50MfxCD17eqyJR+Dag1svjJOLN+BJ2F/DMqMEY="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.13.2/dist/mermaid.min.js","integrity":"sha256-UIQPVkGifpwMvDH5yGgORJ9sSTDq38zz6BGU6dNaKhM="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
