@@ -22,7 +22,7 @@ Windows 10 上安装了 [Fences](https://www.stardock.com/products/fences/) 用�
 
 4. 接着运行 `%windir%\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe .\EarlyStart.exe`，应该会有`成功完成`之类的字样，可以关闭 CMD 了
 
-![EarlyStart](https://upyun.iamzs.top/2001/EarlyStart.png)
+![EarlyStart](/images/2001/EarlyStart.png)
 
 5. 在用户文件夹下，即 `C:\Users\<username>` 下新建一个 `.earlystart` 文件，然后将想要 earlystart 的应用程序路径每行写入一个。比如我的是 `"C:\Program Files (x86)\Stardock\Fences\Fences.exe"`
 

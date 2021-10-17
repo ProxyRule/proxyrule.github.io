@@ -20,17 +20,17 @@ tags:
 
 1. 网络状态未识别，默认安装的两个虚拟交换机 Default Switch 和 DockerNAT 一直是未识别的网络
 
-![Internet](https://upyun.iamzs.top/2001/Internet.png)
+![Internet](/images/2001/Internet.png)
 
-![vEthernet](https://upyun.iamzs.top/2001/vEthernet.png)
+![vEthernet](/images/2001/vEthernet.png)
 
 2. 默认安装的虚拟机不显示 IP 地址，Hyper-V 也无法连接上虚拟机
 
-![VM](https://upyun.iamzs.top/2001/VM.png)
+![VM](/images/2001/VM.png)
 
 3. 命令 `docker-machine ls` 显示为空，即使上图中 Docker 的宿主机是存在的
 
-![docker-machine](https://upyun.iamzs.top/2001/docker-machine.png)
+![docker-machine](/images/2001/docker-machine.png)
 
 和这位遇到的情况差不多：[docker hyper-V 无法访问虚拟机](https://segmentfault.com/q/1010000014706486)
 

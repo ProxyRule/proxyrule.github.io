@@ -13,7 +13,7 @@ tags:
 
 之前通过 Scoop 安装了 vscode，用 vscode 打开过 `.py` 文件，而后又把 vscode 卸载了。我发现，当你右键单击 `.py` 文件选择打开方式时，会发现残存的东西（如下图），不用说肯定又和注册表有关。
 
-![open-with](https://upyun.iamzs.top/2001/open-with.png)
+![open-with](/images/2001/open-with.png)
 
 打开注册表编辑器，搜索 `C:\Users\Zheng\scoop\apps\vscode\current\Code.exe` 在路径 `计算机\HKEY_CLASSES_ROOT\py_auto_file\shell\open\command` 下发现了相关注册表值，将其删除，问题似乎解决，在这篇[文章](https://www.lmdouble.com/1820352339.html)中也得到印证。但是，这个问题是否真的解决了呢，有没有其他的注册表残留项。问题的关键在于，我对 Windows 注册表不了解，不了解它的文件结构和各部分功能，下次遇到其他问题又得像瞎子一样乱撞，在网络上疯狂查找资料。所以，得了解有关注册表的知识，包括设计思路、演变发展、各部分功能等。
 

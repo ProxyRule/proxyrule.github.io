@@ -9,7 +9,7 @@ GPG 公钥：{% button https://github.com/FDUZS.gpg, FDUZS, key fa-fw fa-lg %}
 
 公钥指纹：`F47E 1E87 60D6 75BE 2505  81D6 F84D 153D BEC9 C906`
 
-![GPG](https://upyun.iamzs.top/2002/GPG.png)
+![GPG](/images/2002/GPG.png)
 
 「阿卡林省」人。人如其省。比较低调，与世无争，只想做些自己喜欢的、有意义的事。~~2019 本命年，硕士在读，但并不开心。近两年，总感觉特别焦虑，做事没有耐心，与之前的我大不同。~~
 

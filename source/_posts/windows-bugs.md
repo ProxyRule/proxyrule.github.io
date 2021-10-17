@@ -20,7 +20,7 @@ tags:
 
 3. 在详细信息窗格中，双击`关闭 Windows 网络连接状态指示器活动测试`，然后单击`已启用`，点`确定`
 
-![Group-Policy](https://upyun.iamzs.top/2001/Group-Policy.png)
+![Group-Policy](/images/2001/Group-Policy.png)
 
 ### Task Scheduler CPU 占用高
 
@@ -32,7 +32,7 @@ tags:
 
 3. Task Scheduler 占用 CPU 高达 60%
 
-![Task-Manager](https://upyun.iamzs.top/2001/Task-Manager.png)
+![Task-Manager](/images/2001/Task-Manager.png)
 
 #### 查找解决方案
 
@@ -50,7 +50,7 @@ tags:
 
 4. 重启
 
-![Task-Scheduler](https://upyun.iamzs.top/2001/Task-Scheduler.png)
+![Task-Scheduler](/images/2001/Task-Scheduler.png)
 
 #### 最终解决
 
@@ -92,11 +92,11 @@ HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers
 
 2. 打开组策略后点击左侧菜单依次展开`计算机配置 — 管理模板 — Windows 组件 — Windows 更新`
 
-![Windows-Update](https://upyun.iamzs.top/2001/Windows-Update.png)
+![Windows-Update](/images/2001/Windows-Update.png)
 
 3. 双击`配置自动更新`即可打开如下图的新窗口，在新窗口左侧的选项里将默认的`未配置`更改为`已禁用`即可
 
-![AutoUpdate](https://upyun.iamzs.top/2001/AutoUpdate.png)
+![AutoUpdate](/images/2001/AutoUpdate.png)
 
 {% note info %}
 将此项变更为已禁用后系统将不再自动检查和下载安装更新， 因此你需要定期去更新里手动进行检查。原文出处为 [https://www.landiannews.com/archives/40677.html](https://www.landiannews.com/archives/40677.html)
@@ -106,7 +106,7 @@ HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers
 
 这世界对强迫症患者太不友好，比如 Windows 10 上某一软件卸载后可能启动项还残留在那里，并且名称显示为 Program（下图中第二项），关键他喵的名称前还没有软件图标（当然没有，毕竟软件已经被卸载了）。
 
-![Before](https://upyun.iamzs.top/2001/Before.png)
+![Before](/images/2001/Before.png)
 
 通过 Google，得知可以修改注册表来解决这一问题：
 
@@ -126,13 +126,13 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
 
 像我的就是属于第二种情况，进入注册表后找到已删除软件的残余启动项
 
-![Registry](https://upyun.iamzs.top/2001/Registry.png)
+![Registry](/images/2001/Registry.png)
 
 接下来当然是右键直接删除该键值了
 
 然后再打开任务管理器，发现原本闹心的「Program」果然不见了，世界又充满爱了
 
-![After](https://upyun.iamzs.top/2001/After.png)
+![After](/images/2001/After.png)
 
 ### Windows 10 升级 1803 后多了个 OEM 分区并分配盘符
 
@@ -140,9 +140,9 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
 
 手上的一台联想笔记本在更新到 Windows 1803 版后在`此电脑 - 设备和驱动器`下「多了一个 OEM 分区」并且分配了盘符。
 
-![This-PC-Before](https://upyun.iamzs.top/2001/This-PC-Before.png)
+![This-PC-Before](/images/2001/This-PC-Before.png)
 
-![Disk-Management-Before](https://upyun.iamzs.top/2001/Disk-Management-Before.png)
+![Disk-Management-Before](/images/2001/Disk-Management-Before.png)
 
 其实也不能算多了一个分区，这个分区原本应该是用于系统恢复的，本不该分配盘符，但估计是这次更新的 Bug 导致这样的问题。分配的盘符是跟在已占用的盘符之后，比如我外接了一个硬盘里面有两个分区，占用了 D 和 E，所以之后是 F。
 
@@ -168,13 +168,13 @@ select volume x    （x 表示卷号）
 remove letter=x    （x 表示盘符）
 ```
 
-![DiskPart](https://upyun.iamzs.top/2001/DiskPart.png)
+![DiskPart](/images/2001/DiskPart.png)
 
 #### 问题解决
 
-![This-PC-After](https://upyun.iamzs.top/2001/This-PC-After.png)
+![This-PC-After](/images/2001/This-PC-After.png)
 
-![Disk-Management-After](https://upyun.iamzs.top/2001/Disk-Management-After.png)
+![Disk-Management-After](/images/2001/Disk-Management-After.png)
 
 #### 参考方案
 
@@ -186,7 +186,7 @@ remove letter=x    （x 表示盘符）
 
 如下图，查到的解决办法各不相同，最后哪一种都没有采用。我目前的做法是，将控制面板中的电池计划选项重置为默认，然后关机重启，勉强解决燃眉之急。
 
-![CPU](https://upyun.iamzs.top/2001/CPU.png)
+![CPU](/images/2001/CPU.png)
 
 ### 更改无线网络名称
 
@@ -200,7 +200,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Prof
 
 系统是 Windows 专业版 1909，电源计划是默认的平衡模式。有时候晚上合盖后第二天早上笔记本发烫，揭开盖子直接进入解锁登录界面。这次又遇到了，寻找解决方法，并稍作记录。
 
-![powercfg](https://upyun.iamzs.top/2002/powercfg.png)
+![powercfg](/images/2002/powercfg.png)
 
 如图，我的笔记本支持 Standby (S3)、Hibernate、Hybrid Sleep、Fast Startup 这四种 sleep states。其中第一种就相当于 Sleep，中文翻译为睡眠；第二种则叫做休眠；第三种叫做混合睡眠；第四种是 Windows 8 时引入的快速关机。
 
@@ -216,7 +216,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Prof
 
 下面则是电池平衡模式下默认的高级设置选项，留存方便日后对比：
 
-![default_settings](https://upyun.iamzs.top/2002/default_settings.png)
+![default_settings](/images/2002/default_settings.png)
 
 上面第三篇文章中有这么两段话点醒了我
 
@@ -226,7 +226,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Prof
 
 同时结合这篇[文章](https://blog.csdn.net/hanziyuan08/article/details/89396894)，我查看了 `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power` 下的「CsEnabled」键值，竟然默认是 1。
 
-![CsEnabled](https://upyun.iamzs.top/2002/CsEnabled.png)
+![CsEnabled](/images/2002/CsEnabled.png)
 
 那么问题来了，上面第一张图明明显示我的电脑不支持 S0 Standby，电池驱动管理却依然将其开启。我觉得很可能就是这个问题了。
 
@@ -243,8 +243,8 @@ select disk <number>  # <number> 为实际磁盘编号
 clean
 ```
 
-![diskpart](https://upyun.iamzs.top/2011/diskpart.png)
+![diskpart](/images/2011/diskpart.png)
 
 第二步，在磁盘管理器中创建
 
-![disk-management](https://upyun.iamzs.top/2011/disk-management.png)
+![disk-management](/images/2011/disk-management.png)
