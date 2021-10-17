@@ -21,7 +21,7 @@ minify: true
 custom_file_path:
   head: source/_data/head.njk
   #header: source/_data/header.njk
-  sidebar: source/_data/sidebar.njk
+  #sidebar: source/_data/sidebar.njk
   #postMeta: source/_data/post-meta.njk
   postBodyEnd: source/_data/post-body-end.njk
   footer: source/_data/footer.njk
@@ -141,7 +141,7 @@ site_state: true
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
   GitHub: https://github.com/FDUZS || fab fa-github
-  E-Mail: mailto:i@shuaizheng.email || fa fa-envelope
+  #E-Mail: mailto:yourname@example.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -218,8 +218,8 @@ footer:
 
   # Beian ICP and gongan information for Chinese users. See: https://beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
-    enable: true
-    icp: 赣ICP备2021009007号-1
+    enable: false
+    icp:
     # The digit in the num of gongan beian.
     gongan_id:
     # The full num of gongan beian.
