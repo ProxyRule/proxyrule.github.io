@@ -5,6 +5,10 @@ type: about
 comments: false
 ---
 
+{% note warning %}
+博客自 2021 年 10 月 17 日起可能再也不会更新，如有需要请关注 iamzs.cn
+{% endnote %}
+
 GPG 公钥：{% button https://github.com/FDUZS.gpg, FDUZS, key fa-fw fa-lg %}
 
 公钥指纹：`F47E 1E87 60D6 75BE 2505  81D6 F84D 153D BEC9 C906`
