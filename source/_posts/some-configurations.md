@@ -114,7 +114,7 @@ Host github.com
     ProxyCommand connect -S 127.0.0.1:1080 %h %p
 ```
 
-这里 `-S` 表示使用 socks5 代理，如果是 http 代理则为 `-H`。connect 工具 git 自带。
+这里 `-S` 表示使用 socks5 代理，如果是 http 代理则为 `-H`。connect 工具 [Git for Windows](https://gitforwindows.org) 自带。
 
 我自己的话，则是设置成这样：
 
