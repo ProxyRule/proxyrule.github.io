@@ -27,7 +27,7 @@
 <meta property="og:description" content="恰逢 Zotero 6.0 正式版发布没多久，来填两年多前留的这个坑，应该不会太晚。主要讲一讲如何设置并且快速上手使用，而且根据我的观察，很多人对其中一些概念分得似乎不是很清，影响了他们的工作流程设定。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-01-06T05:55:51.000Z">
-<meta property="article:modified_time" content="2022-03-21T14:17:21.038Z">
+<meta property="article:modified_time" content="2022-03-22T05:28:21.672Z">
 <meta property="article:author" content="Zheng Shuai">
 <meta property="article:tag" content="利器">
 <meta property="article:tag" content="软件">
@@ -228,7 +228,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-21 22:17:21" itemprop="dateModified" datetime="2022-03-21T22:17:21+08:00">2022-03-21</time>
+      <time title="修改时间：2022-03-22 13:28:21" itemprop="dateModified" datetime="2022-03-22T13:28:21+08:00">2022-03-22</time>
     </span>
 
   
@@ -246,9 +246,9 @@
 
 <h3 id="前置要求"><a href="#前置要求" class="headerlink" title="前置要求"></a>前置要求</h3><p>在开始之前，先安装下面的插件和软件。当然，假定你已经安装了 <a target="_blank" rel="noopener" href="https://www.zotero.org/download/">Zotero</a> 最新版以及你所使用的浏览器对应的 Zotero Connector 插件。</p>
 <h4 id="插件篇"><a href="#插件篇" class="headerlink" title="插件篇"></a>插件篇</h4><ul>
-<li><p><a target="_blank" rel="noopener" href="http://zotfile.com/">ZotFile</a> 可以方便添加附件及重命名。</p>
+<li><p><a target="_blank" rel="noopener" href="http://zotfile.com/">ZotFile</a> 可以方便添加附件及重命名</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/l0o0/jasminum">Jasminum - 茉莉花</a> 对国内文献数据库（如：CNKI）支持良好</p>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/l0o0/jasminum">Jasminum - 茉莉花</a> 对国内文献数据库（如：CNKI）支持良好，可自动下载文献 PDF</p>
 </li>
 <li><p><a target="_blank" rel="noopener" href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a> 可选，如果你不知道 LaTeX 是啥的话</p>
 </li>
@@ -256,7 +256,7 @@
 </li>
 </ul>
 <h4 id="软件篇"><a href="#软件篇" class="headerlink" title="软件篇"></a>软件篇</h4><ul>
-<li><a target="_blank" rel="noopener" href="https://www.pdflabs.com/tools/pdftk-server/">PDFtk Server</a> 上面的茉莉花插件需要。可通过 <a href="https://www.iamzs.top/archives/scoop-guidebook.html">Scoop</a> 安装 <code>scoop install pdftk</code>。当然，也可手动<a target="_blank" rel="noopener" href="https://www.pdflabs.com/tools/pdftk-server/">安装</a>。由于我使用的是 Windows，如果你是其他系统的话，请到上面茉莉花页面查看对应安装说明。</li>
+<li><a target="_blank" rel="noopener" href="https://www.pdflabs.com/tools/pdftk-server/">PDFtk Server</a> 上面的茉莉花插件需要，可帮助自动生成和添加 PDF 目录（仅在支持的情况下）。可通过 <a href="https://www.iamzs.top/archives/scoop-guidebook.html">Scoop</a> 安装 <code>scoop install pdftk</code>。当然，也可手动<a target="_blank" rel="noopener" href="https://www.pdflabs.com/tools/pdftk-server/">安装</a>。由于我使用的是 Windows，如果你是其他系统的话，请到上面茉莉花页面查看对应安装说明。</li>
 </ul>
 <h4 id="账号篇"><a href="#账号篇" class="headerlink" title="账号篇"></a>账号篇</h4><ul>
 <li><p>Zotero 账号，官网注册即可</p>
@@ -297,7 +297,10 @@
 </ul>
 <p><strong>Zotero Scihub 插件</strong></p>
 <ul>
-<li>根据实际情况修改 URL，如 <a target="_blank" rel="noopener" href="https://sci-hub.se/">https://sci-hub.se/</a></li>
+<li><p>取消勾选自动下载 PDF，在新版本中它可能会打断浏览器插件和茉莉花插件的文献下载</p>
+</li>
+<li><p>根据实际情况修改 URL，如 <a target="_blank" rel="noopener" href="https://sci-hub.se/">https://sci-hub.se/</a></p>
+</li>
 </ul>
 <p><strong>ZotFile 插件设置</strong></p>
 <ul>
