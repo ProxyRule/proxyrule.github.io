@@ -18,9 +18,9 @@ tags:
 
 #### 插件篇
 
-- [ZotFile](http://zotfile.com/) 可以方便添加附件及重命名。
+- [ZotFile](http://zotfile.com/) 可以方便添加附件及重命名
 
-- [Jasminum - 茉莉花](https://github.com/l0o0/jasminum) 对国内文献数据库（如：CNKI）支持良好
+- [Jasminum - 茉莉花](https://github.com/l0o0/jasminum) 对国内文献数据库（如：CNKI）支持良好，可自动下载文献 PDF
 
 - [Better BibTeX](https://retorque.re/zotero-better-bibtex/) 可选，如果你不知道 LaTeX 是啥的话
 
@@ -28,7 +28,7 @@ tags:
 
 #### 软件篇
 
-- [PDFtk Server](https://www.pdflabs.com/tools/pdftk-server/) 上面的茉莉花插件需要。可通过 [Scoop](https://www.iamzs.top/archives/scoop-guidebook.html) 安装 `scoop install pdftk`。当然，也可手动[安装](https://www.pdflabs.com/tools/pdftk-server/)。由于我使用的是 Windows，如果你是其他系统的话，请到上面茉莉花页面查看对应安装说明。
+- [PDFtk Server](https://www.pdflabs.com/tools/pdftk-server/) 上面的茉莉花插件需要，可帮助自动生成和添加 PDF 目录（仅在支持的情况下）。可通过 [Scoop](https://www.iamzs.top/archives/scoop-guidebook.html) 安装 `scoop install pdftk`。当然，也可手动[安装](https://www.pdflabs.com/tools/pdftk-server/)。由于我使用的是 Windows，如果你是其他系统的话，请到上面茉莉花页面查看对应安装说明。
 
 #### 账号篇
 
@@ -77,6 +77,8 @@ tags:
 - 在 Unofficial Translators Repository 中更新所有解析器，并在 浏览器插件设置 Advanced - Translators 中点击 Update Translators
 
 **Zotero Scihub 插件**
+
+- 取消勾选自动下载 PDF，在新版本中它可能会打断浏览器插件和茉莉花插件的文献下载
 
 - 根据实际情况修改 URL，如 https://sci-hub.se/
 
