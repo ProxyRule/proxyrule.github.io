@@ -28,7 +28,7 @@ tags:
 
 #### 软件篇
 
-- [PDFtk Server](https://www.pdflabs.com/tools/pdftk-server/) 上面的茉莉花插件需要，可帮助自动生成和添加 PDF 目录（仅在支持的情况下）。可通过 [Scoop](https://www.iamzs.top/archives/scoop-guidebook.html) 安装 `scoop install pdftk`。当然，也可手动[安装](https://www.pdflabs.com/tools/pdftk-server/)。由于我使用的是 Windows，如果你是其他系统的话，请到上面茉莉花页面查看对应安装说明。
+- [PDFtk Server](https://www.pdflabs.com/tools/pdftk-server/) 上面的茉莉花插件需要，可帮助自动生成和添加 PDF 书签（仅在支持的情况下，如国内硕博论文和一些外文期刊。下载硕博论文 PDF 版，可转到[知网海外版](https://chn.oversea.cnki.net/index/)）。你可通过 [Scoop](https://www.iamzs.top/archives/scoop-guidebook.html) 安装 `scoop install pdftk`。当然，也可手动[安装](https://www.pdflabs.com/tools/pdftk-server/)。由于我使用的是 Windows，如果你是其他系统的话，请到上面茉莉花页面查看对应安装说明。
 
 #### 账号篇
 
