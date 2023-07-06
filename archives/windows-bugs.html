@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.0.0">
-
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -15,54 +14,57 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iamzs.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zs.fyi","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="大约从 2015 年开始使用 Windows 10 系统，这是一个不断遇到坑然后想办法填坑的过程，以下便是遇到的各种稀奇古怪的问题以及可能的解决方案。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="专治 Windows 10 各种不服">
-<meta property="og:url" content="https://www.iamzs.top/archives/windows-bugs.html">
+<meta property="og:url" content="https://www.zs.fyi/archives/windows-bugs.html">
 <meta property="og:site_name" content="IamZS">
 <meta property="og:description" content="大约从 2015 年开始使用 Windows 10 系统，这是一个不断遇到坑然后想办法填坑的过程，以下便是遇到的各种稀奇古怪的问题以及可能的解决方案。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.iamzs.top/images/2001/Group-Policy.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2001/Task-Manager.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2001/Task-Scheduler.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2001/Windows-Update.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2001/AutoUpdate.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2001/Before.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2001/Registry.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2001/After.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2001/This-PC-Before.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2001/Disk-Management-Before.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2001/DiskPart.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2001/This-PC-After.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2001/Disk-Management-After.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2001/CPU.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2002/powercfg.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2002/default_settings.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2002/CsEnabled.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2011/diskpart.png">
-<meta property="og:image" content="https://www.iamzs.top/images/2011/disk-management.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2001/Group-Policy.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2001/Task-Manager.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2001/Task-Scheduler.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2001/Windows-Update.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2001/AutoUpdate.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2001/Before.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2001/Registry.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2001/After.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2001/This-PC-Before.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2001/Disk-Management-Before.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2001/DiskPart.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2001/This-PC-After.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2001/Disk-Management-After.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2001/CPU.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2002/powercfg.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2002/default_settings.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2002/CsEnabled.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2011/diskpart.png">
+<meta property="og:image" content="https://www.zs.fyi/images/2011/disk-management.png">
 <meta property="article:published_time" content="2020-01-23T11:28:46.000Z">
-<meta property="article:modified_time" content="2022-04-22T14:18:47.093Z">
+<meta property="article:modified_time" content="2023-07-06T15:29:39.645Z">
 <meta property="article:author" content="Zheng Shuai">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="Bug">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.iamzs.top/images/2001/Group-Policy.png">
+<meta name="twitter:image" content="https://www.zs.fyi/images/2001/Group-Policy.png">
 
 
-<link rel="canonical" href="https://www.iamzs.top/archives/windows-bugs.html">
+<link rel="canonical" href="https://www.zs.fyi/archives/windows-bugs.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.iamzs.top/archives/windows-bugs.html","path":"archives/windows-bugs.html","title":"专治 Windows 10 各种不服"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zs.fyi/archives/windows-bugs.html","path":"archives/windows-bugs.html","title":"专治 Windows 10 各种不服"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>专治 Windows 10 各种不服 | IamZS</title>
   
+
+
+
 
 
 
@@ -78,8 +80,8 @@
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
         <span class="toggle-line"></span>
@@ -99,7 +101,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
     </div>
   </div>
 </div>
@@ -107,26 +109,16 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
   </ul>
 </nav>
 
 
 
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -147,13 +139,13 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Zheng Shuai"
       src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">Zheng Shuai</p>
   <div class="site-description" itemprop="description">读书、写作、思考，或许有点技术。</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
@@ -168,36 +160,24 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
+  <div class="links-of-author animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/FDUZS" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;FDUZS" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/FDUZS" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;FDUZS" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
   </div>
-  <div class="cc-license site-overview-item animated" itemprop="license">
+  <div class="cc-license animated" itemprop="license">
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
   </div>
-
-
 
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
 
@@ -210,7 +190,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.iamzs.top/archives/windows-bugs.html">
+    <link itemprop="mainEntityOfPage" href="https://www.zs.fyi/archives/windows-bugs.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -221,7 +201,7 @@
       <meta itemprop="name" content="IamZS">
       <meta itemprop="description" content="读书、写作、思考，或许有点技术。">
     </span>
-    
+
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="专治 Windows 10 各种不服 | IamZS">
       <meta itemprop="description" content="">
@@ -246,7 +226,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-22 22:18:47" itemprop="dateModified" datetime="2022-04-22T22:18:47+08:00">2022-04-22</time>
+      <time title="修改时间：2023-07-06 23:29:39" itemprop="dateModified" datetime="2023-07-06T23:29:39+08:00">2023-07-06</time>
     </span>
 
   
@@ -258,8 +238,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <p>大约从 2015 年开始使用 Windows 10 系统，这是一个不断遇到坑然后想办法填坑的过程，以下便是遇到的各种稀奇古怪的问题以及可能的解决方案。</p>
+    <div class="post-body" itemprop="articleBody"><p>大约从 2015 年开始使用 Windows 10 系统，这是一个不断遇到坑然后想办法填坑的过程，以下便是遇到的各种稀奇古怪的问题以及可能的解决方案。</p>
 <span id="more"></span>
 
 <h3 id="Windows-10-开机后浏览器自动打开-MSN-中文网"><a href="#Windows-10-开机后浏览器自动打开-MSN-中文网" class="headerlink" title="Windows 10 开机后浏览器自动打开 MSN 中文网"></a>Windows 10 开机后浏览器自动打开 MSN 中文网</h3><p>重装系统后，遇到这个问题，得到微软社区的解答后问题解决，顺便记录一下。</p>
@@ -362,7 +341,7 @@
 <p>其实也不能算多了一个分区，这个分区原本应该是用于系统恢复的，本不该分配盘符，但估计是这次更新的 Bug 导致这样的问题。分配的盘符是跟在已占用的盘符之后，比如我外接了一个硬盘里面有两个分区，占用了 D 和 E，所以之后是 F。</p>
 <h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><p>网上搜索一番，发现有这个问题的还不在少数。但是很奇怪，我的另一台笔记本没有出现这种情况。</p>
 <p>下面是解决办法（感谢知乎用户 <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/fisher-sam-5">@Fisher Sam</a>）和我的参考示例：</p>
-<pre class="language-shell" data-language="shell"><code class="language-shell">以管理员权限运行命令提示符，逐行运行
+<pre class="language-bash" data-language="bash"><code class="language-bash">以管理员权限运行命令提示符，逐行运行
 
 diskpart
 
@@ -416,7 +395,7 @@ remove <span class="token assign-left variable">letter</span><span class="token 
 <p>那么问题来了，上面第一张图明明显示我的电脑不支持 S0 Standby，电池驱动管理却依然将其开启。我觉得很可能就是这个问题了。</p>
 <h3 id="恢复-Linux-U-盘启动盘在-Windows-下的使用"><a href="#恢复-Linux-U-盘启动盘在-Windows-下的使用" class="headerlink" title="恢复 Linux U 盘启动盘在 Windows 下的使用"></a>恢复 Linux U 盘启动盘在 Windows 下的使用</h3><p>通过 DD 方式制作 Linux 启动盘后，将 U 盘插在 Windows 笔记本上，要么在文件资源管理器中不显示或者显示可用空间只有 200MB，尽管在磁盘管理器中是正常的。而且，此时尝试直接格式化也是没有用的。可通过以下两步解决：</p>
 <p>第一步，调用 diskpart 命令</p>
-<pre class="language-shell" data-language="shell"><code class="language-shell">diskpart
+<pre class="language-bash" data-language="bash"><code class="language-bash">diskpart
 list disk
 <span class="token keyword">select</span> disk <span class="token operator">&lt;</span>number<span class="token operator">></span>  <span class="token comment"># &lt;number> 为实际磁盘编号</span>
 clean</code></pre>
@@ -435,7 +414,7 @@ clean</code></pre>
 
 
           <div class="reward-container">
-  <div>Buy me a coffee</div>
+  <div>请我一杯咖啡吧！</div>
   <button>
     赞赏
   </button>
@@ -461,10 +440,10 @@ clean</code></pre>
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://www.iamzs.top/archives/windows-bugs.html" title="专治 Windows 10 各种不服">https://www.iamzs.top/archives/windows-bugs.html</a>
+      <a href="https://www.zs.fyi/archives/windows-bugs.html" title="专治 Windows 10 各种不服">https://www.zs.fyi/archives/windows-bugs.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>
@@ -475,23 +454,25 @@ clean</code></pre>
   <div class="social-list">
 
       <div class="social-item">
-        <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
-          <span class="icon">
-            <i class="fab fa-weixin"></i>
+          <span class="social-link">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
           </span>
 
-          <span class="label">WeChat</span>
-        </a>
+          <img class="social-item-img" src="/images/wechat_channel.jpg">
       </div>
 
       <div class="social-item">
-        <a target="_blank" class="social-link" href="/atom.xml">
-          <span class="icon">
-            <i class="fa fa-rss"></i>
-          </span>
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
 
-          <span class="label">RSS</span>
-        </a>
+            <span class="label">RSS</span>
+          </a>
       </div>
   </div>
 </div>
@@ -530,15 +511,14 @@ clean</code></pre>
   <footer class="footer">
     <div class="footer-inner">
 
-
-<div class="copyright">
-  &copy; 2016 – 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Zheng Shuai</span>
-</div>
+  <div class="copyright">
+    &copy; 2016 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zheng Shuai</span>
+  </div>
 <div class="powered-by">
 	本网站由
 	<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="border-bottom: none;">
@@ -552,19 +532,37 @@ clean</code></pre>
   </footer>
 
   
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
-
-  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdn.jsdelivr.net/npm/pdfobject@2.2.7/pdfobject.min.js","integrity":"sha256-ph3Dk89VmuTVXG6x/RDzk53SU9LPdAh1tpv0UvnDZ2I="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdn.jsdelivr.net/npm/pdfobject@2.2.12/pdfobject.min.js","integrity":"sha256-g2xji1rlE3KsGVClvuxTbcR0Kn2+wtQADSff2Tbb4zA="},"url":"/lib/pdf/web/viewer.html"}</script>
   <script src="/js/third-party/tags/pdf.js"></script>
 
-  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js","integrity":"sha256-7wT34TI0pEBeEFoi4z+vhuSddGh6vUTMWdqJ2SDe2jg="}}</script>
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@10.2.3/dist/mermaid.min.js","integrity":"sha256-JFptYy4KzJ5OQP+Q9fubNf3cxpPPmZKqUOovyEONKrQ="}}</script>
   <script src="/js/third-party/tags/mermaid.js"></script>
+
+
 
 
 
