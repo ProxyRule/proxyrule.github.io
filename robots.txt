@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.zs.fyi/sitemap.xml
+Sitemap: https://zs.fyi/sitemap.xml
