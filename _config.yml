@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: IamZS
-subtitle: Zheng Shuai's blog
+title: 知识参考
+subtitle: ZS.FYI
 description: 读书、写作、思考，或许有点技术。
-keywords: Python, JavaScript, PHP, 前端, 数据分析及可视化, 公共管理
-author: Zheng Shuai
+keywords: Python, JavaScript, PHP
+author: Shuai Zheng
 language: zh-CN
 timezone: Asia/Shanghai
 

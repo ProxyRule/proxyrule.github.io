@@ -33,7 +33,7 @@ tags:
 
 - **官方服务器**：默认情况下，1P 和 Bitwarden 都是通过官方服务器来同步密码的，我感觉这俩的速度都差不多，可能后者要快那么一点。当然，有此感觉也可能是对 1P 的龟速怨念所致。
 
-- **自建服务器**：Bitwarden 的服务端、桌面端、移动端等都是开源的，它也非常慷慨大方地提供了通过 Docker 来自行部署的[方法](https://help.bitwarden.com/article/install-on-premise/)，并且全过程非常地简单。唯一的一点就是，要求服务器的内存至少 2GB。但是，有个兄弟用 Rust 实现了这一功能，并将[源码](https://github.com/dani-garcia/bitwarden_rs)公布在 GitHub 上，对服务器的要求大大降低。我在按照官方教程[部署](https://bitwarden.iamzs.ga/)（**开放至 2020/01/03 24:00:00**）完之后，与 [bitwarden_rs 版](https://pwd.iamzs.ga/)（**开放至 2020/01/03 24:00:00**）比较发现，在前者中那些高级账户的 features 仍然没有解锁或者说是根据你注册时使用的邮箱来决定是否解锁（邮箱账号是否已经是 Premium），而在 Rust 版中所有的功能都是可以直接用的。此外，在搭建过程中还是遇到不少坑的，比如通过官方的 Docker 安装后一直无法收到 Verification Email，后百般尝试才解决。搭建过程和踩的坑可能会另写一篇文章。
+- **自建服务器**：Bitwarden 的服务端、桌面端、移动端等都是开源的，它也非常慷慨大方地提供了通过 Docker 来自行部署的[方法](https://help.bitwarden.com/article/install-on-premise/)，并且全过程非常地简单。唯一的一点就是，要求服务器的内存至少 2GB。但是，有个兄弟用 Rust 实现了这一功能，并将[源码](https://github.com/dani-garcia/bitwarden_rs)公布在 GitHub 上，对服务器的要求大大降低。我在按照官方教程部署完之后，与 bitwarden_rs 版比较发现，在前者中那些高级账户的 features 仍然没有解锁或者说是根据你注册时使用的邮箱来决定是否解锁（邮箱账号是否已经是 Premium），而在 Rust 版中所有的功能都是可以直接用的。此外，在搭建过程中还是遇到不少坑的，比如通过官方的 Docker 安装后一直无法收到 Verification Email，后百般尝试才解决。搭建过程和踩的坑可能会另写一篇文章。
 
 更新：在删除测试用的密码时，我发现似乎官方版 Docker 搭建的同步和响应速度要快些，不知是不是心理作用。
 
