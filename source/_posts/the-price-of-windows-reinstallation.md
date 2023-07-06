@@ -66,7 +66,7 @@ tags:
 
 ✅ 已安装 - MATLAB ---> 学校购买授权，帐号登录
 
-✅ 已安装 - Navicat ---> 学校邮箱申请密钥,反激活完成
+✅ 已安装 - Navicat ---> 学校邮箱申请密钥，反激活完成
 
 ✅ 已安装 - Axure ---> 教育授权，本地反激活完成
 
@@ -138,7 +138,7 @@ tags:
 
 8. 垃圾小米笔记本，安装 git 时自动休眠睡死了，转向处理这一问题的 bug 分支。
 
-9. ~~初步判断是集成显卡驱动问题~~并不是，可能跟主板芯片和电池管理驱动有关，所以老老实实把所有驱动打了一遍。为了加快驱动下载速度，安装 Internet Download Manager，而密钥存储在 1Password 中，先下载安装 1P 。
+9. ~~初步判断是集成显卡驱动问题~~并不是，可能跟主板芯片和电池管理驱动有关，所以老老实实把所有驱动打了一遍。为了加快驱动下载速度，安装 Internet Download Manager，而密钥存储在 1Password 中，先下载安装 1P。
 
 10. 安装 git 后，将原来的 `.gitconfig` 文件复制到用户目录下覆盖新生成的配置文件
 
@@ -146,7 +146,7 @@ tags:
 
 12. 之前通过 Scoop 安装的一些软件虽然可以[无损迁移恢复使用](https://zs.fyi/archives/windows-open-with.html#Scoop-%E8%BF%81%E7%A7%BB%E5%8F%8A%E9%87%8D%E8%A3%85%E5%90%8E%E6%81%A2%E5%A4%8D%E4%BD%BF%E7%94%A8)，但最终还是决定全部重装一遍，完整记录下来。
 
-13. Scoop install：adb | android-sdk | anki | annie | aria2 | autohotkey | blender | bluescreenview | captura | chromedriver | concfg | curl | dark | dropit | everything | ffmpeg | figlet | fork | geckodriver | geekuninstaller | gimp | gpg | graphviz | honeyview | hugo | inkscape | joplin | lessmsi | motrix | msys2 | neovim | nodejs-lts | nvm | openjdk13 | openshot | pandoc | pandownload | php | proxifier-portable | pshazz | racket | screentogif | sharex | sqlite | sudo | sumatrapdf | telegram | time | touch | v2ray | v2rayn | vnote | vscode | which | winscp | yarn | youtube-dl | zotero
+13. Scoop install: adb | android-sdk | anki | annie | aria2 | autohotkey | blender | bluescreenview | captura | chromedriver | concfg | curl | dark | dropit | everything | ffmpeg | figlet | fork | geckodriver | geekuninstaller | gimp | gpg | graphviz | honeyview | hugo | inkscape | joplin | lessmsi | motrix | msys2 | neovim | nodejs-lts | nvm | openjdk13 | openshot | pandoc | pandownload | php | proxifier-portable | pshazz | racket | screentogif | sharex | sqlite | sudo | sumatrapdf | telegram | time | touch | v2ray | v2rayn | vnote | vscode | which | winscp | yarn | youtube-dl | zotero
 
 14. go 改为手动安装
 
