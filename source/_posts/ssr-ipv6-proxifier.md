@@ -26,7 +26,7 @@ tags:
 
 ### 客户端安装
 
-愿意尝试使用 [Scoop](https://www.iamzs.top/archives/scoop-guidebook.html) 的话，安装只需一条命令：`scoop install shadowsocksr-csharp`。
+愿意尝试使用 [Scoop](https://www.zs.fyi/archives/scoop-guidebook.html) 的话，安装只需一条命令：`scoop install shadowsocksr-csharp`。
 
 手动安装的话依然是：[某大型同性交友网站](https://github.com/shadowsocksrr/shadowsocksr-csharp/releases)。
 

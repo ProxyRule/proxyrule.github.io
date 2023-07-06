@@ -45,10 +45,10 @@ icon    : Font Awesome icon 名。text 和 icon 至少指定一个。
 #### 示例
 
 ```markdown
-{% button https://www.iamzs.top, IamZS, home fa-fw fa-lg, Zheng Shuai's blog %}
+{% button https://www.zs.fyi, IamZS, home fa-fw fa-lg, Zheng Shuai's blog %}
 ```
 
-{% button https://www.iamzs.top, IamZS, home fa-fw fa-lg, Zheng Shuai's blog %}
+{% button https://www.zs.fyi, IamZS, home fa-fw fa-lg, Zheng Shuai's blog %}
 
 更多示例可查阅该[文档](https://theme-next.js.org/docs/tag-plugins/button.html)。
 
