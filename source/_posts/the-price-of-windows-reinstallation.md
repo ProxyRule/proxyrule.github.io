@@ -132,7 +132,7 @@ tags:
 
 5. 登录微软账号同步设置和 OneDrive 文件，先进行简单设置和覆盖原有设置，如去掉固定在任务栏的快捷图标，将默认输入语言设置为中文、默认应用语言和系统显示语言设置为英文
 
-6. 安装 Scoop，参考的是之前写的 [Scoop 不完全上手指南](https://www.zs.fyi/archives/scoop-guidebook.html)。安装完后，用户文件夹下多了一个 `.config` 文件夹，里面有 Scoop 的配置文件
+6. 安装 Scoop，参考的是之前写的 [Scoop 不完全上手指南](https://zs.fyi/archives/scoop-guidebook.html)。安装完后，用户文件夹下多了一个 `.config` 文件夹，里面有 Scoop 的配置文件
 
 7. 先通过 Scoop 安装 shadowsocksr-csharp，前提是添加 extras bucket，而添加 extras bucket 的前提是安装 git 和 7zip。这一过程是异常痛苦的，网络环境并不太好，只能看着下载进度条慢慢地走……
 
@@ -144,7 +144,7 @@ tags:
 
 11. 安装完谷歌浏览器后，登录账号同步设置及插件，复制机场的订阅地址到小飞机，开启飞行模式
 
-12. 之前通过 Scoop 安装的一些软件虽然可以[无损迁移恢复使用](https://www.zs.fyi/archives/windows-open-with.html#Scoop-%E8%BF%81%E7%A7%BB%E5%8F%8A%E9%87%8D%E8%A3%85%E5%90%8E%E6%81%A2%E5%A4%8D%E4%BD%BF%E7%94%A8)，但最终还是决定全部重装一遍，完整记录下来。
+12. 之前通过 Scoop 安装的一些软件虽然可以[无损迁移恢复使用](https://zs.fyi/archives/windows-open-with.html#Scoop-%E8%BF%81%E7%A7%BB%E5%8F%8A%E9%87%8D%E8%A3%85%E5%90%8E%E6%81%A2%E5%A4%8D%E4%BD%BF%E7%94%A8)，但最终还是决定全部重装一遍，完整记录下来。
 
 13. Scoop install：adb | android-sdk | anki | annie | aria2 | autohotkey | blender | bluescreenview | captura | chromedriver | concfg | curl | dark | dropit | everything | ffmpeg | figlet | fork | geckodriver | geekuninstaller | gimp | gpg | graphviz | honeyview | hugo | inkscape | joplin | lessmsi | motrix | msys2 | neovim | nodejs-lts | nvm | openjdk13 | openshot | pandoc | pandownload | php | proxifier-portable | pshazz | racket | screentogif | sharex | sqlite | sudo | sumatrapdf | telegram | time | touch | v2ray | v2rayn | vnote | vscode | which | winscp | yarn | youtube-dl | zotero
 
