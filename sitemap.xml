@@ -11,78 +11,6 @@
   </url>
   
   <url>
-    <loc>https://zs.fyi/archives/ssr-ipv6-proxifier.html</loc>
-    
-    <lastmod>2023-07-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/start-over.html</loc>
-    
-    <lastmod>2023-07-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/the-price-of-windows-reinstallation.html</loc>
-    
-    <lastmod>2023-07-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/windows-bluescreen.html</loc>
-    
-    <lastmod>2023-07-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/windows-bugs.html</loc>
-    
-    <lastmod>2023-07-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/windows-open-with.html</loc>
-    
-    <lastmod>2023-07-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/xnheulpb.html</loc>
-    
-    <lastmod>2023-07-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/about/index.html</loc>
-    
-    <lastmod>2023-07-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://zs.fyi/archives/comparison-among-three-password-managers.html</loc>
     
     <lastmod>2023-07-06</lastmod>
@@ -192,6 +120,78 @@
   
   <url>
     <loc>https://zs.fyi/archives/ssh-proxycommand-proxyjump.html</loc>
+    
+    <lastmod>2023-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/ssr-ipv6-proxifier.html</loc>
+    
+    <lastmod>2023-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/start-over.html</loc>
+    
+    <lastmod>2023-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/the-price-of-windows-reinstallation.html</loc>
+    
+    <lastmod>2023-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/windows-bluescreen.html</loc>
+    
+    <lastmod>2023-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/windows-bugs.html</loc>
+    
+    <lastmod>2023-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/windows-open-with.html</loc>
+    
+    <lastmod>2023-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/xnheulpb.html</loc>
+    
+    <lastmod>2023-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/about/index.html</loc>
     
     <lastmod>2023-07-06</lastmod>
     
