@@ -39,7 +39,7 @@ tags:
 
 ### Scoop 迁移及重装后恢复使用
 
-根据 GitHub issue 「[How to use scoop after reinstalling the system](https://github.com/lukesampson/scoop/issues/2894)」 及参考该[文章](https://jiayaoo3o.github.io/2019/03/19/%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D%E4%BD%BF%E7%94%A8scoop/)（文章作者即为上述 issue 的提出者），步骤如下：
+根据 GitHub issue「[How to use scoop after reinstalling the system](https://github.com/lukesampson/scoop/issues/2894)」及参考该[文章](https://jiayaoo3o.github.io/2019/03/19/%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D%E4%BD%BF%E7%94%A8scoop/)（文章作者即为上述 issue 的提出者），步骤如下：
 
 1. 将 Scoop 安装目录完整保存至他处
 
