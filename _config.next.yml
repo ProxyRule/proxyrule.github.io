@@ -36,10 +36,10 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+# scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 # Dark Mode
 darkmode: false
@@ -103,8 +103,8 @@ menu_settings:
 
 sidebar:
   # Sidebar Position.
-  # position: left
-  position: right
+  position: left
+  # position: right
 
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
@@ -661,6 +661,13 @@ add_this_id:
 # Statistics and Analytics
 # See: https://theme-next.js.org/docs/third-party-services/statistics-and-analytics
 # ---------------------------------------------------------------
+
+# Umami Analytics
+umami:
+  enable: true
+  script_url: https://umami.shuaizheng.net/script.js # https://umami.example.com/script.js
+  website_id: 79f168a7-944e-4a85-8571-26a94d508d3e # <your website id>
+  host_url: # <your umami site url>
 
 # Google Analytics
 google_analytics:
