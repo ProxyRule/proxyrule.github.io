@@ -419,7 +419,7 @@ pjax: false
 fancybox: false
 mediumzoom: true
 
-lazyload: false
+lazyload: true
 
 pangu: true
 
