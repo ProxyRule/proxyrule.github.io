@@ -85,9 +85,9 @@
 </ul>
 ]]></content>
       <tags>
-        <tag>利器</tag>
-        <tag>软件</tag>
+        <tag>软件推荐</tag>
         <tag>密码管理</tag>
+        <tag>Bitwarden</tag>
       </tags>
   </entry>
   <entry>
@@ -206,8 +206,7 @@
 <p>科三的教练车也是皮卡，不过车况要好很多。科三除了要求打卡一定时长，还要达到一定的里程数，好像是 120 公里。我们这边，科三和科二的教练不是同一个。查了下，教我的好像是个十几年的老教练。</p>
 <p>练科三就舒服多了，起码可以轰油门了，教练教的也比较细致，可能是我问的多。一开始觉得科三挺难的，因为从座椅的调整到离合的使用，跟科二的习惯都不一样，加上档位跟速度的匹配，油门跟离合的配合，第一天刚上路的时候连直线行驶也做不到。教练一一讲解，还模拟了很多可能的突发情景以及该如何处置，比如紧急情况越级减档、车辆为什么会闯动、车辆熄火的原因。此外，还纠正了挂挡的动作。练了几天后，觉得其实也不难，只不过要注意的细节比较多。</p>
 <p>从 7 月 21 日开始，28 日满时长满公里数，历时 8 天。</p>
-<p><strong>小结</strong></p>
-<table>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><table>
 <thead>
 <tr>
 <th>科目</th>
@@ -268,19 +267,17 @@
 <td>距科三考试十天内无需预约</td>
 </tr>
 </tbody></table>
-<h3 id="考试流程"><a href="#考试流程" class="headerlink" title="考试流程"></a>考试流程</h3><h4 id="科一和科四-1"><a href="#科一和科四-1" class="headerlink" title="科一和科四"></a>科一和科四</h4><p>看完视频，把题库里的题刷一刷，基本不会有问题。科一错了一道，科四满分。</p>
+<h3 id="考试流程"><a href="#考试流程" class="headerlink" title="考试流程"></a>考试流程</h3><h4 id="科目一和科目四"><a href="#科目一和科目四" class="headerlink" title="科目一和科目四"></a>科目一和科目四</h4><p>看完视频，把题库里的题刷一刷，基本不会有问题。科一错了一道，科四满分。</p>
 <ol>
 <li>排队进场，核验身份证和人脸比对。</li>
-<li>上机考试开始：</li>
-</ol>
-<ul>
+<li>上机考试开始：<ul>
 <li>科一 45 分钟，100 道题，每题 1 分，90 分合格。</li>
 <li>科四 45 分钟，50 道题，每题 2 分，90 分合格。</li>
 </ul>
-<ol start="3">
+</li>
 <li>成绩合格，签字拍照离场。</li>
 </ol>
-<h4 id="科二-1"><a href="#科二-1" class="headerlink" title="科二"></a>科二</h4><p>每个项目都有时间要求，但据我观察一般不会出现超时的情况，所以无需担心，安心完成项目即可。项目中停车会扣分，但已完成当前项目未到达下一项目的行驶途中可以停车等待。满分 100 分，80 分合格。</p>
+<h4 id="科目二"><a href="#科目二" class="headerlink" title="科目二"></a>科目二</h4><p>每个项目都有时间要求，但据我观察一般不会出现超时的情况，所以无需担心，安心完成项目即可。项目中停车会扣分，但已完成当前项目未到达下一项目的行驶途中可以停车等待。满分 100 分，80 分合格。</p>
 <p>我们这边坡道定点停车和起步项目是不踩油门的。</p>
 <table>
 <thead>
@@ -316,7 +313,7 @@
 <td>争取别溜车和熄火</td>
 </tr>
 </tbody></table>
-<h4 id="科三-1"><a href="#科三-1" class="headerlink" title="科三"></a>科三</h4><p>我们这里开始考试前的准备动作是：先上车调整座椅，感受方向盘、离合、刹车和变速杆的力度。然后下车从车前左侧开始，逆时针顺序先后按车前左侧、车尾右侧、车前右侧的三个按钮，完成绕车一周。</p>
+<h4 id="科目三"><a href="#科目三" class="headerlink" title="科目三"></a>科目三</h4><p>我们这里开始考试前的准备动作是：先上车调整座椅，感受方向盘、离合、刹车和变速杆的力度。然后下车从车前左侧开始，逆时针顺序先后按车前左侧、车尾右侧、车前右侧的三个按钮，完成绕车一周。</p>
 <p>接着上车进行人脸识别验证，坐在副驾的考官点击「开始考试」，此后禁止说话和做小动作。先进行模拟夜间灯光考试，考试合格后听到语音指令就可以起步了。起步要求开左转向灯，按喇叭，挂一档，松手刹。</p>
 <p>无论是灯光考试还是有语音播报的道路考试项目，都不要抢语音，等播报完成后再进行相应操作，否则直接不合格。</p>
 <p>考场是双向四车道，中间有绿化带分隔，有三条考试线路。满分 100 分，90 分合格。</p>
@@ -410,8 +407,6 @@
 <p>拿到驾照只是合法驾驶机动车的开始，如何安全文明驾驶才是一生要修炼的课题。</p>
 ]]></content>
       <tags>
-        <tag>日常</tag>
-        <tag>驾照</tag>
         <tag>考试</tag>
       </tags>
   </entry>
@@ -436,8 +431,8 @@
 <ol start="5">
 <li>在用户文件夹下，即 <code>C:\Users\&lt;username&gt;</code> 下新建一个 <code>.earlystart</code> 文件，然后将想要 earlystart 的应用程序路径每行写入一个。比如我的是 <code>&quot;C:\Program Files (x86)\Stardock\Fences\Fences.exe&quot;</code></li>
 </ol>
-<p><mark>注意</mark>：如果你写入上述文件的某一行程序路径无效的话，那么在这之后指定的任何程序都不会被 earlystart</p>
-<ol start="6">
+<p>注意：如果你写入上述文件的某一行程序路径无效的话，那么在这之后指定的任何程序都不会被 earlystart</p>
+<ol>
 <li>重启观察是否有变化</li>
 </ol>
 <h3 id="如何卸载"><a href="#如何卸载" class="headerlink" title="如何卸载"></a>如何卸载</h3><ol>
@@ -450,7 +445,6 @@
 </ol>
 ]]></content>
       <tags>
-        <tag>软件</tag>
         <tag>Windows</tag>
       </tags>
   </entry>
@@ -503,8 +497,7 @@
 <p>不过到这里出现了两种路径，即只在桌面端使用 Zotero 和搭配 iPad 使用。在那之前，先介绍一下 Zotero，我们利用它保存的无非两种数据：文献条目信息及对应的附件，前者包含文献的元数据，方便写作时引用和著录，后者则是文献 PDF 和笔记等。Zotero 免费提供了 300MB 的存储空间，如果附件也一并同步的话肯定是不够的，当然你也可以年付 120 美金以获取无限空间，那样的话也不用纠结和折腾了。</p>
 <p>好了，确定你我都是暂时无力负担官方存储服务之人，在附件同步的选择上只剩下链接形式和 WebDAV 这两种，与上面两种路径分别对应。使用前者同步的是纯 PDF 文件，使用后者的话，每一条文献条目会同步两个文件，一个是 PDF 的压缩文件，另一个我也不知道是啥，可参看<a href="https://www.zotero.org/support/sync">官方文档</a>页面。</p>
 <p>因此，如果不需要在平板上看文献的话，我不建议使用 WebDAV 同步。顺嘴说一句，团队类型的文献库即使是附件也只能通过官方同步，不过个人使用可以先不管。</p>
-<h4 id="两种路径共有设置"><a href="#两种路径共有设置" class="headerlink" title="两种路径共有设置"></a>两种路径共有设置</h4><p><strong>General</strong></p>
-<ul>
+<h4 id="两种路径共有设置"><a href="#两种路径共有设置" class="headerlink" title="两种路径共有设置"></a>两种路径共有设置</h4><h5 id="General"><a href="#General" class="headerlink" title="General"></a>General</h5><ul>
 <li><p>取消勾选 Automatically take snapshots when creating items from web pages</p>
 <p>我不需要它自动创建文献的网页快照</p>
 </li>
@@ -515,12 +508,10 @@
 <p>不让软件自动打标签</p>
 </li>
 </ul>
-<p><strong>Cite</strong></p>
-<ul>
+<h5 id="Cite"><a href="#Cite" class="headerlink" title="Cite"></a>Cite</h5><ul>
 <li>添加国标引用和著录样式，留给你自己去探索</li>
 </ul>
-<p><strong>茉莉花插件设置</strong></p>
-<ul>
+<h5 id="茉莉花插件设置"><a href="#茉莉花插件设置" class="headerlink" title="茉莉花插件设置"></a>茉莉花插件设置</h5><ul>
 <li><p>勾选 Retrieve CNKI meta data when add Chinese articles</p>
 </li>
 <li><p>PDFtk Server Execute File Path 选择 PDFtk Server 安装目录下的 bin 目录</p>
@@ -528,32 +519,30 @@
 <li><p>在 Unofficial Translators Repository 中更新所有解析器，并在 浏览器插件设置 Advanced - Translators 中点击 Update Translators</p>
 </li>
 </ul>
-<p><strong>Zotero Scihub 插件</strong></p>
-<ul>
+<h5 id="Zotero-Scihub-插件"><a href="#Zotero-Scihub-插件" class="headerlink" title="Zotero Scihub 插件"></a>Zotero Scihub 插件</h5><ul>
 <li><p>取消勾选自动下载 PDF，在新版本中它可能会打断浏览器插件和茉莉花插件的文献下载</p>
 </li>
 <li><p>根据实际情况修改 URL，如 <a href="https://sci-hub.se/">https://sci-hub.se/</a></p>
 </li>
 </ul>
-<p><strong>ZotFile 插件设置</strong></p>
-<ul>
+<h5 id="ZotFile-插件设置"><a href="#ZotFile-插件设置" class="headerlink" title="ZotFile 插件设置"></a>ZotFile 插件设置</h5><ul>
 <li><p>Source Folder for Attaching Files 设置为常用的下载文件夹</p>
 </li>
 <li><p>Other Advanced Settings 选择 Always rename</p>
 </li>
 </ul>
-<h4 id="区别设置"><a href="#区别设置" class="headerlink" title="区别设置"></a>区别设置</h4><div class="tabs" id="two-ways"><ul class="nav-tabs"><li class="tab active"><a href="#two-ways-1">只在桌面端使用</a></li><li class="tab"><a href="#two-ways-2">搭配 iPad 使用</a></li></ul><div class="tab-content"><div class="tab-pane active" id="two-ways-1"><p><strong>Sync</strong></p>
+<h4 id="区别设置"><a href="#区别设置" class="headerlink" title="区别设置"></a>区别设置</h4><div class="tabs" id="two-ways"><ul class="nav-tabs"><li class="tab active"><a href="#two-ways-1">只在桌面端使用</a></li><li class="tab"><a href="#two-ways-2">搭配 iPad 使用</a></li></ul><div class="tab-content"><div class="tab-pane active" id="two-ways-1"><p>Sync</p>
 <ul>
 <li>登录账号并取消勾选 Sync automatically，也可保持勾选</li>
 </ul>
-<p><strong>Advanced</strong></p>
+<p>Advanced</p>
 <ul>
 <li>Base Directory 设置为 OneDrive PDF 文件夹，即你想放置和同步 PDF 文献的地方</li>
 </ul>
-<p><strong>ZotFile 插件设置</strong></p>
+<p>ZotFile 插件设置</p>
 <ul>
 <li>Custom Location 设置为上述 Base Directory</li>
-</ul></div><div class="tab-pane" id="two-ways-2"><p><strong>Sync</strong></p>
+</ul></div><div class="tab-pane" id="two-ways-2"><p>Sync</p>
 <ul>
 <li><p>登录账号并在下方文件同步处将默认的 Zotero 改为 WebDAV，这是坚果云官方提供的<a href="https://help.jianguoyun.com/?p=3168">帮助文档</a></p>
 </li>
@@ -580,8 +569,7 @@ Custom Location 设置为上述 Base Directory（弃用）
 Other Advanced Settings 选择 Always rename -->
 ]]></content>
       <tags>
-        <tag>利器</tag>
-        <tag>软件</tag>
+        <tag>软件推荐</tag>
         <tag>Zotero</tag>
         <tag>文献管理</tag>
       </tags>
@@ -592,23 +580,29 @@ Other Advanced Settings 选择 Always rename -->
     <content><![CDATA[<p>NexT 主题通过一些标签「插件」来增强页面显示效果和提供额外信息，如按钮、标注、流程图等。以下是我所需要的部分，完整文档可查阅<a href="https://theme-next.js.org/docs/tag-plugins/">这里</a>。</p>
 <span id="more"></span>
 
-<h3 id="居中引用"><a href="#居中引用" class="headerlink" title="居中引用"></a>居中引用</h3><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% centerquote %&#125;最好只有一行文字&#123;% endcenterquote %&#125;</span><br><span class="line"></span><br><span class="line">// 简写形式</span><br><span class="line">&#123;% cq %&#125;最好只有一行文字&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="居中引用"><a href="#居中引用" class="headerlink" title="居中引用"></a>居中引用</h3><p>用法</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% centerquote %&#125;最好只有一行文字&#123;% endcenterquote %&#125;</span><br><span class="line"></span><br><span class="line">// 简写形式</span><br><span class="line">&#123;% cq %&#125;最好只有一行文字&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><blockquote class="blockquote-center">
+<p>示例</p>
+<blockquote class="blockquote-center">
 <p>最好只有一行文字</p>
 
 </blockquote>
 
-<h3 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h3><h4 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% button url, text, icon [class], [title] %&#125;</span><br><span class="line"></span><br><span class="line">// 简写形式</span><br><span class="line">&#123;% btn url, text, icon [class], [title] %&#125;</span><br><span class="line"></span><br><span class="line">url     : URL 绝对或者相对路径。</span><br><span class="line">text    : 按钮显示的文字。text 和 icon 至少指定一个。</span><br><span class="line">icon    : Font Awesome icon 名。text 和 icon 至少指定一个。</span><br><span class="line">[class] : 可选参数。icon 样式：fa-fw | fa-lg | fa-2x | fa-3x | fa-4x | fa-5x</span><br><span class="line">[title] : 可选参数。鼠标悬停时显示的文字。</span><br></pre></td></tr></table></figure>
+<h3 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h3><p>用法</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% button url, text, icon [class], [title] %&#125;</span><br><span class="line"></span><br><span class="line">// 简写形式</span><br><span class="line">&#123;% btn url, text, icon [class], [title] %&#125;</span><br><span class="line"></span><br><span class="line">url     : URL 绝对或者相对路径。</span><br><span class="line">text    : 按钮显示的文字。text 和 icon 至少指定一个。</span><br><span class="line">icon    : Font Awesome icon 名。text 和 icon 至少指定一个。</span><br><span class="line">[class] : 可选参数。icon 样式：fa-fw | fa-lg | fa-2x | fa-3x | fa-4x | fa-5x</span><br><span class="line">[title] : 可选参数。鼠标悬停时显示的文字。</span><br></pre></td></tr></table></figure>
 
-<h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% button https://zs.fyi, ZS.FYI, home fa-fw fa-lg, 知识参考 %&#125;</span><br></pre></td></tr></table></figure>
+<p>示例</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% button https://zs.fyi, ZS.FYI, home fa-fw fa-lg, 知识参考 %&#125;</span><br></pre></td></tr></table></figure>
 
 <a class="btn" href="https://zs.fyi" title="知识参考"><i class="fa fa-home fa-fw fa-lg"></i>ZS.FYI</a>
 
 <p>更多示例可查阅该<a href="https://theme-next.js.org/docs/tag-plugins/button.html">文档</a>。</p>
-<h3 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h3><h4 id="用法-2"><a href="#用法-2" class="headerlink" title="用法"></a>用法</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% label [class]@text %&#125;</span><br><span class="line"></span><br><span class="line">[class] : 可选参数，未指定则使用浏览器默认样式。支持的值有：default | primary | success | info | warning | danger</span><br><span class="line">text    : &#x27;success @text&#x27; 和 &#x27;success@text&#x27; 的效果是一样的。</span><br></pre></td></tr></table></figure>
+<h3 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h3><p>用法</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% label [class]@text %&#125;</span><br><span class="line"></span><br><span class="line">[class] : 可选参数，未指定则使用浏览器默认样式。支持的值有：default | primary | success | info | warning | danger</span><br><span class="line">text    : &#x27;success @text&#x27; 和 &#x27;success@text&#x27; 的效果是一样的。</span><br></pre></td></tr></table></figure>
 
-<h4 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% label default @default %&#125;</span><br><span class="line">&#123;% label primary @primary %&#125;</span><br><span class="line">&#123;% label success @success %&#125;</span><br><span class="line"><span class="emphasis">*&#123;% label info @italic + info %&#125;*</span></span><br><span class="line"><span class="strong">**&#123;% label warning @bold + warning %&#125;**</span></span><br><span class="line">~~&#123;% label danger @strikethrough + danger %&#125;~~</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">mark</span>&gt;</span></span>mark<span class="language-xml"><span class="tag">&lt;/<span class="name">mark</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>示例</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% label default @default %&#125;</span><br><span class="line">&#123;% label primary @primary %&#125;</span><br><span class="line">&#123;% label success @success %&#125;</span><br><span class="line"><span class="emphasis">*&#123;% label info @italic + info %&#125;*</span></span><br><span class="line"><span class="strong">**&#123;% label warning @bold + warning %&#125;**</span></span><br><span class="line">~~&#123;% label danger @strikethrough + danger %&#125;~~</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">mark</span>&gt;</span></span>mark<span class="language-xml"><span class="tag">&lt;/<span class="name">mark</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><mark class="label default">default</mark></li>
@@ -620,10 +614,12 @@ Other Advanced Settings 选择 Always rename -->
 <li><mark>mark</mark></li>
 </ul>
 <h3 id="Mermaid"><a href="#Mermaid" class="headerlink" title="Mermaid"></a>Mermaid</h3><p>Mermaid 是一个用于画流程图、状态图、时序图、甘特图等的库，使用 JS 进行本地渲染。</p>
-<h4 id="用法-3"><a href="#用法-3" class="headerlink" title="用法"></a>用法</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% mermaid type %&#125;</span><br><span class="line">something</span><br><span class="line">&#123;% endmermaid %&#125;</span><br><span class="line"></span><br><span class="line">type : 类型</span><br></pre></td></tr></table></figure>
+<p>用法</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% mermaid type %&#125;</span><br><span class="line">something</span><br><span class="line">&#123;% endmermaid %&#125;</span><br><span class="line"></span><br><span class="line">type : 类型</span><br></pre></td></tr></table></figure>
 
 <p>可以在<a href="https://mermaid-js.github.io/mermaid/">这里</a>查阅支持哪些图及其详细用法。</p>
-<h4 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% mermaid pie %&#125;</span><br><span class="line">&quot;Dogs&quot; : 386</span><br><span class="line">&quot;Cats&quot; : 85</span><br><span class="line">&quot;Rats&quot; : 15</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>示例</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% mermaid pie %&#125;</span><br><span class="line">&quot;Dogs&quot; : 386</span><br><span class="line">&quot;Cats&quot; : 85</span><br><span class="line">&quot;Rats&quot; : 15</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
 
 <pre class="mermaid">
 pie
@@ -632,9 +628,11 @@ pie
 &quot;Rats&quot; : 15
 </pre>
 
-<h3 id="注释说明"><a href="#注释说明" class="headerlink" title="注释说明"></a>注释说明</h3><h4 id="用法-4"><a href="#用法-4" class="headerlink" title="用法"></a>用法</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note [class] [no-icon] [summary] %&#125;</span><br><span class="line">任何内容</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">[class]   : 可选参数。支持的值有：default | primary | success | info | warning | danger</span><br><span class="line">[no-icon] : 可选参数。不显示 icon</span><br><span class="line">[summary] : 可选参数。</span><br></pre></td></tr></table></figure>
+<h3 id="注释说明"><a href="#注释说明" class="headerlink" title="注释说明"></a>注释说明</h3><p>用法</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note [class] [no-icon] [summary] %&#125;</span><br><span class="line">任何内容</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">[class]   : 可选参数。支持的值有：default | primary | success | info | warning | danger</span><br><span class="line">[no-icon] : 可选参数。不显示 icon</span><br><span class="line">[summary] : 可选参数。</span><br></pre></td></tr></table></figure>
 
-<h4 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note %&#125;</span><br><span class="line">假装是四级标题，&#123;% label @未定义 %&#125;样式</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<p>示例</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note %&#125;</span><br><span class="line">假装是四级标题，&#123;% label @未定义 %&#125;样式</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
 
 <div class="note "><p>假装是四级标题，<mark class="label ">未定义</mark>样式</p>
 </div>
@@ -669,9 +667,11 @@ pie
 <div class="note danger"><p>假装是四级标题，<mark class="label danger">danger</mark> 样式</p>
 </div>
 
-<h3 id="嵌入-PDF"><a href="#嵌入-PDF" class="headerlink" title="嵌入 PDF"></a>嵌入 PDF</h3><h4 id="用法-5"><a href="#用法-5" class="headerlink" title="用法"></a>用法</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% pdf url [height] %&#125;</span><br><span class="line"></span><br><span class="line">url      : PDF 文件的绝对路径。</span><br><span class="line">[height] : 可选参数。高度（单位：px）。</span><br></pre></td></tr></table></figure>
+<h3 id="嵌入-PDF"><a href="#嵌入-PDF" class="headerlink" title="嵌入 PDF"></a>嵌入 PDF</h3><p>用法</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% pdf url [height] %&#125;</span><br><span class="line"></span><br><span class="line">url      : PDF 文件的绝对路径。</span><br><span class="line">[height] : 可选参数。高度（单位：px）。</span><br></pre></td></tr></table></figure>
 
-<h4 id="示例-5"><a href="#示例-5" class="headerlink" title="示例"></a>示例</h4><p>暂无</p>
+<p>示例</p>
+<p>暂无</p>
 ]]></content>
       <tags>
         <tag>Hexo</tag>
@@ -918,7 +918,8 @@ pie
 </ol>
 ]]></content>
       <tags>
-        <tag>利器</tag>
+        <tag>软件推荐</tag>
+        <tag>Windows</tag>
         <tag>Scoop</tag>
       </tags>
   </entry>
@@ -939,8 +940,6 @@ pie
 <p>再谈到它的 slogan，Scoop 其实只是一个 installer，我们不应把它当成像 pacman 一样的包管理器，用于掌管万物。根据自己的使用习惯，将其用来维护一些开发工具和小众软件（如 pandoc 这类没有自动更新功能的工具，以及另一些只能提示更新但不能自动更新的软件）即可。或许，可以将两者结合起来，一个 <code>scoop home [软件名]</code> 如 <code>scoop home 7zip</code> 轻松唤起浏览器并打开软件主页，手动下载安装完事，Scoop 深藏功与名。</p>
 ]]></content>
       <tags>
-        <tag>利器</tag>
-        <tag>软件</tag>
         <tag>Scoop</tag>
       </tags>
   </entry>
@@ -1344,7 +1343,6 @@ pie
 ]]></content>
       <tags>
         <tag>IPv6</tag>
-        <tag>校园网</tag>
       </tags>
   </entry>
   <entry>
@@ -1368,8 +1366,44 @@ pie
 <p>最后是一些丢掉了也不觉得可惜的日常碎碎念。</p>
 ]]></content>
       <tags>
-        <tag>日常</tag>
         <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Task Scheduler CPU 占用高</title>
+    <url>/archives/task-scheduler-cpu.html</url>
+    <content><![CDATA[<h3 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h3><ol>
+<li><p>风扇一直转个不停</p>
+</li>
+<li><p>查看任务管理器，CPU 占用一直是 99%</p>
+</li>
+<li><p>Task Scheduler 占用 CPU 高达 60%</p>
+</li>
+</ol>
+<span id="more"></span>
+
+<p><img data-src="/images/2001/Task-Manager.png" alt="Task-Manager" loading="lazy"></p>
+<h3 id="查找解决方案"><a href="#查找解决方案" class="headerlink" title="查找解决方案"></a>查找解决方案</h3><ol>
+<li><p>个人博客：<a href="http://www.tikas.me/task-scheduler-cpu-to-high/">http://www.tikas.me/task-scheduler-cpu-to-high/</a></p>
+</li>
+<li><p>微软社区，有个人提了个相同问题，可惜没人回答</p>
+</li>
+</ol>
+<h3 id="尝试解决"><a href="#尝试解决" class="headerlink" title="尝试解决"></a>尝试解决</h3><ol>
+<li><p><kbd>Start</kbd> + <kbd>X</kbd>，然后按 <kbd>G</kbd>，进入计算机管理</p>
+</li>
+<li><p>定位到<code>任务计划程序库 - Microsoft - Windows - Customer Experience Improvement Program</code>，在右侧可以看到有三个计划任务，都是微软所谓的客户体验改善计划</p>
+</li>
+<li><p>右键将它们全部禁止</p>
+</li>
+<li><p>重启</p>
+</li>
+</ol>
+<p><img data-src="/images/2001/Task-Scheduler.png" alt="Task-Scheduler" loading="lazy"></p>
+<h3 id="最终解决"><a href="#最终解决" class="headerlink" title="最终解决"></a>最终解决</h3><p>直接将这三个服务删除</p>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
@@ -1475,7 +1509,53 @@ pie
 ]]></content>
       <tags>
         <tag>Windows</tag>
-        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 10 升级 1803 后多了个 OEM 分区并分配盘符</title>
+    <url>/archives/windows-1803-oem.html</url>
+    <content><![CDATA[<h3 id="问题概述"><a href="#问题概述" class="headerlink" title="问题概述"></a>问题概述</h3><p>手上的一台联想笔记本在更新到 Windows 1803 版后在<code>此电脑 - 设备和驱动器</code>下「多了一个 OEM 分区」并且分配了盘符。</p>
+<span id="more"></span>
+
+<p><img data-src="/images/2001/This-PC-Before.png" alt="This-PC-Before" loading="lazy"></p>
+<p><img data-src="/images/2001/Disk-Management-Before.png" alt="Disk-Management-Before" loading="lazy"></p>
+<p>其实也不能算多了一个分区，这个分区原本应该是用于系统恢复的，本不该分配盘符，但估计是这次更新的 Bug 导致这样的问题。分配的盘符是跟在已占用的盘符之后，比如我外接了一个硬盘里面有两个分区，占用了 D 和 E，所以之后是 F。</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>网上搜索一番，发现有这个问题的还不在少数。但是很奇怪，我的另一台笔记本没有出现这种情况。</p>
+<p>下面是解决办法（感谢知乎用户 <a href="https://www.zhihu.com/people/fisher-sam-5">@Fisher Sam</a>）和我的参考示例：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">以管理员权限运行命令提示符，逐行运行</span><br><span class="line"></span><br><span class="line">diskpart</span><br><span class="line"></span><br><span class="line">list disk</span><br><span class="line"></span><br><span class="line">select disk x      （x 表示磁盘序号）</span><br><span class="line"></span><br><span class="line">list volume</span><br><span class="line"></span><br><span class="line">select volume x    （x 表示卷号）</span><br><span class="line"></span><br><span class="line">remove letter=x    （x 表示盘符）</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/images/2001/DiskPart.png" alt="DiskPart" loading="lazy"></p>
+<h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p><img data-src="/images/2001/This-PC-After.png" alt="This-PC-After" loading="lazy"></p>
+<p><img data-src="/images/2001/Disk-Management-After.png" alt="Disk-Management-After" loading="lazy"></p>
+<h3 id="参考方案"><a href="#参考方案" class="headerlink" title="参考方案"></a>参考方案</h3><ul>
+<li><p><a href="https://www.zhihu.com/question/275658123">windows10 升级 1803 版后为什么多了个 OEM 分区并多分配了一个盘符？</a></p>
+</li>
+<li><p><a href="https://www.zhihu.com/question/275581629">win10 升级 1803 后多了一个 OEM 分区是什么，可以取消吗？</a></p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 10 用户账号历史头像删除</title>
+    <url>/archives/windows-account-avatar.html</url>
+    <content><![CDATA[<p>数次更换头像后，在当前头像右侧会显示之前设置的头像，作为强迫症这是绝对不能忍的。</p>
+<span id="more"></span>
+
+<p>解决方法如下：</p>
+<ol>
+<li><p><kbd>Start</kbd> + <kbd>R</kbd> 运行，输入 <code>%APPDATA%\Microsoft\Windows\AccountPictures</code>，然后确定</p>
+</li>
+<li><p>进入后，可以看到之前使用过的头像，删除即可</p>
+</li>
+<li><p>再按下 <kbd>Start</kbd> + <kbd>I</kbd>，进入<code>账户 - 你的信息</code>，可以看到之前的头像已经消失</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
@@ -1513,66 +1593,53 @@ pie
     <content><![CDATA[<p>大约从 2015 年开始使用 Windows 10 系统，这是一个不断遇到坑然后想办法填坑的过程，以下便是遇到的各种稀奇古怪的问题以及可能的解决方案。</p>
 <span id="more"></span>
 
-<h3 id="Windows-10-开机后浏览器自动打开-MSN-中文网"><a href="#Windows-10-开机后浏览器自动打开-MSN-中文网" class="headerlink" title="Windows 10 开机后浏览器自动打开 MSN 中文网"></a>Windows 10 开机后浏览器自动打开 MSN 中文网</h3><p>重装系统后，遇到这个问题，得到微软社区的解答后问题解决，顺便记录一下。</p>
-<ol>
-<li><p>Windows 10 专业版，打开组策略</p>
+<ul>
+<li><p><a href="https://zs.fyi/archives/windows-msn.html">Windows 10 开机后浏览器自动打开 MSN 中文网</a></p>
 </li>
-<li><p>依次展开<code>计算机配置 - 管理模板 - 系统 - Internet 通信管理</code>，然后单击 <code>Internet 通信设置</code></p>
+<li><p><a href="https://zs.fyi/archives/task-scheduler-cpu.html">Task Scheduler CPU 占用高</a></p>
 </li>
-<li><p>在详细信息窗格中，双击<code>关闭 Windows 网络连接状态指示器活动测试</code>，然后单击<code>已启用</code>，点<code>确定</code></p>
+<li><p><a href="https://zs.fyi/archives/windows-igfxDTCM-igfxcui.html">删除 Windows 10 桌面右键菜单中的图形选项和图形属性选项</a></p>
 </li>
-</ol>
-<p><img data-src="/images/2001/Group-Policy.png" alt="Group-Policy" loading="lazy"></p>
-<h3 id="Task-Scheduler-CPU-占用高"><a href="#Task-Scheduler-CPU-占用高" class="headerlink" title="Task Scheduler CPU 占用高"></a>Task Scheduler CPU 占用高</h3><h4 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h4><ol>
-<li><p>风扇一直转个不停</p>
+<li><p><a href="https://zs.fyi/archives/windows-account-avatar.html">Windows 10 用户账号历史头像删除</a></p>
 </li>
-<li><p>查看任务管理器，CPU 占用一直是 99%</p>
+<li><p><a href="https://zs.fyi/archives/windows-disable-autoupdate.html">通过组策略禁用 Windows 10 系统的自动更新功能</a></p>
 </li>
-<li><p>Task Scheduler 占用 CPU 高达 60%</p>
+<li><p><a href="https://zs.fyi/archives/windows-start-program.html">如何删除 Windows 启动项中的「Program」</a></p>
 </li>
-</ol>
-<p><img data-src="/images/2001/Task-Manager.png" alt="Task-Manager" loading="lazy"></p>
-<h4 id="查找解决方案"><a href="#查找解决方案" class="headerlink" title="查找解决方案"></a>查找解决方案</h4><ol>
-<li><p>个人博客：<a href="http://www.tikas.me/task-scheduler-cpu-to-high/">http://www.tikas.me/task-scheduler-cpu-to-high/</a></p>
+<li><p><a href="https://zs.fyi/archives/windows-1803-oem.html">Windows 10 升级 1803 后多了个 OEM 分区并分配盘符</a></p>
 </li>
-<li><p>微软社区，有个人提了个相同问题，可惜没人回答</p>
+<li><p><a href="https://zs.fyi/archives/windows-cpu-0-4ghz.html">CPU 频率锁定在 0.4GHz</a></p>
 </li>
-</ol>
-<h4 id="尝试解决"><a href="#尝试解决" class="headerlink" title="尝试解决"></a>尝试解决</h4><ol>
-<li><p><kbd>Start</kbd> + <kbd>X</kbd>，然后按 <kbd>G</kbd>，进入计算机管理</p>
+<li><p><a href="https://zs.fyi/archives/windows-network-profile.html">更改无线网络名称</a></p>
 </li>
-<li><p>定位到<code>任务计划程序库 - Microsoft - Windows - Customer Experience Improvement Program</code>，在右侧可以看到有三个计划任务，都是微软所谓的客户体验改善计划</p>
+<li><p><a href="https://zs.fyi/archives/windows-sleep-bug.html">Windows 10 无法进入休眠状态</a></p>
 </li>
-<li><p>右键将它们全部禁止</p>
+<li><p><a href="https://zs.fyi/archives/windows-linux-udisk.html">恢复 Linux U 盘启动盘在 Windows 下的使用</a></p>
 </li>
-<li><p>重启</p>
-</li>
-</ol>
-<p><img data-src="/images/2001/Task-Scheduler.png" alt="Task-Scheduler" loading="lazy"></p>
-<h4 id="最终解决"><a href="#最终解决" class="headerlink" title="最终解决"></a>最终解决</h4><p>直接将这三个服务删除</p>
-<h3 id="删除-Windows-10-桌面右键菜单中的图形选项和图形属性选项"><a href="#删除-Windows-10-桌面右键菜单中的图形选项和图形属性选项" class="headerlink" title="删除 Windows 10 桌面右键菜单中的图形选项和图形属性选项"></a>删除 Windows 10 桌面右键菜单中的图形选项和图形属性选项</h3><p>我的笔记本电脑经常在集成显卡驱动更新后，点击鼠标右键要等很长时间才能弹出菜单来。作为强迫症自然不能忍受，网络搜索得到答案后，写在这作为记录。</p>
-<ol>
-<li><p>按下 <kbd>Start</kbd> + <kbd>R</kbd> 调出运行，输入 <code>regedit</code> 回车</p>
-</li>
-<li><p>在注册表编辑器中定位到</p>
-</li>
-</ol>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers</span><br></pre></td></tr></table></figure>
+</ul>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CPU 频率锁定在 0.4GHz</title>
+    <url>/archives/windows-cpu-0-4ghz.html</url>
+    <content><![CDATA[<p>如下图，查到的解决办法各不相同，最后哪一种都没有采用。我目前的做法是，将控制面板中的电池计划选项重置为默认，然后关机重启，勉强解决燃眉之急。</p>
+<span id="more"></span>
 
-<ol start="3">
-<li>删除 <code>igfxDTCM</code> 和 <code>igfxcui</code> 两个项目</li>
-</ol>
-<h3 id="Windows-10-用户账号历史头像删除"><a href="#Windows-10-用户账号历史头像删除" class="headerlink" title="Windows 10 用户账号历史头像删除"></a>Windows 10 用户账号历史头像删除</h3><p>数次更换头像后，在当前头像右侧会显示之前设置的头像，作为强迫症这是绝对不能忍的。</p>
-<p>解决方法如下：</p>
-<ol>
-<li><p><kbd>Start</kbd> + <kbd>R</kbd> 运行，输入 <code>%APPDATA%\Microsoft\Windows\AccountPictures</code>，然后确定</p>
-</li>
-<li><p>进入后，可以看到之前使用过的头像，删除即可</p>
-</li>
-<li><p>再按下 <kbd>Start</kbd> + <kbd>I</kbd>，进入<code>账户 - 你的信息</code>，可以看到之前的头像已经消失</p>
-</li>
-</ol>
-<h3 id="通过组策略禁用-Windows-10-系统的自动更新功能"><a href="#通过组策略禁用-Windows-10-系统的自动更新功能" class="headerlink" title="通过组策略禁用 Windows 10 系统的自动更新功能"></a>通过组策略禁用 Windows 10 系统的自动更新功能</h3><p>众所周知近年微软发布的更新经常性的导致 Windows 10 用户出现诸如开机黑屏或者是直接无法启动的问题。显然对于绝大多数用户来说能否稳定的运行才是最重要的，同时也并不是所有的用户都有能力解决各类问题。</p>
+<p><img data-src="/images/2001/CPU.png" alt="CPU" loading="lazy"></p>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>通过组策略禁用 Windows 10 系统的自动更新功能</title>
+    <url>/archives/windows-disable-autoupdate.html</url>
+    <content><![CDATA[<p>众所周知近年微软发布的更新经常性的导致 Windows 10 用户出现诸如开机黑屏或者是直接无法启动的问题。显然对于绝大多数用户来说能否稳定的运行才是最重要的，同时也并不是所有的用户都有能力解决各类问题。</p>
+<span id="more"></span>
+
 <p>例如近期微软更新致使部分用户启动出现黑屏的问题，虽有临时解决方案但并不是所有的设备都可顺利解决。因此还不如直接禁用掉 Windows 10 的自动更新策略，省的每次安装更新都是提心吊胆的害怕出现新的问题。基于安全性考虑我们是不会建议大家不安装更新的，此处的禁用只是禁用掉自动更新而不是禁用更新。</p>
 <ol>
 <li><p>快捷键 <kbd>Start</kbd> + <kbd>R</kbd> 打开运行，然后在运行的对话框中填写 <code>gpedit.msc</code> 并确定</p>
@@ -1585,75 +1652,41 @@ pie
 <li>双击<code>配置自动更新</code>即可打开如下图的新窗口，在新窗口左侧的选项里将默认的<code>未配置</code>更改为<code>已禁用</code>即可</li>
 </ol>
 <p><img data-src="/images/2001/AutoUpdate.png" alt="AutoUpdate" loading="lazy"></p>
-<div class="note info"><p>将此项变更为已禁用后系统将不再自动检查和下载安装更新， 因此你需要定期去更新里手动进行检查。原文出处为 <a href="https://www.landiannews.com/archives/40677.html">https://www.landiannews.com/archives/40677.html</a></p>
+<div class="note info"><p>将此项变更为已禁用后系统将不再自动检查和下载安装更新，因此你需要定期去更新里手动进行检查。原文出处为 <a href="https://www.landiannews.com/archives/40677.html">https://www.landiannews.com/archives/40677.html</a></p>
 </div>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>删除 Windows 10 桌面右键菜单中的图形选项和图形属性选项</title>
+    <url>/archives/windows-igfxDTCM-igfxcui.html</url>
+    <content><![CDATA[<p>我的笔记本电脑经常在集成显卡驱动更新后，点击鼠标右键要等很长时间才能弹出菜单来。作为强迫症自然不能忍受，网络搜索得到答案后，写在这作为记录。</p>
+<span id="more"></span>
 
-<h3 id="如何删除-Windows-启动项中的「Program」"><a href="#如何删除-Windows-启动项中的「Program」" class="headerlink" title="如何删除 Windows 启动项中的「Program」"></a>如何删除 Windows 启动项中的「Program」</h3><p>这世界对强迫症患者太不友好，比如 Windows 10 上某一软件卸载后可能启动项还残留在那里，并且名称显示为 Program（下图中第二项），关键他喵的名称前还没有软件图标（当然没有，毕竟软件已经被卸载了）。</p>
-<p><img data-src="/images/2001/Before.png" alt="Before" loading="lazy"></p>
-<p>通过 Google，得知可以修改注册表来解决这一问题：</p>
-<p>首先 <kbd>Start</kbd> + <kbd>R</kbd> 呼出运行，输入 <code>regedit</code>，回车打开注册表编辑器</p>
-<ul>
-<li>如果是要删除系统开机启动项（影响所有用户），注册表定位到</li>
-</ul>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>按下 <kbd>Start</kbd> + <kbd>R</kbd> 调出运行，输入 <code>regedit</code> 回车</p>
+</li>
+<li><p>在注册表编辑器中定位到</p>
+</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>如果要删除当前用户的开机启动项，注册表定位到</li>
-</ul>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>删除 <code>igfxDTCM</code> 和 <code>igfxcui</code> 两个项目</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>恢复 Linux U 盘启动盘在 Windows 下的使用</title>
+    <url>/archives/windows-linux-udisk.html</url>
+    <content><![CDATA[<p>通过 DD 方式制作 Linux 启动盘后，将 U 盘插在 Windows 笔记本上，要么在文件资源管理器中不显示或者显示可用空间只有 200MB，尽管在磁盘管理器中是正常的。而且，此时尝试直接格式化也是没有用的。可通过以下两步解决：</p>
+<span id="more"></span>
 
-<p>像我的就是属于第二种情况，进入注册表后找到已删除软件的残余启动项</p>
-<p><img data-src="/images/2001/Registry.png" alt="Registry" loading="lazy"></p>
-<p>接下来当然是右键直接删除该键值了</p>
-<p>然后再打开任务管理器，发现原本闹心的「Program」果然不见了，世界又充满爱了</p>
-<p><img data-src="/images/2001/After.png" alt="After" loading="lazy"></p>
-<h3 id="Windows-10-升级-1803-后多了个-OEM-分区并分配盘符"><a href="#Windows-10-升级-1803-后多了个-OEM-分区并分配盘符" class="headerlink" title="Windows 10 升级 1803 后多了个 OEM 分区并分配盘符"></a>Windows 10 升级 1803 后多了个 OEM 分区并分配盘符</h3><h4 id="问题概述"><a href="#问题概述" class="headerlink" title="问题概述"></a>问题概述</h4><p>手上的一台联想笔记本在更新到 Windows 1803 版后在<code>此电脑 - 设备和驱动器</code>下「多了一个 OEM 分区」并且分配了盘符。</p>
-<p><img data-src="/images/2001/This-PC-Before.png" alt="This-PC-Before" loading="lazy"></p>
-<p><img data-src="/images/2001/Disk-Management-Before.png" alt="Disk-Management-Before" loading="lazy"></p>
-<p>其实也不能算多了一个分区，这个分区原本应该是用于系统恢复的，本不该分配盘符，但估计是这次更新的 Bug 导致这样的问题。分配的盘符是跟在已占用的盘符之后，比如我外接了一个硬盘里面有两个分区，占用了 D 和 E，所以之后是 F。</p>
-<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><p>网上搜索一番，发现有这个问题的还不在少数。但是很奇怪，我的另一台笔记本没有出现这种情况。</p>
-<p>下面是解决办法（感谢知乎用户 <a href="https://www.zhihu.com/people/fisher-sam-5">@Fisher Sam</a>）和我的参考示例：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">以管理员权限运行命令提示符，逐行运行</span><br><span class="line"></span><br><span class="line">diskpart</span><br><span class="line"></span><br><span class="line">list disk</span><br><span class="line"></span><br><span class="line">select disk x      （x 表示磁盘序号）</span><br><span class="line"></span><br><span class="line">list volume</span><br><span class="line"></span><br><span class="line">select volume x    （x 表示卷号）</span><br><span class="line"></span><br><span class="line">remove letter=x    （x 表示盘符）</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="/images/2001/DiskPart.png" alt="DiskPart" loading="lazy"></p>
-<h4 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h4><p><img data-src="/images/2001/This-PC-After.png" alt="This-PC-After" loading="lazy"></p>
-<p><img data-src="/images/2001/Disk-Management-After.png" alt="Disk-Management-After" loading="lazy"></p>
-<h4 id="参考方案"><a href="#参考方案" class="headerlink" title="参考方案"></a>参考方案</h4><ul>
-<li><p><a href="https://www.zhihu.com/question/275658123">windows10 升级1803版后为什么多了个OEM分区并多分配了一个盘符？</a></p>
-</li>
-<li><p><a href="https://www.zhihu.com/question/275581629">win10升级1803后多了一个OEM分区是什么，可以取消吗？</a></p>
-</li>
-</ul>
-<h3 id="CPU-频率锁定在-0-4GHz"><a href="#CPU-频率锁定在-0-4GHz" class="headerlink" title="CPU 频率锁定在 0.4GHz"></a>CPU 频率锁定在 0.4GHz</h3><p>如下图，查到的解决办法各不相同，最后哪一种都没有采用。我目前的做法是，将控制面板中的电池计划选项重置为默认，然后关机重启，勉强解决燃眉之急。</p>
-<p><img data-src="/images/2001/CPU.png" alt="CPU" loading="lazy"></p>
-<h3 id="更改无线网络名称"><a href="#更改无线网络名称" class="headerlink" title="更改无线网络名称"></a>更改无线网络名称</h3><p>注册表地址如下：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles</span><br></pre></td></tr></table></figure>
-
-<h3 id="Windows-10-无法进入休眠状态"><a href="#Windows-10-无法进入休眠状态" class="headerlink" title="Windows 10 无法进入休眠状态"></a>Windows 10 无法进入休眠状态</h3><p>系统是 Windows 专业版 1909，电源计划是默认的平衡模式。有时候晚上合盖后第二天早上笔记本发烫，揭开盖子直接进入解锁登录界面。这次又遇到了，寻找解决方法，并稍作记录。</p>
-<p><img data-src="/images/2002/powercfg.png" alt="powercfg" loading="lazy"></p>
-<p>如图，我的笔记本支持 Standby (S3)、Hibernate、Hybrid Sleep、Fast Startup 这四种 sleep states。其中第一种就相当于 Sleep，中文翻译为睡眠；第二种则叫做休眠；第三种叫做混合睡眠；第四种是 Windows 8 时引入的快速关机。</p>
-<p>它们之间乱七八糟的关系和区别可以查看以下几篇文章：</p>
-<ul>
-<li><p><a href="https://blog.csdn.net/Listener_ri/article/details/50835594">hybrid-sleep和sleep以及hibernate的区别</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/y97523szb/article/details/78108777">睡眠、休眠、混合睡眠三者之间的关系与区别</a></p>
-</li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/47006051">关于电脑的待机、睡眠、休眠，这篇应该可以解答你所有的疑问</a>（推荐）</p>
-</li>
-<li><p><a href="https://www.howtogeek.com/102897/whats-the-difference-between-sleep-and-hibernate-in-windows/">What’s the Difference Between Sleep and Hibernate in Windows?</a></p>
-</li>
-</ul>
-<p>下面则是电池平衡模式下默认的高级设置选项，留存方便日后对比：</p>
-<p><img data-src="/images/2002/default_settings.png" alt="default_settings" loading="lazy"></p>
-<p>上面第三篇文章中有这么两段话点醒了我</p>
-<blockquote>
-<p>不过呢，随着移动时代的到来，微软肯定也意识到了这个问题。从 Windows 8 开始，Windows 引入了一种新的电源状态，叫 S0 Standby，或 Modern Standby，原理和我上面分析的 iPhone 熄屏状态一模一样。该状态在一些 Windows 平板电脑上实现了，比如 Surface Pro 3，小米平板二代。</p>
-<p>用 <code>powercfg -a</code> 可查得当前系统是否支持 Modern Standby。Modern Standby 又分两种，一种是不带网络连接的，另一种是带网络连接的，后者在进入熄屏状态时可以被特定的网络数据包唤醒（需要网卡硬件支持），后者也称 Connected Standby。小米平板二代支持后者。</p>
-</blockquote>
-<p>同时结合这篇<a href="https://blog.csdn.net/hanziyuan08/article/details/89396894">文章</a>，我查看了 <code>Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power</code> 下的「CsEnabled」键值，竟然默认是 1。</p>
-<p><img data-src="/images/2002/CsEnabled.png" alt="CsEnabled" loading="lazy"></p>
-<p>那么问题来了，上面第一张图明明显示我的电脑不支持 S0 Standby，电池驱动管理却依然将其开启。我觉得很可能就是这个问题了。</p>
-<h3 id="恢复-Linux-U-盘启动盘在-Windows-下的使用"><a href="#恢复-Linux-U-盘启动盘在-Windows-下的使用" class="headerlink" title="恢复 Linux U 盘启动盘在 Windows 下的使用"></a>恢复 Linux U 盘启动盘在 Windows 下的使用</h3><p>通过 DD 方式制作 Linux 启动盘后，将 U 盘插在 Windows 笔记本上，要么在文件资源管理器中不显示或者显示可用空间只有 200MB，尽管在磁盘管理器中是正常的。而且，此时尝试直接格式化也是没有用的。可通过以下两步解决：</p>
 <p>第一步，调用 diskpart 命令</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">diskpart</span><br><span class="line">list disk</span><br><span class="line">select disk &lt;number&gt;  # &lt;number&gt; 为实际磁盘编号</span><br><span class="line">clean</span><br></pre></td></tr></table></figure>
 
@@ -1663,7 +1696,37 @@ pie
 ]]></content>
       <tags>
         <tag>Windows</tag>
-        <tag>Bug</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 10 开机后浏览器自动打开 MSN 中文网</title>
+    <url>/archives/windows-msn.html</url>
+    <content><![CDATA[<p>重装系统后，遇到这个问题，得到微软社区的解答后问题解决，顺便记录一下。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>Windows 10 专业版，打开组策略</p>
+</li>
+<li><p>依次展开<code>计算机配置 - 管理模板 - 系统 - Internet 通信管理</code>，然后单击 <code>Internet 通信设置</code></p>
+</li>
+<li><p>在详细信息窗格中，双击<code>关闭 Windows 网络连接状态指示器活动测试</code>，然后单击<code>已启用</code>，点<code>确定</code></p>
+</li>
+</ol>
+<p><img data-src="/images/2001/Group-Policy.png" alt="Group-Policy" loading="lazy"></p>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>更改无线网络名称</title>
+    <url>/archives/windows-network-profile.html</url>
+    <content><![CDATA[<p>注册表地址如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
@@ -1703,6 +1766,69 @@ pie
 </ol>
 <h3 id="Python-3-8-1-下-Jupyter-Notebook-启动报错"><a href="#Python-3-8-1-下-Jupyter-Notebook-启动报错" class="headerlink" title="Python 3.8.1 下 Jupyter Notebook 启动报错"></a>Python 3.8.1 下 Jupyter Notebook 启动报错</h3><p>原本打算将 Python 转到也使用 Scoop 进行安装，安装完后发现 Python 版本为 3.8.1 并且启动不了 Jupyter Notebook。在网上查到，<a href="https://stackoverflow.com/questions/58422817/jupyter-notebook-with-python-3-8-notimplementederror">这一问题</a>跟 tornado 有关并且知道了解决办法。</p>
 <p>但是呢，我不想这样做，于是尝试通过 <code>scoop install python37</code> 安装 3.7.6 版本的 Python，安装完后 <code>scoop reset python37</code> 但是 <code>python --version</code> 依然显示 3.8.1。几番尝试之后，无果，作罢，不知道是我的姿势有问题，还是说 <code>scoop reset</code> 目前只支持在 2.7 和 3.x 版本之间切换而不支持 3.7.6 与 3.8.1 版本间的切换？最后，还是采用手动的方式安装 Python 3.7.6，问题解决。Python 和 R 也是为数不多的没有通过 Scoop 进行安装的软件。</p>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 10 无法进入休眠状态</title>
+    <url>/archives/windows-sleep-bug.html</url>
+    <content><![CDATA[<p>系统是 Windows 专业版 1909，电源计划是默认的平衡模式。有时候晚上合盖后第二天早上笔记本发烫，揭开盖子直接进入解锁登录界面。这次又遇到了，寻找解决方法，并稍作记录。</p>
+<span id="more"></span>
+
+<p><img data-src="/images/2002/powercfg.png" alt="powercfg" loading="lazy"></p>
+<p>如图，我的笔记本支持 Standby (S3)、Hibernate、Hybrid Sleep、Fast Startup 这四种 sleep states。其中第一种就相当于 Sleep，中文翻译为睡眠；第二种则叫做休眠；第三种叫做混合睡眠；第四种是 Windows 8 时引入的快速关机。</p>
+<p>它们之间乱七八糟的关系和区别可以查看以下几篇文章：</p>
+<ul>
+<li><p><a href="https://blog.csdn.net/Listener_ri/article/details/50835594">hybrid-sleep 和 sleep 以及 hibernate 的区别</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/y97523szb/article/details/78108777">睡眠、休眠、混合睡眠三者之间的关系与区别</a></p>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/47006051">关于电脑的待机、睡眠、休眠，这篇应该可以解答你所有的疑问</a>（推荐）</p>
+</li>
+<li><p><a href="https://www.howtogeek.com/102897/whats-the-difference-between-sleep-and-hibernate-in-windows/">What’s the Difference Between Sleep and Hibernate in Windows?</a></p>
+</li>
+</ul>
+<p>下面则是电池平衡模式下默认的高级设置选项，留存方便日后对比：</p>
+<p><img data-src="/images/2002/default_settings.png" alt="default_settings" loading="lazy"></p>
+<p>上面第三篇文章中有这么两段话点醒了我</p>
+<blockquote>
+<p>不过呢，随着移动时代的到来，微软肯定也意识到了这个问题。从 Windows 8 开始，Windows 引入了一种新的电源状态，叫 S0 Standby，或 Modern Standby，原理和我上面分析的 iPhone 熄屏状态一模一样。该状态在一些 Windows 平板电脑上实现了，比如 Surface Pro 3，小米平板二代。</p>
+<p>用 <code>powercfg -a</code> 可查得当前系统是否支持 Modern Standby。Modern Standby 又分两种，一种是不带网络连接的，另一种是带网络连接的，后者在进入熄屏状态时可以被特定的网络数据包唤醒（需要网卡硬件支持），后者也称 Connected Standby。小米平板二代支持后者。</p>
+</blockquote>
+<p>同时结合这篇<a href="https://blog.csdn.net/hanziyuan08/article/details/89396894">文章</a>，我查看了 <code>Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power</code> 下的「CsEnabled」键值，竟然默认是 1。</p>
+<p><img data-src="/images/2002/CsEnabled.png" alt="CsEnabled" loading="lazy"></p>
+<p>那么问题来了，上面第一张图明明显示我的电脑不支持 S0 Standby，电池驱动管理却依然将其开启。我觉得很可能就是这个问题了。</p>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何删除 Windows 启动项中的「Program」</title>
+    <url>/archives/windows-start-program.html</url>
+    <content><![CDATA[<p>这世界对强迫症患者太不友好，比如 Windows 10 上某一软件卸载后可能启动项还残留在那里，并且名称显示为 Program（下图中第二项），关键他喵的名称前还没有软件图标（当然没有，毕竟软件已经被卸载了）。</p>
+<span id="more"></span>
+
+<p><img data-src="/images/2001/Before.png" alt="Before" loading="lazy"></p>
+<p>通过 Google，得知可以修改注册表来解决这一问题：</p>
+<p>首先 <kbd>Start</kbd> + <kbd>R</kbd> 呼出运行，输入 <code>regedit</code>，回车打开注册表编辑器</p>
+<ul>
+<li>如果是要删除系统开机启动项（影响所有用户），注册表定位到</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果要删除当前用户的开机启动项，注册表定位到</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run</span><br></pre></td></tr></table></figure>
+
+<p>像我的就是属于第二种情况，进入注册表后找到已删除软件的残余启动项</p>
+<p><img data-src="/images/2001/Registry.png" alt="Registry" loading="lazy"></p>
+<p>接下来当然是右键直接删除该键值了</p>
+<p>然后再打开任务管理器，发现原本闹心的「Program」果然不见了，世界又充满爱了</p>
+<p><img data-src="/images/2001/After.png" alt="After" loading="lazy"></p>
 ]]></content>
       <tags>
         <tag>Windows</tag>
@@ -1757,7 +1883,6 @@ pie
 <p>有兴趣，可前往小鹤双拼官网进一步学习：<a href="https://flypy.com/index.html">小鹤双拼输入法</a></p>
 ]]></content>
       <tags>
-        <tag>利器</tag>
         <tag>小鹤双拼</tag>
         <tag>输入法</tag>
       </tags>
