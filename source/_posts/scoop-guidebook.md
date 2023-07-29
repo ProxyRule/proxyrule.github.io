@@ -3,7 +3,8 @@ title: Scoop 不完全上手指南
 date: 2020-01-03 13:11:06
 tags:
   - Scoop
-  - 利器
+  - 软件推荐
+  - Windows
 ---
 
 {% note info %}

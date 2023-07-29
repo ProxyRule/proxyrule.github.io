@@ -3,7 +3,6 @@ title: 用 IPv6 来拯救你的校园网
 date: 2020-01-10 11:33:45
 tags:
   - IPv6
-  - 校园网
 ---
 
 {% note info %}

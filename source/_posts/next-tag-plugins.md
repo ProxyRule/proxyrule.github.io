@@ -12,7 +12,7 @@ NexT 主题通过一些标签「插件」来增强页面显示效果和提供额
 
 ### 居中引用
 
-#### 用法
+用法
 
 ```markdown
 {% centerquote %}最好只有一行文字{% endcenterquote %}
@@ -21,13 +21,13 @@ NexT 主题通过一些标签「插件」来增强页面显示效果和提供额
 {% cq %}最好只有一行文字{% endcq %}
 ```
 
-#### 示例
+示例
 
 {% centerquote %}最好只有一行文字{% endcenterquote %}
 
 ### 按钮
 
-#### 用法
+用法
 
 ```markdown
 {% button url, text, icon [class], [title] %}
@@ -42,7 +42,7 @@ icon    : Font Awesome icon 名。text 和 icon 至少指定一个。
 [title] : 可选参数。鼠标悬停时显示的文字。
 ```
 
-#### 示例
+示例
 
 ```markdown
 {% button https://zs.fyi, ZS.FYI, home fa-fw fa-lg, 知识参考 %}
@@ -54,7 +54,7 @@ icon    : Font Awesome icon 名。text 和 icon 至少指定一个。
 
 ### 标注
 
-#### 用法
+用法
 
 ```markdown
 {% label [class]@text %}
@@ -63,7 +63,7 @@ icon    : Font Awesome icon 名。text 和 icon 至少指定一个。
 text    : 'success @text' 和 'success@text' 的效果是一样的。
 ```
 
-#### 示例
+示例
 
 ```markdown
 {% label default @default %}
@@ -87,7 +87,7 @@ text    : 'success @text' 和 'success@text' 的效果是一样的。
 
 Mermaid 是一个用于画流程图、状态图、时序图、甘特图等的库，使用 JS 进行本地渲染。
 
-#### 用法
+用法
 
 ```markdown
 {% mermaid type %}
@@ -99,7 +99,7 @@ type : 类型
 
 可以在[这里](https://mermaid-js.github.io/mermaid/)查阅支持哪些图及其详细用法。
 
-#### 示例
+示例
 
 ```markdown
 {% mermaid pie %}
@@ -117,7 +117,7 @@ type : 类型
 
 ### 注释说明
 
-#### 用法
+用法
 
 ```markdown
 {% note [class] [no-icon] [summary] %}
@@ -129,7 +129,7 @@ type : 类型
 [summary] : 可选参数。
 ```
 
-#### 示例
+示例
 
 ```markdown
 {% note %}
@@ -203,7 +203,7 @@ type : 类型
 
 ### 嵌入 PDF
 
-#### 用法
+用法
 
 ```markdown
 {% pdf url [height] %}
@@ -212,6 +212,6 @@ url      : PDF 文件的绝对路径。
 [height] : 可选参数。高度（单位：px）。
 ```
 
-#### 示例
+示例
 
 暂无

@@ -3,7 +3,6 @@ title: 如何让应用在进入桌面前启动
 date: 2020-01-17 17:54:29
 tags:
   - Windows
-  - 软件
 ---
 
 Windows 10 上安装了 [Fences](https://www.stardock.com/products/fences/) 用来管理桌面上一些常用文件（夹），虽然它被设置为开机自启，但是在进入桌面后很长一段时间内它还处于启动状态，桌面文件不能迅速加载出来。受[如何调整 Windows 10 软件开机启动顺序](https://meta.appinn.net/t/windows-10-windows-10/13337)启发，将这一过程记录下来，同时加入了前文中未提到的一些细节、注意事项以及如何卸载。
@@ -26,9 +25,9 @@ Windows 10 上安装了 [Fences](https://www.stardock.com/products/fences/) 用�
 
 5. 在用户文件夹下，即 `C:\Users\<username>` 下新建一个 `.earlystart` 文件，然后将想要 earlystart 的应用程序路径每行写入一个。比如我的是 `"C:\Program Files (x86)\Stardock\Fences\Fences.exe"`
 
-<mark>注意</mark>：如果你写入上述文件的某一行程序路径无效的话，那么在这之后指定的任何程序都不会被 earlystart
+注意：如果你写入上述文件的某一行程序路径无效的话，那么在这之后指定的任何程序都不会被 earlystart
 
-6. 重启观察是否有变化
+1. 重启观察是否有变化
 
 ### 如何卸载
 

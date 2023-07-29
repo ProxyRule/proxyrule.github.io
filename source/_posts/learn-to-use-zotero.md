@@ -3,8 +3,7 @@ title: 尝试系统学习使用 Zotero
 date: 2020-01-06 13:55:51
 tags:
   - Zotero
-  - 利器
-  - 软件
+  - 软件推荐
   - 文献管理
 ---
 
@@ -50,7 +49,7 @@ tags:
 
 #### 两种路径共有设置
 
-**General**
+##### General
 
 - 取消勾选 Automatically take snapshots when creating items from web pages
 
@@ -64,11 +63,11 @@ tags:
 
   不让软件自动打标签
 
-**Cite**
+##### Cite
 
 - 添加国标引用和著录样式，留给你自己去探索
 
-**茉莉花插件设置**
+##### 茉莉花插件设置
 
 - 勾选 Retrieve CNKI meta data when add Chinese articles
 
@@ -76,13 +75,13 @@ tags:
 
 - 在 Unofficial Translators Repository 中更新所有解析器，并在 浏览器插件设置 Advanced - Translators 中点击 Update Translators
 
-**Zotero Scihub 插件**
+##### Zotero Scihub 插件
 
 - 取消勾选自动下载 PDF，在新版本中它可能会打断浏览器插件和茉莉花插件的文献下载
 
-- 根据实际情况修改 URL，如 https://sci-hub.se/
+- 根据实际情况修改 URL，如 <https://sci-hub.se/>
 
-**ZotFile 插件设置**
+##### ZotFile 插件设置
 
 - Source Folder for Attaching Files 设置为常用的下载文件夹
 
@@ -92,21 +91,21 @@ tags:
 
 {% tabs Two ways %}
 <!-- tab 只在桌面端使用 -->
-**Sync**
+Sync
 
 - 登录账号并取消勾选 Sync automatically，也可保持勾选
 
-**Advanced**
+Advanced
 
 - Base Directory 设置为 OneDrive PDF 文件夹，即你想放置和同步 PDF 文献的地方
 
-**ZotFile 插件设置**
+ZotFile 插件设置
 
 - Custom Location 设置为上述 Base Directory
 <!-- endtab -->
 
 <!-- tab 搭配 iPad 使用 -->
-**Sync**
+Sync
 
 - 登录账号并在下方文件同步处将默认的 Zotero 改为 WebDAV，这是坚果云官方提供的[帮助文档](https://help.jianguoyun.com/?p=3168)
 
