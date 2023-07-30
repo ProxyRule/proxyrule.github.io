@@ -11,33 +11,6 @@
   </url>
   
   <url>
-    <loc>https://zs.fyi/archives/docker-tutorial.html</loc>
-    
-    <lastmod>2023-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/driver-license.html</loc>
-    
-    <lastmod>2023-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/early-start.html</loc>
-    
-    <lastmod>2023-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://zs.fyi/archives/excel-2016-blank.html</loc>
     
     <lastmod>2023-07-30</lastmod>
@@ -128,6 +101,15 @@
   </url>
   
   <url>
+    <loc>https://zs.fyi/archives/task-scheduler-cpu.html</loc>
+    
+    <lastmod>2023-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zs.fyi/archives/the-price-of-windows-reinstallation.html</loc>
     
     <lastmod>2023-07-30</lastmod>
@@ -138,15 +120,6 @@
   
   <url>
     <loc>https://zs.fyi/archives/windows-1803-oem.html</loc>
-    
-    <lastmod>2023-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/task-scheduler-cpu.html</loc>
     
     <lastmod>2023-07-30</lastmod>
     
@@ -291,6 +264,33 @@
   
   <url>
     <loc>https://zs.fyi/archives/computer-font.html</loc>
+    
+    <lastmod>2023-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/docker-tutorial.html</loc>
+    
+    <lastmod>2023-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/driver-license.html</loc>
+    
+    <lastmod>2023-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/early-start.html</loc>
     
     <lastmod>2023-07-30</lastmod>
     

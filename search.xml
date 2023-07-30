@@ -1370,6 +1370,43 @@ pie
       </tags>
   </entry>
   <entry>
+    <title>Task Scheduler CPU 占用高</title>
+    <url>/archives/task-scheduler-cpu.html</url>
+    <content><![CDATA[<h3 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h3><ol>
+<li><p>风扇一直转个不停</p>
+</li>
+<li><p>查看任务管理器，CPU 占用一直是 99%</p>
+</li>
+<li><p>Task Scheduler 占用 CPU 高达 60%</p>
+</li>
+</ol>
+<span id="more"></span>
+
+<p><img data-src="/images/2001/Task-Manager.png" alt="Task-Manager" loading="lazy"></p>
+<h3 id="查找解决方案"><a href="#查找解决方案" class="headerlink" title="查找解决方案"></a>查找解决方案</h3><ol>
+<li><p>个人博客：<a href="http://www.tikas.me/task-scheduler-cpu-to-high/">http://www.tikas.me/task-scheduler-cpu-to-high/</a></p>
+</li>
+<li><p>微软社区，有个人提了个相同问题，可惜没人回答</p>
+</li>
+</ol>
+<h3 id="尝试解决"><a href="#尝试解决" class="headerlink" title="尝试解决"></a>尝试解决</h3><ol>
+<li><p><kbd>Start</kbd> + <kbd>X</kbd>，然后按 <kbd>G</kbd>，进入计算机管理</p>
+</li>
+<li><p>定位到<code>任务计划程序库 - Microsoft - Windows - Customer Experience Improvement Program</code>，在右侧可以看到有三个计划任务，都是微软所谓的客户体验改善计划</p>
+</li>
+<li><p>右键将它们全部禁止</p>
+</li>
+<li><p>重启</p>
+</li>
+</ol>
+<p><img data-src="/images/2001/Task-Scheduler.png" alt="Task-Scheduler" loading="lazy"></p>
+<h3 id="最终解决"><a href="#最终解决" class="headerlink" title="最终解决"></a>最终解决</h3><p>直接将这三个服务删除</p>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>重装系统的成本及前后工作</title>
     <url>/archives/the-price-of-windows-reinstallation.html</url>
     <content><![CDATA[<p>这次重装系统（为何要重装有兴趣的可翻看上上篇）我是一万个不愿意的，因为我知道系统重装的成本有多大。就单纯装个系统来说可能只需要十几分钟，但是装系统前的准备工作（主要是备份和制作安装启动 U 盘）以及系统装完后的恢复备份、软件安装调试、系统设置等，要想完全恢复之前的使用环境，差不多得需要一天的时间。现在是晚上的 10:42，先记录下该做的一些工作，按步骤来就不会出错。</p>
@@ -1496,43 +1533,6 @@ pie
 <li><p><a href="https://www.zhihu.com/question/275581629">win10 升级 1803 后多了一个 OEM 分区是什么，可以取消吗？</a></p>
 </li>
 </ul>
-]]></content>
-      <tags>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Task Scheduler CPU 占用高</title>
-    <url>/archives/task-scheduler-cpu.html</url>
-    <content><![CDATA[<h3 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h3><ol>
-<li><p>风扇一直转个不停</p>
-</li>
-<li><p>查看任务管理器，CPU 占用一直是 99%</p>
-</li>
-<li><p>Task Scheduler 占用 CPU 高达 60%</p>
-</li>
-</ol>
-<span id="more"></span>
-
-<p><img data-src="/images/2001/Task-Manager.png" alt="Task-Manager" loading="lazy"></p>
-<h3 id="查找解决方案"><a href="#查找解决方案" class="headerlink" title="查找解决方案"></a>查找解决方案</h3><ol>
-<li><p>个人博客：<a href="http://www.tikas.me/task-scheduler-cpu-to-high/">http://www.tikas.me/task-scheduler-cpu-to-high/</a></p>
-</li>
-<li><p>微软社区，有个人提了个相同问题，可惜没人回答</p>
-</li>
-</ol>
-<h3 id="尝试解决"><a href="#尝试解决" class="headerlink" title="尝试解决"></a>尝试解决</h3><ol>
-<li><p><kbd>Start</kbd> + <kbd>X</kbd>，然后按 <kbd>G</kbd>，进入计算机管理</p>
-</li>
-<li><p>定位到<code>任务计划程序库 - Microsoft - Windows - Customer Experience Improvement Program</code>，在右侧可以看到有三个计划任务，都是微软所谓的客户体验改善计划</p>
-</li>
-<li><p>右键将它们全部禁止</p>
-</li>
-<li><p>重启</p>
-</li>
-</ol>
-<p><img data-src="/images/2001/Task-Scheduler.png" alt="Task-Scheduler" loading="lazy"></p>
-<h3 id="最终解决"><a href="#最终解决" class="headerlink" title="最终解决"></a>最终解决</h3><p>直接将这三个服务删除</p>
 ]]></content>
       <tags>
         <tag>Windows</tag>
