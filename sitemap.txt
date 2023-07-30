@@ -1,4 +1,9 @@
 https://zs.fyi/tags/index.html
+https://zs.fyi/archives/comparison-among-three-password-managers.html
+https://zs.fyi/archives/computer-font.html
+https://zs.fyi/archives/docker-tutorial.html
+https://zs.fyi/archives/driver-license.html
+https://zs.fyi/archives/early-start.html
 https://zs.fyi/archives/excel-2016-blank.html
 https://zs.fyi/archives/learn-to-use-zotero.html
 https://zs.fyi/archives/next-tag-plugins.html
@@ -26,11 +31,6 @@ https://zs.fyi/archives/windows-sleep-bug.html
 https://zs.fyi/archives/windows-start-program.html
 https://zs.fyi/archives/xnheulpb.html
 https://zs.fyi/about/index.html
-https://zs.fyi/archives/comparison-among-three-password-managers.html
-https://zs.fyi/archives/computer-font.html
-https://zs.fyi/archives/docker-tutorial.html
-https://zs.fyi/archives/driver-license.html
-https://zs.fyi/archives/early-start.html
 https://zs.fyi/
 https://zs.fyi/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/
 https://zs.fyi/tags/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86/
