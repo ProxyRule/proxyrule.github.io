@@ -495,7 +495,7 @@ cloudflare_analytics: 6a76903e336e4cc58924a3300de1ad69
 # Umami Analytics
 umami:
   enable: true
-  script_url: https://umami.shuaizheng.net/script.js # https://umami.example.com/script.js
+  script_url: https://umami.zs.fyi/script.js # https://umami.example.com/script.js
   website_id: 79f168a7-944e-4a85-8571-26a94d508d3e # <your website id>
   host_url: # <your umami site url>
 
