@@ -8,7 +8,7 @@
 
 <p>半年多前，一次偶然机会得知 1Password（下称 1P）提供一年的家庭版试用机会，到期后付费也就不到 60 美元 &#x2F; 年（个人版不到 36 美元），并不算贵，于是便注册了个账号开始尝试使用密码管理软件。我算是比较谨慎的人，自从接触网络以来没有使用过弱密码，最开始使用的也含有十位以上的数字字母，后来加入了特殊字符以及逐渐演化出的一套自定义密码规则和根据账号重要程度的三级密码分级制度。这算是在使用 1P 前我自认为比较完善的密码管理方法，兼顾了密码记忆难度和安全性。但是，有时候账号的重要程度是无法严格区分的那么后期记忆的时候就有可能用错不同等级的密码，此外不同应用（网站）对密码的要求不一样（有不少不支持密码中含有特殊字符的，又或者我自定义的密码规则超出了最大长度只能删减或者降低密码等级缩短长度），还有就是如果开启 TOTP 验证必须安装诸如 Google Authenticator 的应用非常麻烦（麻烦之处有二：一为填写验证码时必须拿出手机而无法直接在桌面电脑上完成，二则是考虑到同步及意外情况需换用支持 TOTP 验证同步的应用。虽然与「不将鸡蛋放在一个篮子里」相悖，但我曾遇到过这类意外和通过申诉、人工服务等找回密码的窘境，所以同步功能自然在我考虑范围之内）。</p>
 <p>说回到密码管理软件，1P 确实改变了我的密码管理习惯并且极大地提高了生活幸福感。比如，新注册的账号我都直接用 Password Generator 生成 24 位（如果支持的话，否则减少长度）含大小写字母、数字、特殊字符的随机密码，我可以毫无顾忌地开启 TOTP 验证，发现哪些密码是多个账号共用的，通过浏览器插件一键填充，支持通过 Windows Hello、Face ID 解锁等。但是，就 1P 而言，它并不完美。首先，同步速度真的是不敢恭维，有时必须得退出应用后重新启动它似乎才会反应过来；然后是保存的 Item 中有些网站应用的图标无法成功抓取只留一个「小锁」，这对于强迫症患者来说是非常抓狂的；再有就是关于密码分享的，比如我将我 Private Vault 中的某个账号密码分享给家人后在 All Vaults 中会显示两个（一个在 Private，一个在 Shared），这是正常的。但是，当我修改 Private Vault 中这个账号某些信息后，我所期望的是 Shared Vault 中该账号信息也随之变化，但事实并非如此。我得先将原来共享的删除后，再重复一次共享操作。这有点像「浅拷贝」和「深拷贝」的区别，不知能否明白我的意思。</p>
-<p><img data-src="/images/1912/1Password-Generator.png" alt="1Password-Generator" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/1Password-Generator.png" alt="1Password-Generator" loading="lazy"></p>
 <p>除了上面提到的三个痛点，1P 确实是我今年尝试过的最爽的应用之一。但人嘛，总想追求最好的，即使可能并不存在或者这已经是最好的。于是，在一众密码管理软件中，我努力寻找属于我的那一个。我首先剔除了 LastPass（出过安全事故）和 KeePass（首先自然是 Windows 下的 UI 不讨喜，其次是以插件的形式添加功能需投入很多时间打磨，以及各个平台客户端的设计风格不统一），SafeInCloud、Dashlane 等之前听得比较少，最后考虑到时间成本等因素只挑选了 Enpass 和 Bitwarden 加入比较。同时，由于手上只有 Windows 笔记本和 iPhone，故无法对 macOS、Linux 和 Android 下的使用表现进行评价。所以，这是一篇主观不全面，偏体验和细节的比较评测。</p>
 <h3 id="收费模式"><a href="#收费模式" class="headerlink" title="收费模式"></a>收费模式</h3><ul>
 <li><p><strong>受限的免费版</strong>：在提供免费版本上，各家也有不同的思路。比如，1Password 只提供 30 天试用而没有可供免费使用的「阉割版」。Enpass 则是桌面端、移动端都提供全功能的免费版本，但是移动端免费版本能保存的密码条数最多只有 25 条且只有一个 Vault。Bitwarden 的思路又不同，它提供免费版本且对密码条数没有限制，但是某些功能只有高级账户才能使用，其中就包括对我来说非常关键的 TOTP 认证。此外，像密码泄露检查、弱密码和多账号共用密码检查等也需要高级账户才能解锁。</p>
@@ -28,19 +28,19 @@
 </ul>
 <p>更新：在删除测试用的密码时，我发现似乎官方版 Docker 搭建的同步和响应速度要快些，不知是不是心理作用。</p>
 <p>更新：不得不说，官方版吃内存真是猛啊……</p>
-<p><img data-src="/images/1912/GCP.png" alt="GCP" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/GCP.png" alt="GCP" loading="lazy"></p>
 <h3 id="密码填充"><a href="#密码填充" class="headerlink" title="密码填充"></a>密码填充</h3><p>作为密码管理软件的核心功能，我反而觉得没有什么可说的。如果连密码填充都做不好的话，还有什么必要选它呢。这三者的密码填充方式也不太相同，Bitwarden 属于一次点击自动填充，Enpass 默认设置是双击自动填充并提交。1P 可能是因为我最先使用且已经全面接管了谷歌浏览器的「自动填充」，在网页表单右侧会驻留一个「小锁」并显示填充浮窗，单击即可完成填充，如果开启了 TOTP 会连 one-time password 也一并复制供后续填充。</p>
-<p><img data-src="/images/1912/1Password-Chrome.png" alt="1Password-Chrome" loading="lazy"></p>
-<p><img data-src="/images/1912/1Password-Web-Form.png" alt="1Password-Web-Form" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/1Password-Chrome.png" alt="1Password-Chrome" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/1Password-Web-Form.png" alt="1Password-Web-Form" loading="lazy"></p>
 <p>但，以上所述功能在这三款软件使用期间均遇到抽风的情况。</p>
 <h3 id="用户界面"><a href="#用户界面" class="headerlink" title="用户界面"></a>用户界面</h3><p>就 Windows 下来说，我觉得 1P 和 Bitwarden 的界面都还可以，但是不太喜欢 Enpass，它的设计风格 Windows 气息太浓了，没阴影、没圆角、没渐变，丑拒。</p>
-<p><img data-src="/images/1912/1Password-PC.png" alt="1Password-PC" loading="lazy"></p>
-<p><img data-src="/images/1912/Bitwarden-PC.png" alt="Bitwarden-PC" loading="lazy"></p>
-<p><img data-src="/images/1912/Enpass-PC.png" alt="Enpass-PC" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/1Password-PC.png" alt="1Password-PC" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/Bitwarden-PC.png" alt="Bitwarden-PC" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/Enpass-PC.png" alt="Enpass-PC" loading="lazy"></p>
 <p>iOS 下其实也和 PC 下差不多，Enpass 我感觉依旧最丑，虽然比 Windows 版好看了一点。不过，下图一最左侧 Face ID 解锁 Enpass 时下面的一大块黑真的是辣眼睛。</p>
-<p><img data-src="/images/1912/Enpass-iOS.JPG" alt="Enpass-iOS" loading="lazy"></p>
-<p><img data-src="/images/1912/1Password-iOS.JPG" alt="1Password-iOS" loading="lazy"></p>
-<p><img data-src="/images/1912/Bitwarden-iOS.JPG" alt="Bitwarden-iOS" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/Enpass-iOS.JPG" alt="Enpass-iOS" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/1Password-iOS.JPG" alt="1Password-iOS" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/Bitwarden-iOS.JPG" alt="Bitwarden-iOS" loading="lazy"></p>
 <p>在功能布局上，三者的侧重点也不一样。Enpass 的底栏分别是所有密码条目按字母升序（左上角同步，右上角可以新添密码）、分类标签页和 TOTP 及附件查看（乱七八糟）、密码检测和生成页、设置页，给我的感觉就是页面功能分类不清和重复多余。比如说，我觉得 All Items 页和 Groups 可以合并在一起，将搜索框、同步按钮及新增按钮挪到 Groups 中去。相比之下，我觉得 1P 的思路可能更好一下，虽然它也有四栏，但却不会给我凌乱的感觉。第一栏中显示的是加星的那些密码项和最近使用过的，同时还提供了搜索框。第二栏是分类页，右上角可以新增条目且同样可以检索密码项。第三栏就比较特别和有意思，它是一个标签页，虽然我这里目前是空的，但可以想见即使以后添加了各种标签大概率一页也足够全部显示，不会显得繁杂。但是，前面的「分类」和这里的「标签」是否也存在重复呢，仔细观察的话会发现很多软件中都有这二者共存的现象，找机会我得好好研究一下。第四栏设置页就不多说了。Bitwarden 是这三者中界面最简洁的，第一栏将分类和具体密码项放在一起，顶部是搜索和新增按钮，第二栏就完全只是一个密码生成器，最后一栏同样是设置页。我不是很认同其第二栏的做法，就我来说移动端功能基本就是填充密码，像注册账号生成密码之类的工作都会在桌面上完成，所以对我来说将这一功能单独放在一栏完全没必要。</p>
 <h3 id="一些重要的细节"><a href="#一些重要的细节" class="headerlink" title="一些重要的细节"></a>一些重要的细节</h3><ul>
 <li><p><strong>Website Icon 的获取逻辑</strong>：1P 在这方面的表现应该是最差的，一开始在「三个痛点」中就有提到，另外两款软件都能获取到偏偏它不行。Enpass 和 Bitwarden 在抓取逻辑上也存在不同。就我不严谨观察发现，在 <a href="https://mail.zju.edu.cn/">https://mail.zju.edu.cn</a> 的抓取上两者表现不一样，Enpass 抓取的图标居然是浙大的校徽「求是鹰」，而这是 <a href="https://www.zju.edu.cn/">https://www.zju.edu.cn</a>的 icon，与之相对 Bitwarden 则正确抓取了「邮件」icon。但是，这俩货在别的网站上抓取的好像又是一样的，不知为何。</p>
@@ -50,16 +50,16 @@
 <li><p><strong>表单字段抓取</strong>：我觉得 Enpass 在这方面的表现是最差的。下图是我完全使用 Enpass 注册的一个账号（密码生成 + 表单抓取保存），当你点开「Show Webform」时会发现它抓取了很多不必要的信息并且需要经常到「FORM MAPPING」中进行调整（因为有些网站注册时需要填用户名、邮箱、密码等信息，但是登录时「用户名」只能是邮箱而不是前述用户名，但 Enpass 填充时会将用户名填入表单）。</p>
 </li>
 </ul>
-<p><img data-src="/images/1912/Enpass-Webform.png" alt="Enpass-Webform" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/Enpass-Webform.png" alt="Enpass-Webform" loading="lazy"></p>
 <p>并且，在应对像 Box 这类<a href="https://account.box.com/login">登录页面</a>时，Enpass 显得更加力不从心。这类登录页面有这样一个特点，你需要先填写用户名（Username&#x2F;Email），点击下一步后才会出现密码框和登录按钮。起先我以为这样设计，Box 会先对输入的用户名进行核验，后来发现其实不会，那我就不是很明白这样操作的意义了。</p>
-<p><img data-src="/images/1912/Box-login.png" alt="Box-login" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/Box-login.png" alt="Box-login" loading="lazy"></p>
 <p>那么，Enpass 会抓取些什么呢？下面是谷歌浏览器 Enpass 插件提示我保存的 Item，发现漏掉了用户名（此处为 Email），我觉得是不堪使用的。</p>
-<p><img data-src="/images/1912/Enpass-Add-Item.png" alt="Enpass-Add-Item" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/Enpass-Add-Item.png" alt="Enpass-Add-Item" loading="lazy"></p>
 <ul>
 <li><strong>Item 自动命名</strong>：在这一项中，我最喜欢 Bitwarden 的处理方式，它的 Item Name 使用的都是登录网站的域名，比如登录的 Website 为 <code>mail.zju.edu.cn</code>，那么其 Item Name 就同样是 <code>mail.zju.edu.cn</code>。这对于一个强迫症患者来说真的是无比舒适。1P 默认抓取的应该是 <code>head</code> 标签下 <code>title</code> 标签的值，中规中矩。我最不喜欢的是 Enpass 的处理方式，它同样是根据登录网站的域名来确定 Item Name 的。只不过，我认为它的做法有点简单粗暴甚至自以为是，直接截取域名的二级域，然后首字母大写其余一律小写。仍旧以 <code>mail.zju.edu.cn</code> 为例，那么它默认保存的 Item Name 为 <code>Zju</code>，对这种做法我只能呵呵。</li>
 </ul>
-<p><img data-src="/images/1912/Bitwarden-Items.png" alt="Bitwarden-Items" loading="lazy"></p>
-<p><img data-src="/images/1912/Enpass-Items.png" alt="Enpass-Items" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/Bitwarden-Items.png" alt="Bitwarden-Items" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/Enpass-Items.png" alt="Enpass-Items" loading="lazy"></p>
 <ul>
 <li><p><strong>TOTP 添加方式</strong>：Windows 下除 1P 可以扫描二维码外，其余两个都必须手动输入 code 或者掏出手机来扫码。虽然 1P 有些二维码也不能直接识别必须借助手机，但是有总比没有好，还是必须给好评的。</p>
 </li>
@@ -113,16 +113,16 @@
 <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol>
 <li>网络状态未识别，默认安装的两个虚拟交换机 Default Switch 和 DockerNAT 一直是未识别的网络</li>
 </ol>
-<p><img data-src="/images/2001/Internet.png" alt="Internet" loading="lazy"></p>
-<p><img data-src="/images/2001/vEthernet.png" alt="vEthernet" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/Internet.png" alt="Internet" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/vEthernet.png" alt="vEthernet" loading="lazy"></p>
 <ol start="2">
 <li>默认安装的虚拟机不显示 IP 地址，Hyper-V 也无法连接上虚拟机</li>
 </ol>
-<p><img data-src="/images/2001/VM.png" alt="VM" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/VM.png" alt="VM" loading="lazy"></p>
 <ol start="3">
 <li>命令 <code>docker-machine ls</code> 显示为空，即使上图中 Docker 的宿主机是存在的</li>
 </ol>
-<p><img data-src="/images/2001/docker-machine.png" alt="docker-machine" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/docker-machine.png" alt="docker-machine" loading="lazy"></p>
 <p>和这位遇到的情况差不多：<a href="https://segmentfault.com/q/1010000014706486">docker hyper-V 无法访问虚拟机</a></p>
 <h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>放弃。有 Linux 不用，我在 Windows 上用 Docker 图的啥啊，又不馋她身子。</p>
 <p>另外，这类的 issue 三年前就有人提了：<a href="https://github.com/docker/for-win/issues/367">Docker HyperV vEthernet (DockerNAT) is Un-identified Network (Public Network) in tray</a>，至今似乎仍未解决。</p>
@@ -231,7 +231,7 @@
 </tr>
 </tbody></table>
 <p>实际练车时间并没有多长，大部分都花在等安排和等预约考试上了。如果能进行相应优化，使各流程无缝衔接上，即使在练车和考试要求更严格的今天，从报名到拿驾照的时间也能控制在 40 天左右。</p>
-<p><img data-src="/images/2008/training-records.JPEG" alt="training-records" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/training-records.JPEG" alt="training-records" loading="lazy"></p>
 <h3 id="预约考试"><a href="#预约考试" class="headerlink" title="预约考试"></a>预约考试</h3><p>可能是因为地方小的缘故，预约时间倒也不算长，基本一礼拜内都能约到。</p>
 <table>
 <thead>
@@ -427,7 +427,7 @@
 <li><p>接着运行 <code>%windir%\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe .\EarlyStart.exe</code>，应该会有<code>成功完成</code>之类的字样，可以关闭 CMD 了</p>
 </li>
 </ol>
-<p><img data-src="/images/2001/EarlyStart.png" alt="EarlyStart" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/EarlyStart.png" alt="EarlyStart" loading="lazy"></p>
 <ol start="5">
 <li>在用户文件夹下，即 <code>C:\Users\&lt;username&gt;</code> 下新建一个 <code>.earlystart</code> 文件，然后将想要 earlystart 的应用程序路径每行写入一个。比如我的是 <code>&quot;C:\Program Files (x86)\Stardock\Fences\Fences.exe&quot;</code></li>
 </ol>
@@ -738,7 +738,7 @@ pie
 <li><p>勾选左侧最上方 C++ build tools，然后查看右侧，确保 MSVC v142 - VS 2019 C++ x64&#x2F;x86 build tools 和 Windows 10 SDK 被选中。默认情况下应该不需要动，直接点击安装，等待完成即可</p>
 </li>
 </ol>
-<p><img data-src="/images/2010/VS-Build-Tools-2019.png" alt="VS-Build-Tools-2019" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/VS-Build-Tools-2019.png" alt="VS-Build-Tools-2019" loading="lazy"></p>
 <h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
 <li><p>官方文档：<a href="https://wiki.python.org/moin/WindowsCompilers#Which_Microsoft_Visual_C.2B-.2B-_compiler_to_use_with_a_specific_Python_version_.3F">Which Microsoft Visual C++ compiler to use with a specific Python version ?</a></p>
 </li>
@@ -1382,7 +1382,7 @@ pie
 </ol>
 <span id="more"></span>
 
-<p><img data-src="/images/2001/Task-Manager.png" alt="Task-Manager" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/Task-Manager.png" alt="Task-Manager" loading="lazy"></p>
 <h3 id="查找解决方案"><a href="#查找解决方案" class="headerlink" title="查找解决方案"></a>查找解决方案</h3><ol>
 <li><p>个人博客：<a href="http://www.tikas.me/task-scheduler-cpu-to-high/">http://www.tikas.me/task-scheduler-cpu-to-high/</a></p>
 </li>
@@ -1399,7 +1399,7 @@ pie
 <li><p>重启</p>
 </li>
 </ol>
-<p><img data-src="/images/2001/Task-Scheduler.png" alt="Task-Scheduler" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/Task-Scheduler.png" alt="Task-Scheduler" loading="lazy"></p>
 <h3 id="最终解决"><a href="#最终解决" class="headerlink" title="最终解决"></a>最终解决</h3><p>直接将这三个服务删除</p>
 ]]></content>
       <tags>
@@ -1517,16 +1517,16 @@ pie
     <content><![CDATA[<h3 id="问题概述"><a href="#问题概述" class="headerlink" title="问题概述"></a>问题概述</h3><p>手上的一台联想笔记本在更新到 Windows 1803 版后在<code>此电脑 - 设备和驱动器</code>下「多了一个 OEM 分区」并且分配了盘符。</p>
 <span id="more"></span>
 
-<p><img data-src="/images/2001/This-PC-Before.png" alt="This-PC-Before" loading="lazy"></p>
-<p><img data-src="/images/2001/Disk-Management-Before.png" alt="Disk-Management-Before" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/This-PC-Before.png" alt="This-PC-Before" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/Disk-Management-Before.png" alt="Disk-Management-Before" loading="lazy"></p>
 <p>其实也不能算多了一个分区，这个分区原本应该是用于系统恢复的，本不该分配盘符，但估计是这次更新的 Bug 导致这样的问题。分配的盘符是跟在已占用的盘符之后，比如我外接了一个硬盘里面有两个分区，占用了 D 和 E，所以之后是 F。</p>
 <h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>网上搜索一番，发现有这个问题的还不在少数。但是很奇怪，我的另一台笔记本没有出现这种情况。</p>
 <p>下面是解决办法（感谢知乎用户 <a href="https://www.zhihu.com/people/fisher-sam-5">@Fisher Sam</a>）和我的参考示例：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">以管理员权限运行命令提示符，逐行运行</span><br><span class="line"></span><br><span class="line">diskpart</span><br><span class="line"></span><br><span class="line">list disk</span><br><span class="line"></span><br><span class="line">select disk x      （x 表示磁盘序号）</span><br><span class="line"></span><br><span class="line">list volume</span><br><span class="line"></span><br><span class="line">select volume x    （x 表示卷号）</span><br><span class="line"></span><br><span class="line">remove letter=x    （x 表示盘符）</span><br></pre></td></tr></table></figure>
 
-<p><img data-src="/images/2001/DiskPart.png" alt="DiskPart" loading="lazy"></p>
-<h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p><img data-src="/images/2001/This-PC-After.png" alt="This-PC-After" loading="lazy"></p>
-<p><img data-src="/images/2001/Disk-Management-After.png" alt="Disk-Management-After" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/DiskPart.png" alt="DiskPart" loading="lazy"></p>
+<h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p><img data-src="https://img.zs.fyi/2308/This-PC-After.png" alt="This-PC-After" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/Disk-Management-After.png" alt="Disk-Management-After" loading="lazy"></p>
 <h3 id="参考方案"><a href="#参考方案" class="headerlink" title="参考方案"></a>参考方案</h3><ul>
 <li><p><a href="https://www.zhihu.com/question/275658123">windows10 升级 1803 版后为什么多了个 OEM 分区并多分配了一个盘符？</a></p>
 </li>
@@ -1565,8 +1565,8 @@ pie
 <span id="more"></span>
 
 <h3 id="查找问题"><a href="#查找问题" class="headerlink" title="查找问题"></a>查找问题</h3><p>通过使用 BlueScreenView 查看 dump 文件，确定是由 <code>winhvr.sys</code> 驱动引起的 <code>ntoskrnl.exe</code> 崩溃，然后再看下面的文件描述，应该是 Hyper-V 跟网络虚拟服务导致的系统内核损坏，其他的就看不出什么名堂了。见下图：</p>
-<p><img data-src="/images/2001/BlueScreenView.png" alt="BlueScreenView" loading="lazy"></p>
-<p>另外，dmp 文件我放在这里了：<a href="/images/2001/011620-8250-01.dmp">011620-8250-01.dmp</a>，大佬可以帮忙看看，有遇到类似问题的也可以作为参考。</p>
+<p><img data-src="https://img.zs.fyi/2308/BlueScreenView.png" alt="BlueScreenView" loading="lazy"></p>
+<p>另外，dmp 文件我放在这里了：<a href="https://img.zs.fyi/2308/011620-8250-01.dmp">011620-8250-01.dmp</a>，大佬可以帮忙看看，有遇到类似问题的也可以作为参考。</p>
 <p>有了以上基本信息，大致知道该往哪个方向查找资料了。</p>
 <h3 id="解决问题？"><a href="#解决问题？" class="headerlink" title="解决问题？"></a>解决问题？</h3><p>我是以 <code>winhvr.sys ntoskrnl.exe 蓝屏</code> 为关键词进行谷歌搜索的，查到的<a href="https://social.technet.microsoft.com/Forums/zh-CN/b95905a4-5b9a-4936-9d65-b7f68df089d6/ntoskrnlexe3401323631-277142116165281240501997820256dmp?forum=win10itprogeneralCN">这篇</a>我认为是最有帮助的，虽然也有一点小错误。</p>
 <p>参照上面回复中提供的解决方法，操作如下：</p>
@@ -1578,9 +1578,9 @@ pie
 <li><p>待上述操作完成后，输入 <code>sfc /VERIFYONLY</code> 再进行系统扫描验证，发现已经可以了，不存在完整性冲突。</p>
 </li>
 </ol>
-<p><img data-src="/images/2001/SCANNOW.png" alt="SCANNOW" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/SCANNOW.png" alt="SCANNOW" loading="lazy"></p>
 <p>不过，至于是否真的解决了问题，我也不确定，后续没再更新的话就是没问题了。</p>
-<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>似乎并没有用，之后 <code>sfc /VERIFYONLY</code> 虽然扫描验证说不存在完整性冲突但还是蓝屏了几次。而且，一个奇怪的现象是，关机后启动不会蓝屏，选择重启大概率会蓝屏。这是之后两次的 dmp 文件：<a href="/images/2001/011720-10140-01.dmp">011720-10140-01.dmp</a> 和 <a href="/images/2001/011720-10281-01.dmp">011720-10281-01.dmp</a></p>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>似乎并没有用，之后 <code>sfc /VERIFYONLY</code> 虽然扫描验证说不存在完整性冲突但还是蓝屏了几次。而且，一个奇怪的现象是，关机后启动不会蓝屏，选择重启大概率会蓝屏。这是之后两次的 dmp 文件：<a href="https://img.zs.fyi/2308/011720-10140-01.dmp">011720-10140-01.dmp</a> 和 <a href="https://img.zs.fyi/2308/011720-10281-01.dmp">011720-10281-01.dmp</a></p>
 <p>受不了了，我太菜了，实在找不到办法解决了，最后决定重装系统了。另外，我后来复盘发现，极有可能是 VMware 和 Hyper-V 冲突的原因，然而当时没有意识到。</p>
 ]]></content>
       <tags>
@@ -1628,7 +1628,7 @@ pie
     <content><![CDATA[<p>如下图，查到的解决办法各不相同，最后哪一种都没有采用。我目前的做法是，将控制面板中的电池计划选项重置为默认，然后关机重启，勉强解决燃眉之急。</p>
 <span id="more"></span>
 
-<p><img data-src="/images/2001/CPU.png" alt="CPU" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/CPU.png" alt="CPU" loading="lazy"></p>
 ]]></content>
       <tags>
         <tag>Windows</tag>
@@ -1647,11 +1647,11 @@ pie
 <li><p>打开组策略后点击左侧菜单依次展开<code>计算机配置 — 管理模板 — Windows 组件 — Windows 更新</code></p>
 </li>
 </ol>
-<p><img data-src="/images/2001/Windows-Update.png" alt="Windows-Update" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/Windows-Update.png" alt="Windows-Update" loading="lazy"></p>
 <ol start="3">
 <li>双击<code>配置自动更新</code>即可打开如下图的新窗口，在新窗口左侧的选项里将默认的<code>未配置</code>更改为<code>已禁用</code>即可</li>
 </ol>
-<p><img data-src="/images/2001/AutoUpdate.png" alt="AutoUpdate" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/AutoUpdate.png" alt="AutoUpdate" loading="lazy"></p>
 <div class="note info"><p>将此项变更为已禁用后系统将不再自动检查和下载安装更新，因此你需要定期去更新里手动进行检查。原文出处为 <a href="https://www.landiannews.com/archives/40677.html">https://www.landiannews.com/archives/40677.html</a></p>
 </div>
 ]]></content>
@@ -1690,9 +1690,9 @@ pie
 <p>第一步，调用 diskpart 命令</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">diskpart</span><br><span class="line">list disk</span><br><span class="line">select disk &lt;number&gt;  # &lt;number&gt; 为实际磁盘编号</span><br><span class="line">clean</span><br></pre></td></tr></table></figure>
 
-<p><img data-src="/images/2011/diskpart.png" alt="diskpart" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/diskpart.png" alt="diskpart" loading="lazy"></p>
 <p>第二步，在磁盘管理器中创建</p>
-<p><img data-src="/images/2011/disk-management.png" alt="disk-management" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/disk-management.png" alt="disk-management" loading="lazy"></p>
 ]]></content>
       <tags>
         <tag>Windows</tag>
@@ -1713,7 +1713,7 @@ pie
 <li><p>在详细信息窗格中，双击<code>关闭 Windows 网络连接状态指示器活动测试</code>，然后单击<code>已启用</code>，点<code>确定</code></p>
 </li>
 </ol>
-<p><img data-src="/images/2001/Group-Policy.png" alt="Group-Policy" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/Group-Policy.png" alt="Group-Policy" loading="lazy"></p>
 ]]></content>
       <tags>
         <tag>Windows</tag>
@@ -1736,7 +1736,7 @@ pie
 <span id="more"></span>
 
 <h3 id="右键中的「打开方式」"><a href="#右键中的「打开方式」" class="headerlink" title="右键中的「打开方式」"></a>右键中的「打开方式」</h3><p>之前通过 Scoop 安装了 vscode，用 vscode 打开过 <code>.py</code> 文件，而后又把 vscode 卸载了。我发现，当你右键单击 <code>.py</code> 文件选择打开方式时，会发现残存的东西（如下图），不用说肯定又和注册表有关。</p>
-<p><img data-src="/images/2001/open-with.png" alt="open-with" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/open-with.png" alt="open-with" loading="lazy"></p>
 <p>打开注册表编辑器，搜索 <code>C:\Users\Zheng\scoop\apps\vscode\current\Code.exe</code> 在路径 <code>计算机\HKEY_CLASSES_ROOT\py_auto_file\shell\open\command</code> 下发现了相关注册表值，将其删除，问题似乎解决，在这篇<a href="https://www.lmdouble.com/1820352339.html">文章</a>中也得到印证。但是，这个问题是否真的解决了呢，有没有其他的注册表残留项。问题的关键在于，我对 Windows 注册表不了解，不了解它的文件结构和各部分功能，下次遇到其他问题又得像瞎子一样乱撞，在网络上疯狂查找资料。所以，得了解有关注册表的知识，包括设计思路、演变发展、各部分功能等。</p>
 <h3 id="从-CMD-打开文件夹"><a href="#从-CMD-打开文件夹" class="headerlink" title="从 CMD 打开文件夹"></a>从 CMD 打开文件夹</h3><p>在解决上述问题的过程中，还学习到了一点，从 CMD 快速打开一些特殊文件夹。</p>
 <p>假设说，你当前的 CMD Prompt 是在桌面，即 <code>C:\Users\Zheng\Desktop&gt;</code>，那么</p>
@@ -1777,7 +1777,7 @@ pie
     <content><![CDATA[<p>系统是 Windows 专业版 1909，电源计划是默认的平衡模式。有时候晚上合盖后第二天早上笔记本发烫，揭开盖子直接进入解锁登录界面。这次又遇到了，寻找解决方法，并稍作记录。</p>
 <span id="more"></span>
 
-<p><img data-src="/images/2002/powercfg.png" alt="powercfg" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/powercfg.png" alt="powercfg" loading="lazy"></p>
 <p>如图，我的笔记本支持 Standby (S3)、Hibernate、Hybrid Sleep、Fast Startup 这四种 sleep states。其中第一种就相当于 Sleep，中文翻译为睡眠；第二种则叫做休眠；第三种叫做混合睡眠；第四种是 Windows 8 时引入的快速关机。</p>
 <p>它们之间乱七八糟的关系和区别可以查看以下几篇文章：</p>
 <ul>
@@ -1791,14 +1791,14 @@ pie
 </li>
 </ul>
 <p>下面则是电池平衡模式下默认的高级设置选项，留存方便日后对比：</p>
-<p><img data-src="/images/2002/default_settings.png" alt="default_settings" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/default_settings.png" alt="default_settings" loading="lazy"></p>
 <p>上面第三篇文章中有这么两段话点醒了我</p>
 <blockquote>
 <p>不过呢，随着移动时代的到来，微软肯定也意识到了这个问题。从 Windows 8 开始，Windows 引入了一种新的电源状态，叫 S0 Standby，或 Modern Standby，原理和我上面分析的 iPhone 熄屏状态一模一样。该状态在一些 Windows 平板电脑上实现了，比如 Surface Pro 3，小米平板二代。</p>
 <p>用 <code>powercfg -a</code> 可查得当前系统是否支持 Modern Standby。Modern Standby 又分两种，一种是不带网络连接的，另一种是带网络连接的，后者在进入熄屏状态时可以被特定的网络数据包唤醒（需要网卡硬件支持），后者也称 Connected Standby。小米平板二代支持后者。</p>
 </blockquote>
 <p>同时结合这篇<a href="https://blog.csdn.net/hanziyuan08/article/details/89396894">文章</a>，我查看了 <code>Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power</code> 下的「CsEnabled」键值，竟然默认是 1。</p>
-<p><img data-src="/images/2002/CsEnabled.png" alt="CsEnabled" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/CsEnabled.png" alt="CsEnabled" loading="lazy"></p>
 <p>那么问题来了，上面第一张图明明显示我的电脑不支持 S0 Standby，电池驱动管理却依然将其开启。我觉得很可能就是这个问题了。</p>
 ]]></content>
       <tags>
@@ -1811,7 +1811,7 @@ pie
     <content><![CDATA[<p>这世界对强迫症患者太不友好，比如 Windows 10 上某一软件卸载后可能启动项还残留在那里，并且名称显示为 Program（下图中第二项），关键他喵的名称前还没有软件图标（当然没有，毕竟软件已经被卸载了）。</p>
 <span id="more"></span>
 
-<p><img data-src="/images/2001/Before.png" alt="Before" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/Before.png" alt="Before" loading="lazy"></p>
 <p>通过 Google，得知可以修改注册表来解决这一问题：</p>
 <p>首先 <kbd>Start</kbd> + <kbd>R</kbd> 呼出运行，输入 <code>regedit</code>，回车打开注册表编辑器</p>
 <ul>
@@ -1825,10 +1825,10 @@ pie
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run</span><br></pre></td></tr></table></figure>
 
 <p>像我的就是属于第二种情况，进入注册表后找到已删除软件的残余启动项</p>
-<p><img data-src="/images/2001/Registry.png" alt="Registry" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/Registry.png" alt="Registry" loading="lazy"></p>
 <p>接下来当然是右键直接删除该键值了</p>
 <p>然后再打开任务管理器，发现原本闹心的「Program」果然不见了，世界又充满爱了</p>
-<p><img data-src="/images/2001/After.png" alt="After" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2308/After.png" alt="After" loading="lazy"></p>
 ]]></content>
       <tags>
         <tag>Windows</tag>
@@ -1873,13 +1873,13 @@ pie
 <p>在这方面做得比较好的，同时用的人数也是最多的（PC 端和移动端）应该就属搜狗输入法了吧。我曾经也用过，广为诟病的广告弹窗在高级设置里也能关闭且不复发，但用过一段时间后还是觉得它太臃肿，最终卸载不用。其他的输入法貌似也差不多，没找到一个满意的，所以用回了 Windows 自带的输入法，自定义了小鹤双拼方案，用着省心舒心。这年头的软件啥都想干，争着抢占用户的每一个流量入口，就不能走点心吗？</p>
 <h3 id="双拼方案选择"><a href="#双拼方案选择" class="headerlink" title="双拼方案选择"></a>双拼方案选择</h3><p>层出不穷。常见的双拼方案有<code>自然码方案</code>、<code>微软方案</code>、<code>搜狗方案</code>和我在用的<code>小鹤双拼方案</code>等，具体的我也没有太关注，只是键位映射不同罢了。凭个人喜好选择就好了。</p>
 <p>比如「小鹤双拼」方案：</p>
-<p><img data-src="/images/2001/xnheulpb.png" alt="xnheulpb" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/xnheulpb.png" alt="xnheulpb" loading="lazy"></p>
 <p>一开始我没搞清，我直接在小鹤双拼的官网下载安装了小鹤双拼飞扬版。其实小鹤双拼输入法是包括双拼和双形的，新手以及满足日常需求的话只需要学习双拼或者在别的输入法（如搜狗）中启用小鹤双拼方案，最多再加个辅助码就行了。</p>
 <p>双拼 + 双形重码率更低，打字效率更高，但同时记忆量也更大（需要记忆字根），下图为字根图：</p>
-<p><img data-src="/images/2001/zigf.png" alt="zigf" loading="lazy"></p>
-<p><img data-src="/images/2001/zigftu.png" alt="zigftu" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/zigf.png" alt="zigf" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/zigftu.png" alt="zigftu" loading="lazy"></p>
 <p>双拼 + 双形合二为一图：</p>
-<p><img data-src="/images/2001/zigfzixk.png" alt="zigfzixk" loading="lazy"></p>
+<p><img data-src="https://img.zs.fyi/2307/zigfzixk.png" alt="zigfzixk" loading="lazy"></p>
 <p>有兴趣，可前往小鹤双拼官网进一步学习：<a href="https://flypy.com/index.html">小鹤双拼输入法</a></p>
 ]]></content>
       <tags>
