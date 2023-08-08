@@ -4,6 +4,7 @@ date: 2023-08-08 16:04:27
 tags:
     - Backblaze
     - Cloudflare
+    - ShareX
 ---
 
 本文主要介绍如何设置 Backblaze B2 云存储并将其接入 Cloudflare CDN，以及通过 ShareX 上传图片和文件。
