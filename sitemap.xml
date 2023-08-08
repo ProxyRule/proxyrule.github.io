@@ -2,42 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zs.fyi/archives/backblaze-b2-cloudflare.html</loc>
-    
-    <lastmod>2023-08-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/comparison-among-three-password-managers.html</loc>
-    
-    <lastmod>2023-08-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/computer-font.html</loc>
-    
-    <lastmod>2023-08-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/docker-tutorial.html</loc>
-    
-    <lastmod>2023-08-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://zs.fyi/archives/driver-license.html</loc>
     
     <lastmod>2023-08-08</lastmod>
@@ -75,6 +39,15 @@
   
   <url>
     <loc>https://zs.fyi/archives/next-tag-plugins.html</loc>
+    
+    <lastmod>2023-08-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/planetscale-vercel-umami.html</loc>
     
     <lastmod>2023-08-08</lastmod>
     
@@ -307,6 +280,42 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://zs.fyi/archives/backblaze-b2-cloudflare.html</loc>
+    
+    <lastmod>2023-08-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/comparison-among-three-password-managers.html</loc>
+    
+    <lastmod>2023-08-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/computer-font.html</loc>
+    
+    <lastmod>2023-08-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/docker-tutorial.html</loc>
+    
+    <lastmod>2023-08-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   <url>
     <loc>https://zs.fyi/</loc>
@@ -325,6 +334,13 @@
   
   <url>
     <loc>https://zs.fyi/tags/Cloudflare/</loc>
+    <lastmod>2023-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/tags/ShareX/</loc>
     <lastmod>2023-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -409,6 +425,27 @@
   
   <url>
     <loc>https://zs.fyi/tags/NexT/</loc>
+    <lastmod>2023-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/tags/PlanetScale/</loc>
+    <lastmod>2023-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/tags/Vercel/</loc>
+    <lastmod>2023-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/tags/Umami/</loc>
     <lastmod>2023-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
