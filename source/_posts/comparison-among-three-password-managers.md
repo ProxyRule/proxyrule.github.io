@@ -15,7 +15,7 @@ tags:
 
 说回到密码管理软件，1P 确实改变了我的密码管理习惯并且极大地提高了生活幸福感。比如，新注册的账号我都直接用 Password Generator 生成 24 位（如果支持的话，否则减少长度）含大小写字母、数字、特殊字符的随机密码，我可以毫无顾忌地开启 TOTP 验证，发现哪些密码是多个账号共用的，通过浏览器插件一键填充，支持通过 Windows Hello、Face ID 解锁等。但是，就 1P 而言，它并不完美。首先，同步速度真的是不敢恭维，有时必须得退出应用后重新启动它似乎才会反应过来；然后是保存的 Item 中有些网站应用的图标无法成功抓取只留一个「小锁」，这对于强迫症患者来说是非常抓狂的；再有就是关于密码分享的，比如我将我 Private Vault 中的某个账号密码分享给家人后在 All Vaults 中会显示两个（一个在 Private，一个在 Shared），这是正常的。但是，当我修改 Private Vault 中这个账号某些信息后，我所期望的是 Shared Vault 中该账号信息也随之变化，但事实并非如此。我得先将原来共享的删除后，再重复一次共享操作。这有点像「浅拷贝」和「深拷贝」的区别，不知能否明白我的意思。
 
-![1Password-Generator](/images/1912/1Password-Generator.png)
+![1Password-Generator](https://img.zs.fyi/2307/1Password-Generator.png)
 
 除了上面提到的三个痛点，1P 确实是我今年尝试过的最爽的应用之一。但人嘛，总想追求最好的，即使可能并不存在或者这已经是最好的。于是，在一众密码管理软件中，我努力寻找属于我的那一个。我首先剔除了 LastPass（出过安全事故）和 KeePass（首先自然是 Windows 下的 UI 不讨喜，其次是以插件的形式添加功能需投入很多时间打磨，以及各个平台客户端的设计风格不统一），SafeInCloud、Dashlane 等之前听得比较少，最后考虑到时间成本等因素只挑选了 Enpass 和 Bitwarden 加入比较。同时，由于手上只有 Windows 笔记本和 iPhone，故无法对 macOS、Linux 和 Android 下的使用表现进行评价。所以，这是一篇主观不全面，偏体验和细节的比较评测。
 
@@ -39,15 +39,15 @@ tags:
 
 更新：不得不说，官方版吃内存真是猛啊……
 
-![GCP](/images/1912/GCP.png)
+![GCP](https://img.zs.fyi/2307/GCP.png)
 
 ### 密码填充
 
 作为密码管理软件的核心功能，我反而觉得没有什么可说的。如果连密码填充都做不好的话，还有什么必要选它呢。这三者的密码填充方式也不太相同，Bitwarden 属于一次点击自动填充，Enpass 默认设置是双击自动填充并提交。1P 可能是因为我最先使用且已经全面接管了谷歌浏览器的「自动填充」，在网页表单右侧会驻留一个「小锁」并显示填充浮窗，单击即可完成填充，如果开启了 TOTP 会连 one-time password 也一并复制供后续填充。
 
-![1Password-Chrome](/images/1912/1Password-Chrome.png)
+![1Password-Chrome](https://img.zs.fyi/2307/1Password-Chrome.png)
 
-![1Password-Web-Form](/images/1912/1Password-Web-Form.png)
+![1Password-Web-Form](https://img.zs.fyi/2307/1Password-Web-Form.png)
 
 但，以上所述功能在这三款软件使用期间均遇到抽风的情况。
 
@@ -55,19 +55,19 @@ tags:
 
 就 Windows 下来说，我觉得 1P 和 Bitwarden 的界面都还可以，但是不太喜欢 Enpass，它的设计风格 Windows 气息太浓了，没阴影、没圆角、没渐变，丑拒。
 
-![1Password-PC](/images/1912/1Password-PC.png)
+![1Password-PC](https://img.zs.fyi/2307/1Password-PC.png)
 
-![Bitwarden-PC](/images/1912/Bitwarden-PC.png)
+![Bitwarden-PC](https://img.zs.fyi/2307/Bitwarden-PC.png)
 
-![Enpass-PC](/images/1912/Enpass-PC.png)
+![Enpass-PC](https://img.zs.fyi/2307/Enpass-PC.png)
 
 iOS 下其实也和 PC 下差不多，Enpass 我感觉依旧最丑，虽然比 Windows 版好看了一点。不过，下图一最左侧 Face ID 解锁 Enpass 时下面的一大块黑真的是辣眼睛。
 
-![Enpass-iOS](/images/1912/Enpass-iOS.JPG)
+![Enpass-iOS](https://img.zs.fyi/2307/Enpass-iOS.JPG)
 
-![1Password-iOS](/images/1912/1Password-iOS.JPG)
+![1Password-iOS](https://img.zs.fyi/2307/1Password-iOS.JPG)
 
-![Bitwarden-iOS](/images/1912/Bitwarden-iOS.JPG)
+![Bitwarden-iOS](https://img.zs.fyi/2307/Bitwarden-iOS.JPG)
 
 在功能布局上，三者的侧重点也不一样。Enpass 的底栏分别是所有密码条目按字母升序（左上角同步，右上角可以新添密码）、分类标签页和 TOTP 及附件查看（乱七八糟）、密码检测和生成页、设置页，给我的感觉就是页面功能分类不清和重复多余。比如说，我觉得 All Items 页和 Groups 可以合并在一起，将搜索框、同步按钮及新增按钮挪到 Groups 中去。相比之下，我觉得 1P 的思路可能更好一下，虽然它也有四栏，但却不会给我凌乱的感觉。第一栏中显示的是加星的那些密码项和最近使用过的，同时还提供了搜索框。第二栏是分类页，右上角可以新增条目且同样可以检索密码项。第三栏就比较特别和有意思，它是一个标签页，虽然我这里目前是空的，但可以想见即使以后添加了各种标签大概率一页也足够全部显示，不会显得繁杂。但是，前面的「分类」和这里的「标签」是否也存在重复呢，仔细观察的话会发现很多软件中都有这二者共存的现象，找机会我得好好研究一下。第四栏设置页就不多说了。Bitwarden 是这三者中界面最简洁的，第一栏将分类和具体密码项放在一起，顶部是搜索和新增按钮，第二栏就完全只是一个密码生成器，最后一栏同样是设置页。我不是很认同其第二栏的做法，就我来说移动端功能基本就是填充密码，像注册账号生成密码之类的工作都会在桌面上完成，所以对我来说将这一功能单独放在一栏完全没必要。
 
@@ -79,21 +79,21 @@ iOS 下其实也和 PC 下差不多，Enpass 我感觉依旧最丑，虽然比 W
 
 - **表单字段抓取**：我觉得 Enpass 在这方面的表现是最差的。下图是我完全使用 Enpass 注册的一个账号（密码生成 + 表单抓取保存），当你点开「Show Webform」时会发现它抓取了很多不必要的信息并且需要经常到「FORM MAPPING」中进行调整（因为有些网站注册时需要填用户名、邮箱、密码等信息，但是登录时「用户名」只能是邮箱而不是前述用户名，但 Enpass 填充时会将用户名填入表单）。
 
-![Enpass-Webform](/images/1912/Enpass-Webform.png)
+![Enpass-Webform](https://img.zs.fyi/2307/Enpass-Webform.png)
 
 并且，在应对像 Box 这类[登录页面](https://account.box.com/login)时，Enpass 显得更加力不从心。这类登录页面有这样一个特点，你需要先填写用户名（Username/Email），点击下一步后才会出现密码框和登录按钮。起先我以为这样设计，Box 会先对输入的用户名进行核验，后来发现其实不会，那我就不是很明白这样操作的意义了。
 
-![Box-login](/images/1912/Box-login.png)
+![Box-login](https://img.zs.fyi/2307/Box-login.png)
 
 那么，Enpass 会抓取些什么呢？下面是谷歌浏览器 Enpass 插件提示我保存的 Item，发现漏掉了用户名（此处为 Email），我觉得是不堪使用的。
 
-![Enpass-Add-Item](/images/1912/Enpass-Add-Item.png)
+![Enpass-Add-Item](https://img.zs.fyi/2307/Enpass-Add-Item.png)
 
 - **Item 自动命名**：在这一项中，我最喜欢 Bitwarden 的处理方式，它的 Item Name 使用的都是登录网站的域名，比如登录的 Website 为 `mail.zju.edu.cn`，那么其 Item Name 就同样是 `mail.zju.edu.cn`。这对于一个强迫症患者来说真的是无比舒适。1P 默认抓取的应该是 `head` 标签下 `title` 标签的值，中规中矩。我最不喜欢的是 Enpass 的处理方式，它同样是根据登录网站的域名来确定 Item Name 的。只不过，我认为它的做法有点简单粗暴甚至自以为是，直接截取域名的二级域，然后首字母大写其余一律小写。仍旧以 `mail.zju.edu.cn` 为例，那么它默认保存的 Item Name 为 `Zju`，对这种做法我只能呵呵。
 
-![Bitwarden-Items](/images/1912/Bitwarden-Items.png)
+![Bitwarden-Items](https://img.zs.fyi/2307/Bitwarden-Items.png)
 
-![Enpass-Items](/images/1912/Enpass-Items.png)
+![Enpass-Items](https://img.zs.fyi/2307/Enpass-Items.png)
 
 - **TOTP 添加方式**：Windows 下除 1P 可以扫描二维码外，其余两个都必须手动输入 code 或者掏出手机来扫码。虽然 1P 有些二维码也不能直接识别必须借助手机，但是有总比没有好，还是必须给好评的。
 

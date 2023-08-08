@@ -11,9 +11,9 @@ tags:
 
 <!-- more -->
 
-![This-PC-Before](/images/2001/This-PC-Before.png)
+![This-PC-Before](https://img.zs.fyi/2308/This-PC-Before.png)
 
-![Disk-Management-Before](/images/2001/Disk-Management-Before.png)
+![Disk-Management-Before](https://img.zs.fyi/2308/Disk-Management-Before.png)
 
 其实也不能算多了一个分区，这个分区原本应该是用于系统恢复的，本不该分配盘符，但估计是这次更新的 Bug 导致这样的问题。分配的盘符是跟在已占用的盘符之后，比如我外接了一个硬盘里面有两个分区，占用了 D 和 E，所以之后是 F。
 
@@ -39,13 +39,13 @@ select volume x    （x 表示卷号）
 remove letter=x    （x 表示盘符）
 ```
 
-![DiskPart](/images/2001/DiskPart.png)
+![DiskPart](https://img.zs.fyi/2308/DiskPart.png)
 
 ### 问题解决
 
-![This-PC-After](/images/2001/This-PC-After.png)
+![This-PC-After](https://img.zs.fyi/2308/This-PC-After.png)
 
-![Disk-Management-After](/images/2001/Disk-Management-After.png)
+![Disk-Management-After](https://img.zs.fyi/2308/Disk-Management-After.png)
 
 ### 参考方案
 

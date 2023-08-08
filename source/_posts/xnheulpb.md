@@ -66,18 +66,18 @@ tags:
 
 比如「小鹤双拼」方案：
 
-![xnheulpb](/images/2001/xnheulpb.png)
+![xnheulpb](https://img.zs.fyi/2307/xnheulpb.png)
 
 一开始我没搞清，我直接在小鹤双拼的官网下载安装了小鹤双拼飞扬版。其实小鹤双拼输入法是包括双拼和双形的，新手以及满足日常需求的话只需要学习双拼或者在别的输入法（如搜狗）中启用小鹤双拼方案，最多再加个辅助码就行了。
 
 双拼 + 双形重码率更低，打字效率更高，但同时记忆量也更大（需要记忆字根），下图为字根图：
 
-![zigf](/images/2001/zigf.png)
+![zigf](https://img.zs.fyi/2307/zigf.png)
 
-![zigftu](/images/2001/zigftu.png)
+![zigftu](https://img.zs.fyi/2307/zigftu.png)
 
 双拼 + 双形合二为一图：
 
-![zigfzixk](/images/2001/zigfzixk.png)
+![zigfzixk](https://img.zs.fyi/2307/zigfzixk.png)
 
 有兴趣，可前往小鹤双拼官网进一步学习：[小鹤双拼输入法](https://flypy.com/index.html)

@@ -15,4 +15,4 @@ tags:
 
 3. 在详细信息窗格中，双击`关闭 Windows 网络连接状态指示器活动测试`，然后单击`已启用`，点`确定`
 
-![Group-Policy](/images/2001/Group-Policy.png)
+![Group-Policy](https://img.zs.fyi/2308/Group-Policy.png)

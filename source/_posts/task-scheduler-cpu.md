@@ -15,7 +15,7 @@ tags:
 
 <!-- more -->
 
-![Task-Manager](/images/2001/Task-Manager.png)
+![Task-Manager](https://img.zs.fyi/2308/Task-Manager.png)
 
 ### 查找解决方案
 
@@ -33,7 +33,7 @@ tags:
 
 4. 重启
 
-![Task-Scheduler](/images/2001/Task-Scheduler.png)
+![Task-Scheduler](https://img.zs.fyi/2308/Task-Scheduler.png)
 
 ### 最终解决
 

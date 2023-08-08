@@ -9,4 +9,4 @@ tags:
 
 <!-- more -->
 
-![CPU](/images/2001/CPU.png)
+![CPU](https://img.zs.fyi/2308/CPU.png)

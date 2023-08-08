@@ -15,11 +15,11 @@ tags:
 
 2. 打开组策略后点击左侧菜单依次展开`计算机配置 — 管理模板 — Windows 组件 — Windows 更新`
 
-![Windows-Update](/images/2001/Windows-Update.png)
+![Windows-Update](https://img.zs.fyi/2308/Windows-Update.png)
 
 3. 双击`配置自动更新`即可打开如下图的新窗口，在新窗口左侧的选项里将默认的`未配置`更改为`已禁用`即可
 
-![AutoUpdate](/images/2001/AutoUpdate.png)
+![AutoUpdate](https://img.zs.fyi/2308/AutoUpdate.png)
 
 {% note info %}
 将此项变更为已禁用后系统将不再自动检查和下载安装更新，因此你需要定期去更新里手动进行检查。原文出处为 [https://www.landiannews.com/archives/40677.html](https://www.landiannews.com/archives/40677.html)

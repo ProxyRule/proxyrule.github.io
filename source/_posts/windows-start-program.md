@@ -9,7 +9,7 @@ tags:
 
 <!-- more -->
 
-![Before](/images/2001/Before.png)
+![Before](https://img.zs.fyi/2308/Before.png)
 
 通过 Google，得知可以修改注册表来解决这一问题：
 
@@ -29,10 +29,10 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
 
 像我的就是属于第二种情况，进入注册表后找到已删除软件的残余启动项
 
-![Registry](/images/2001/Registry.png)
+![Registry](https://img.zs.fyi/2308/Registry.png)
 
 接下来当然是右键直接删除该键值了
 
 然后再打开任务管理器，发现原本闹心的「Program」果然不见了，世界又充满爱了
 
-![After](/images/2001/After.png)
+![After](https://img.zs.fyi/2308/After.png)

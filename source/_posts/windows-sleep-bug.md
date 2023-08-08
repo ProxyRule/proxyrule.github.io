@@ -9,7 +9,7 @@ tags:
 
 <!-- more -->
 
-![powercfg](/images/2002/powercfg.png)
+![powercfg](https://img.zs.fyi/2308/powercfg.png)
 
 如图，我的笔记本支持 Standby (S3)、Hibernate、Hybrid Sleep、Fast Startup 这四种 sleep states。其中第一种就相当于 Sleep，中文翻译为睡眠；第二种则叫做休眠；第三种叫做混合睡眠；第四种是 Windows 8 时引入的快速关机。
 
@@ -25,7 +25,7 @@ tags:
 
 下面则是电池平衡模式下默认的高级设置选项，留存方便日后对比：
 
-![default_settings](/images/2002/default_settings.png)
+![default_settings](https://img.zs.fyi/2308/default_settings.png)
 
 上面第三篇文章中有这么两段话点醒了我
 
@@ -35,6 +35,6 @@ tags:
 
 同时结合这篇[文章](https://blog.csdn.net/hanziyuan08/article/details/89396894)，我查看了 `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power` 下的「CsEnabled」键值，竟然默认是 1。
 
-![CsEnabled](/images/2002/CsEnabled.png)
+![CsEnabled](https://img.zs.fyi/2308/CsEnabled.png)
 
 那么问题来了，上面第一张图明明显示我的电脑不支持 S0 Standby，电池驱动管理却依然将其开启。我觉得很可能就是这个问题了。

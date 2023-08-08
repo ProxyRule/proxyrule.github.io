@@ -19,8 +19,8 @@ select disk <number>  # <number> 为实际磁盘编号
 clean
 ```
 
-![diskpart](/images/2011/diskpart.png)
+![diskpart](https://img.zs.fyi/2308/diskpart.png)
 
 第二步，在磁盘管理器中创建
 
-![disk-management](/images/2011/disk-management.png)
+![disk-management](https://img.zs.fyi/2308/disk-management.png)
