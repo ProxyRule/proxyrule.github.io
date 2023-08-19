@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.0.0-rc2">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+  <link rel="manifest" href="/site.webmanifest">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zs.fyi","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="主要用到的工具是阿里云函数计算和 subconverter，前者用于机场订阅聚合，后者用于转换订阅。参考这篇博客和 subconverter 文档写成。">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="机场订阅聚合与转换">
+<meta property="og:url" content="https://zs.fyi/archives/proxy-aggregation-and-conversion.html">
+<meta property="og:site_name" content="知识参考">
+<meta property="og:description" content="主要用到的工具是阿里云函数计算和 subconverter，前者用于机场订阅聚合，后者用于转换订阅。参考这篇博客和 subconverter 文档写成。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-08-19T01:24:03.000Z">
+<meta property="article:modified_time" content="2023-08-19T01:41:15.954Z">
+<meta property="article:author" content="ZS.FYI">
+<meta property="article:tag" content="代理">
+<meta property="article:tag" content="subconverter">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://zs.fyi/archives/proxy-aggregation-and-conversion.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zs.fyi/archives/proxy-aggregation-and-conversion.html","path":"archives/proxy-aggregation-and-conversion.html","title":"机场订阅聚合与转换"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>机场订阅聚合与转换 | 知识参考</title>
+  
+
+
+
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{&quot;token&quot;: &quot;6a76903e336e4cc58924a3300de1ad69&quot;}'></script>
+
+
+
+  <script async defer data-website-id="79f168a7-944e-4a85-8571-26a94d508d3e" src="https://umami.zs.fyi/script.js"></script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8546790692734547"
+     crossorigin="anonymous"></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="知识参考" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">知识参考</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A2%E9%98%85%E8%81%9A%E5%90%88"><span class="nav-number">1.</span> <span class="nav-text">订阅聚合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="nav-number">2.</span> <span class="nav-text">自定义域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA-subconverter"><span class="nav-number">3.</span> <span class="nav-text">搭建 subconverter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">使用方式</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ZS.FYI"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ZS.FYI</p>
+  <div class="site-description" itemprop="description">YouTube 频道配套网站</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zsfyi" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zsfyi" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.youtube.com/@zsfyi" title="YouTube → https:&#x2F;&#x2F;www.youtube.com&#x2F;@zsfyi" rel="noopener me" target="_blank"><i class="fab fa-youtube fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zs.fyi/archives/proxy-aggregation-and-conversion.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ZS.FYI">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="知识参考">
+      <meta itemprop="description" content="YouTube 频道配套网站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="机场订阅聚合与转换 | 知识参考">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          机场订阅聚合与转换
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-08-19 09:24:03 / 修改时间：09:41:15" itemprop="dateCreated datePublished" datetime="2023-08-19T09:24:03+08:00">2023-08-19</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>主要用到的工具是<a target="_blank" rel="noopener" href="https://fcnext.console.aliyun.com/cn-hongkong/services">阿里云函数计算</a>和 <a target="_blank" rel="noopener" href="https://github.com/tindy2013/subconverter">subconverter</a>，前者用于机场订阅聚合，后者用于转换订阅。参考这篇<a target="_blank" rel="noopener" href="https://www.ohyee.cc/post/note_lambda_v2ray_clash">博客</a>和 subconverter 文档写成。</p>
+<span id="more"></span>
+
+<h3 id="订阅聚合"><a href="#订阅聚合" class="headerlink" title="订阅聚合"></a>订阅聚合</h3><p>进入函数计算后台，先切换到中国香港集群。在“服务及函数”中创建服务，填写名称，如 proxy，其他保持默认即可。</p>
+<p>在刚创建的服务中新建函数，选择“使用内置运行时创建”，函数名称设置为 subscribe。</p>
+<p>确保选中“处理 HTTP 请求”，然后在下方“高级配置”中将“实例并发度”设置为 100，“执行超时时间”设置为推荐的 600。</p>
+<p>在“环境变量”中添加 <code>URL</code> 变量，值为订阅链接，有多个链接的话用<code>|</code>分隔。再添加一个 <code>TOKEN</code> 变量，值的格式为 <code>&lt;token_name&gt;=&lt;token&gt;</code>，同样以 <code>|</code> 分隔。上面博客中有相关设置截图。</p>
+<p>完成后，点击“创建”会进入代码编辑页面，用的是 VS Code Server。调出终端，执行 <code>npm install axios</code>。修改 <code>index.js</code> 为以下代码，记得点击部署函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> axios = <span class="built_in">require</span>(<span class="string">&#x27;axios&#x27;</span>);</span><br><span class="line">axios.<span class="property">defaults</span>.<span class="property">timeout</span> = <span class="number">3000</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">URLS</span> = (process.<span class="property">env</span>.<span class="property">URL</span> || <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">  .<span class="title function_">split</span>(<span class="string">&#x27;|&#x27;</span>)</span><br><span class="line">  .<span class="title function_">filter</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> item.<span class="property">length</span> &gt; <span class="number">0</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">TOKENS</span> = <span class="title class_">Object</span>.<span class="title function_">assign</span>(</span><br><span class="line">  &#123;&#125;,</span><br><span class="line">  ...(process.<span class="property">env</span>.<span class="property">TOKEN</span> || <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    .<span class="title function_">split</span>(<span class="string">&#x27;|&#x27;</span>)</span><br><span class="line">    .<span class="title function_">filter</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> item.<span class="property">length</span> &gt; <span class="number">0</span>)</span><br><span class="line">    .<span class="title function_">filter</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> item.<span class="title function_">indexOf</span>(<span class="string">&#x27;=&#x27;</span>) !== -<span class="number">1</span>)</span><br><span class="line">    .<span class="title function_">map</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> item.<span class="title function_">split</span>(<span class="string">&#x27;=&#x27;</span>))</span><br><span class="line">    .<span class="title function_">map</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> (&#123; [item[<span class="number">1</span>]]: item[<span class="number">0</span>] &#125;))</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">TESTSUBSCRIBE</span>=<span class="string">&#x27;dm1lc3M6Ly9ldzBLSUNBaWRpSTZJQ0l5SWl3TkNpQWdJbkJ6SWpvZ0l1YTFpK2l2bFNJc0RRb2dJQ0poWkdRaU9pQWlNVEkzTGpBdU1DNHhJaXdOQ2lBZ0luQnZjblFpT2lBaU1USXpORFVpTEEwS0lDQWlhV1FpT2lBaU16QXdaRGN6T1RZdE1tUXlPQzAwWmpKaUxUaG1PV1l0TXpjMU5UQTVZbVZpTVROaElpd05DaUFnSW1GcFpDSTZJQ0l3SWl3TkNpQWdJbk5qZVNJNklDSmhkWFJ2SWl3TkNpQWdJbTVsZENJNklDSjBZM0FpTEEwS0lDQWlkSGx3WlNJNklDSnViMjVsSWl3TkNpQWdJbWh2YzNRaU9pQWlJaXdOQ2lBZ0luQmhkR2dpT2lBaUlpd05DaUFnSW5Sc2N5STZJQ0lpTEEwS0lDQWljMjVwSWpvZ0lpSU5DbjA9DQo=&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">fromBase64</span> = (<span class="params">s</span>) =&gt; <span class="title class_">Buffer</span>.<span class="title function_">from</span>(s, <span class="string">&#x27;base64&#x27;</span>).<span class="title function_">toString</span>();</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">toBase64</span> = (<span class="params">s</span>) =&gt; <span class="title class_">Buffer</span>.<span class="title function_">from</span>(s).<span class="title function_">toString</span>(<span class="string">&#x27;base64&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">removePrefix</span> = (<span class="params">s, p</span>) =&gt; s.<span class="title function_">startsWith</span>(p) ? s.<span class="title function_">slice</span>(p.<span class="property">length</span>) : s;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">get</span> = (<span class="params">url, resolve, reject</span>) =&gt;</span><br><span class="line">  axios</span><br><span class="line">    .<span class="title function_">get</span>(url)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function">(<span class="params">resp</span>) =&gt;</span> resp.<span class="property">data</span>)</span><br><span class="line">    .<span class="title function_">then</span>(resolve)</span><br><span class="line">    .<span class="title function_">catch</span>(reject);</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">getData</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">toBase64</span>(</span><br><span class="line">      (</span><br><span class="line">        <span class="keyword">await</span> <span class="title class_">Promise</span>.<span class="title function_">all</span>(</span><br><span class="line">          <span class="variable constant_">URLS</span>.<span class="title function_">map</span>(</span><br><span class="line">            <span class="function">(<span class="params">url</span>) =&gt;</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> <span class="title function_">get</span>(url, resolve, reject))</span><br><span class="line">          )</span><br><span class="line">        )</span><br><span class="line">      )</span><br><span class="line">        .<span class="title function_">map</span>(<span class="function">(<span class="params">encoded</span>) =&gt;</span></span><br><span class="line">          <span class="title function_">fromBase64</span>(encoded)</span><br><span class="line">            .<span class="title function_">split</span>(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">            .<span class="title function_">filter</span>(<span class="function">(<span class="params">line</span>) =&gt;</span> line.<span class="property">length</span> &gt; <span class="number">0</span>)</span><br><span class="line">        )</span><br><span class="line">        .<span class="title function_">reduce</span>(<span class="function">(<span class="params">pre, cur</span>) =&gt;</span> pre.<span class="title function_">concat</span>(cur))</span><br><span class="line">        .<span class="title function_">join</span>(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    );</span><br><span class="line">  &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">    <span class="keyword">return</span> e.<span class="title function_">toString</span>();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.<span class="property">handler</span> = <span class="keyword">async</span> (req, resp, context) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(req.<span class="property">path</span>);</span><br><span class="line">  <span class="keyword">if</span> (<span class="title function_">removePrefix</span>(req.<span class="property">path</span>, <span class="string">&quot;/subscribe&quot;</span>) === <span class="string">&#x27;/test&#x27;</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(req.<span class="property">clientIP</span>);</span><br><span class="line">    resp.<span class="title function_">send</span>(<span class="variable constant_">TESTSUBSCRIBE</span>);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> token = req.<span class="property">queries</span>[<span class="string">&#x27;token&#x27;</span>];</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable constant_">URLS</span>, <span class="variable constant_">TOKENS</span>);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(req.<span class="property">clientIP</span>, token, <span class="variable constant_">TOKENS</span>[token]);</span><br><span class="line">  <span class="keyword">const</span> res = !!<span class="variable constant_">TOKENS</span>[token] ? <span class="keyword">await</span> <span class="title function_">getData</span>() : <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">  resp.<span class="title function_">send</span>(res);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h3><p>回到函数计算主管理界面，在“域名管理”中添加自定义域名。设置好域名解析后，修改路由配置为 <code>/subscribe</code>，其他栏下拉进行相应选择。完成后，再照此添加一条路由 <code>/subscribe/*</code>。你也可以为域名申请并启用证书，最后点击创建即可。</p>
+<p>绑定域名后，可通过以下形式调用：</p>
+<ul>
+<li><code>https://fc.example.com/subscribe/test</code></li>
+<li><code>https://fc.example.com/subscribe?token=&lt;token&gt;</code></li>
+</ul>
+<p>前者返回测试订阅，方便调试；后者返回打包后的节点信息。</p>
+<h3 id="搭建-subconverter"><a href="#搭建-subconverter" class="headerlink" title="搭建 subconverter"></a>搭建 subconverter</h3><p>那篇博客中 subconverter 部分我试过，经常报错，也懒得去查阿里云的文档。干脆，直接用 <a target="_blank" rel="noopener" href="https://github.com/tindy2013/subconverter/blob/master/README-docker.md">Docker</a> 搭建算了。你可以通过 <a target="_blank" rel="noopener" href="https://www.composerize.com/">Composerize</a> 网站，将 Docker 命令转换成 Docker Compose 更方便些。</p>
+<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>根据<a target="_blank" rel="noopener" href="https://github.com/tindy2013/subconverter/blob/master/README-cn.md">相关文档</a>，调用地址中的 <code>url</code> 参数和远程引用的 <code>config</code> 文件链接，都必须经过 <a target="_blank" rel="noopener" href="https://www.urlencoder.org/">URL Encode</a> 处理。以下面为例进行简单说明。</p>
+<p><code>https://&lt;your_subconverter_server&gt;/sub?target=clash&amp;new_name=true&amp;url=&lt;your_subscription_link&gt;&amp;filename=&lt;filename&gt;&amp;interval=21600&amp;insert=false&amp;config=https%3A%2F%2Fraw.githubusercontent.com%2FFDUZS%2Fsubconverter-config%2Fmain%2Fconfig.ini</code></p>
+<ul>
+<li><code>&lt;your_subconverter_server&gt;</code> 为上面搭建的 subconverter 后端，如果用 IP 访问或无证书，则为 <code>http</code></li>
+<li><code>url</code> 为上面订阅聚合链接，记得带 token 参数并 <a target="_blank" rel="noopener" href="https://www.urlencoder.org/">URL Encode</a> 处理</li>
+<li><code>filename</code> 是在 <a target="_blank" rel="noopener" href="https://docs.cfw.lbyczf.com/">Clash for Windows</a> 等软件中导入后显示的名字</li>
+<li><code>interval</code> 是在 <a target="_blank" rel="noopener" href="https://docs.cfw.lbyczf.com/">Clash for Windows</a> 等软件中导入后自动更新周期，单位为秒</li>
+<li><code>config</code> 即外部配置文件，需经 <a target="_blank" rel="noopener" href="https://www.urlencoder.org/">URL Encode</a> 处理，可直接使用上述例子中的</li>
+<li>其他更多参数可查询相关文档</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>ZS.FYI
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://zs.fyi/archives/proxy-aggregation-and-conversion.html" title="机场订阅聚合与转换">https://zs.fyi/archives/proxy-aggregation-and-conversion.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E4%BB%A3%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 代理</a>
+              <a href="/tags/subconverter/" rel="tag"><i class="fa fa-tag"></i> subconverter</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/archives/add-ipv4-for-ipv6-only-vps.html" rel="prev" title="通过 WARP 为纯 IPv6 VPS 添加 IPv4 网络">
+                  <i class="fa fa-chevron-left"></i> 通过 WARP 为纯 IPv6 VPS 添加 IPv4 网络
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/archives/cheap-proxy-providers.html" rel="next" title="廉价机场众生相">
+                  廉价机场众生相 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2016 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ZS.FYI</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+<div class="powered-by">
+	本网站由
+	<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="border-bottom: none;">
+		<img src="/images/upyun.svg" alt="又拍云" style="width: 80px; display: inline; vertical-align: middle;" />
+	</a>
+	提供 CDN 加速 / 云存储服务
+</div>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.8/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.12/pdfobject.min.js","integrity":"sha256-g2xji1rlE3KsGVClvuxTbcR0Kn2+wtQADSff2Tbb4zA="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.2.3/mermaid.min.js","integrity":"sha256-JFptYy4KzJ5OQP+Q9fubNf3cxpPPmZKqUOovyEONKrQ="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+  <script class="next-config" data-name="wavedrom" type="application/json">{"enable":true,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/wavedrom/3.2.0/wavedrom.min.js","integrity":"sha256-cOqJCt2rKQA4GNjlL0tODFHnWd0CRLKLFqYhO6TCtAE="}}</script>
+  <script class="next-config" data-name="wavedrom_skin" type="application/json">{"enable":true,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/wavedrom/3.2.0/skins/default.js","integrity":"sha256-fduc/Zszk5ezWws2uInY/ALWVmIrmV6VTgXbsYSReFI="}}</script>
+  <script src="/js/third-party/tags/wavedrom.js"></script>
+
+
+
+
+  
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://zs.fyi/archives/proxy-aggregation-and-conversion.html"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"ProxyRule/youtube","issue_term":"pathname","theme":"github-light"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+</body>
+</html>
