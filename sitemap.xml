@@ -11,6 +11,33 @@
   </url>
   
   <url>
+    <loc>https://zs.fyi/archives/add-ipv4-for-ipv6-only-vps.html</loc>
+    
+    <lastmod>2023-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/backblaze-b2-cloudflare.html</loc>
+    
+    <lastmod>2023-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/cheap-proxy-providers.html</loc>
+    
+    <lastmod>2023-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zs.fyi/archives/comparison-among-three-password-managers.html</loc>
     
     <lastmod>2023-08-25</lastmod>
@@ -308,43 +335,16 @@
   </url>
   
   <url>
-    <loc>https://zs.fyi/about/index.html</loc>
-    
-    <lastmod>2023-08-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/add-ipv4-for-ipv6-only-vps.html</loc>
-    
-    <lastmod>2023-08-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/backblaze-b2-cloudflare.html</loc>
-    
-    <lastmod>2023-08-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/cheap-proxy-providers.html</loc>
-    
-    <lastmod>2023-08-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://zs.fyi/GDPR/index.html</loc>
+    
+    <lastmod>2023-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/about/index.html</loc>
     
     <lastmod>2023-08-25</lastmod>
     
