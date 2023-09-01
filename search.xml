@@ -963,14 +963,14 @@ pie
 <ol>
 <li><p><code>pip install --upgrade setuptools</code> 确保 setuptools 版本为 34.4.0 及以上</p>
 </li>
-<li><p>安装 <a href="https://www.visualstudio.com/downloads/#build-tools-for-visual-studio-2019">Microsoft Build Tools for Visual Studio 2019</a> 并运行，应该会提示需要先下载一些文件</p>
+<li><p>到<a href="https://visualstudio.microsoft.com/downloads/">下载页面</a>往下翻找到 Tools for Visual Studio，点开后下载最底下的 Build Tools for Visual Studio 2019。当然，你也可以直接到<a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">这里</a>下载 Microsoft C++ Build Tools。点击运行后，应该会提示需要先下载一些文件</p>
 </li>
 <li><p>勾选左侧最上方 C++ build tools，然后查看右侧，确保 MSVC v142 - VS 2019 C++ x64&#x2F;x86 build tools 和 Windows 10 SDK 被选中。默认情况下应该不需要动，直接点击安装，等待完成即可</p>
 </li>
 </ol>
 <p><img data-src="https://img.zs.fyi/2307/VS-Build-Tools-2019.png" alt="VS-Build-Tools-2019" loading="lazy"></p>
 <h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
-<li><p>官方文档：<a href="https://wiki.python.org/moin/WindowsCompilers#Which_Microsoft_Visual_C.2B-.2B-_compiler_to_use_with_a_specific_Python_version_.3F">Which Microsoft Visual C++ compiler to use with a specific Python version ?</a></p>
+<li><p>Python 官方文档：<a href="https://wiki.python.org/moin/WindowsCompilers#Which_Microsoft_Visual_C.2B-.2B-_compiler_to_use_with_a_specific_Python_version_.3F">Which Microsoft Visual C++ compiler to use with a specific Python version?</a></p>
 </li>
 <li><p>各版本 Visual C++ 下载地址：<a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">The latest supported Visual C++ downloads</a></p>
 </li>
