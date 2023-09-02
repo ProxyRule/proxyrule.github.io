@@ -914,6 +914,12 @@ pie
     <content><![CDATA[<p>「error: Microsoft Visual C++ 14.0 or greater is required」是不是令你痛苦不堪、眉头紧皱？是不是在万般搜索后仍旧无果？是不是网上经验教训一大堆，但是都不能从根本上解决问题？那么，以下可能是你能找到的最全面准确的办法。</p>
 <span id="more"></span>
 
+<p>Hi folks, if you have been referred from this <a href="https://learn.microsoft.com/en-us/answers/questions/419525/microsoft-visual-c-14-0-or-greater-is-required">question</a>, I have prepared a simplified guide for you. Here are the steps to follow:</p>
+<ol>
+<li>Ensure that you have the latest version of setuptools installed. Any version above 34.4.0 should work fine.</li>
+<li>Download and install Microsoft C++ Build Tools from this <a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">page</a> and wait for the installation to complete.</li>
+<li>Modify and install the necessary components by checking the &quot;C++ build tools&quot; checkbox on the left side and installing the modules that are checked by default on the right side (please refer to the screenshot below). Then proceed with the installation.</li>
+</ol>
 <h3 id="Python-版本"><a href="#Python-版本" class="headerlink" title="Python 版本"></a>Python 版本</h3><p>以我正在使用的 <code>Python 3.7.6</code> 为例。</p>
 <h3 id="Visual-C-版本"><a href="#Visual-C-版本" class="headerlink" title="Visual C++ 版本"></a>Visual C++ 版本</h3><p>与上面相对应，Visual C++ 版本应为 <code>14.x</code>。</p>
 <p>为什么是 14.x 呢？这是因为目前有 14.0.X、14.16.X、14.27.x 三个版本，它们分别是 Visual Studio 2015，Visual Studio 2017，Visual Studio 2019 自带的编译工具。并且，根据官方的描述</p>
@@ -961,12 +967,9 @@ pie
 
 <h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><p><mark>注意</mark>：以 Python 3.7.6，只安装（不用费劲安装 Visual Studio 2019）Microsoft Visual C++ 14.2 为例。</p>
 <ol>
-<li><p><code>pip install --upgrade setuptools</code> 确保 setuptools 版本为 34.4.0 及以上</p>
-</li>
-<li><p>到<a href="https://visualstudio.microsoft.com/downloads/">下载页面</a>往下翻找到 Tools for Visual Studio，点开后下载最底下的 Build Tools for Visual Studio 2019。当然，你也可以直接到<a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">这里</a>下载 Microsoft C++ Build Tools。点击运行后，应该会提示需要先下载一些文件</p>
-</li>
-<li><p>勾选左侧最上方 C++ build tools，然后查看右侧，确保 MSVC v142 - VS 2019 C++ x64&#x2F;x86 build tools 和 Windows 10 SDK 被选中。默认情况下应该不需要动，直接点击安装，等待完成即可</p>
-</li>
+<li><code>pip install --upgrade setuptools</code> 确保 setuptools 版本为 34.4.0 及以上</li>
+<li>到<a href="https://visualstudio.microsoft.com/downloads/">下载页面</a>往下翻找到 Tools for Visual Studio，点开后下载最底下的 Build Tools for Visual Studio 2019。当然，你也可以直接到<a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">这里</a>下载 Microsoft C++ Build Tools。点击运行后，应该会提示需要先下载一些文件</li>
+<li>勾选左侧最上方 C++ build tools，然后查看右侧，确保 MSVC v142 - VS 2019 C++ x64&#x2F;x86 build tools 和 Windows 10 SDK 被选中。默认情况下应该不需要动，直接点击安装，等待完成即可</li>
 </ol>
 <p><img data-src="https://img.zs.fyi/2307/VS-Build-Tools-2019.png" alt="VS-Build-Tools-2019" loading="lazy"></p>
 <h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
