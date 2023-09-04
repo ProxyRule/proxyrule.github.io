@@ -263,6 +263,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Docker 搭建 Nginx Proxy Manager</title>
+    <url>/archives/docker-npm.html</url>
+    <content><![CDATA[<p>Nginx Proxy Manager 是一个非常方便的 Nginx 代理管理工具。</p>
+<span id="more"></span>
+
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.8&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">app:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">npm</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">&#x27;jc21/nginx-proxy-manager:latest&#x27;</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="comment"># These ports are in format &lt;host-port&gt;:&lt;container-port&gt;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;80:80&#x27;</span> <span class="comment"># Public HTTP Port</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;443:443&#x27;</span> <span class="comment"># Public HTTPS Port</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;81:81&#x27;</span> <span class="comment"># Admin Web Port</span></span><br><span class="line">      <span class="comment"># Add any other Stream port you want to expose</span></span><br><span class="line">      <span class="comment"># - &#x27;21:21&#x27; # FTP</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Uncomment the next line if you uncomment anything in the section</span></span><br><span class="line">    <span class="comment"># environment:</span></span><br><span class="line">      <span class="comment"># Uncomment this if you want to change the location of</span></span><br><span class="line">      <span class="comment"># the SQLite DB file within the container</span></span><br><span class="line">      <span class="comment"># DB_SQLITE_FILE: &quot;/data/database.sqlite&quot;</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># Uncomment this if IPv6 is not enabled on your host</span></span><br><span class="line">      <span class="comment"># DISABLE_IPV6: &#x27;true&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./letsencrypt:/etc/letsencrypt</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://nginxproxymanager.com/">Nginx Proxy Manager 官网</a></p>
+]]></content>
+      <tags>
+        <tag>Docker</tag>
+        <tag>Nginx Proxy Manager</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker 搭建 RSSHub</title>
     <url>/archives/docker-rsshub.html</url>
     <content><![CDATA[<p>RSSHub 是一个开源、简单易用、易于扩展的 RSS 生成器，可以给任何奇奇怪怪的内容生成 RSS 订阅源。</p>
