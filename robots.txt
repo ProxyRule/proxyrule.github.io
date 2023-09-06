@@ -1,5 +1,10 @@
 # Hexo robots.txt
+
 User-agent: *
-Allow: /
+Disallow: /about/
+Disallow: /GDPR/
+Disallow: /page/
+Disallow: /tags/
+Disallow: /archives/page/
 
 Sitemap: https://zs.fyi/sitemap.xml

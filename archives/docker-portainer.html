@@ -19,26 +19,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zs.fyi","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="YouTube 频道配套网站">
+    <meta name="description" content="Portainer 是一个用户友好的图形化界面工具，用于轻松管理 Docker 容器和容器编排，无需深入命令行操作。">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="知识参考">
-<meta property="og:url" content="https://zs.fyi/tags/IPv6/index.html">
+<meta property="og:title" content="Docker 搭建 Portainer">
+<meta property="og:url" content="https://zs.fyi/archives/docker-portainer.html">
 <meta property="og:site_name" content="知识参考">
-<meta property="og:description" content="YouTube 频道配套网站">
+<meta property="og:description" content="Portainer 是一个用户友好的图形化界面工具，用于轻松管理 Docker 容器和容器编排，无需深入命令行操作。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-09-06T05:03:27.000Z">
+<meta property="article:modified_time" content="2023-09-06T05:15:53.287Z">
 <meta property="article:author" content="ZS.FYI">
-<meta property="article:tag" content="Clash Tutorial, Docker Tutorial, Network Proxy, Website Development, Cryptocurrency, Personal Finance">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="Portainer">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://zs.fyi/tags/IPv6/">
+<link rel="canonical" href="https://zs.fyi/archives/docker-portainer.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/IPv6/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zs.fyi/archives/docker-portainer.html","path":"archives/docker-portainer.html","title":"Docker 搭建 Portainer"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>标签: IPv6 | 知识参考</title>
+<title>Docker 搭建 Portainer | 知识参考</title>
   
 
 
@@ -193,74 +196,132 @@
 
     </div>
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">IPv6
-          <small>标签</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zs.fyi/archives/docker-portainer.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ZS.FYI">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="知识参考">
+      <meta itemprop="description" content="YouTube 频道配套网站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Docker 搭建 Portainer | 知识参考">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Docker 搭建 Portainer
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
+
+      <time title="创建时间：2023-09-06 13:03:27 / 修改时间：13:15:53" itemprop="dateCreated datePublished" datetime="2023-09-06T13:03:27+08:00">2023-09-06</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Portainer 是一个用户友好的图形化界面工具，用于轻松管理 Docker 容器和容器编排，无需深入命令行操作。</p>
+<span id="more"></span>
+
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.3&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">portainer-ee:</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;8000:8000&#x27;</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;9443:9443&#x27;</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">portainer</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">        <span class="attr">volumes:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;/var/run/docker.sock:/var/run/docker.sock&#x27;</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;portainer_data:/data&#x27;</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">&#x27;portainer/portainer-ee:latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">    <span class="attr">portainer_data:</span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.portainer.io/">Portainer 官方网站</a></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-08-19T09:00:22+08:00"
-              content="2023-08-19">
-          08-19
-        </time>
+    
+    
+    
+
+    <footer class="post-footer">
+
+
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/paypal.jpg" alt="ZS.FYI PayPal">
+        <span>PayPal</span>
       </div>
 
-      <div class="post-title">
-        <a class="post-title-link" href="/archives/add-ipv4-for-ipv6-only-vps.html" itemprop="url">
-          <span itemprop="name">通过 WARP 为纯 IPv6 VPS 添加 IPv4 网络</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-01-10T11:33:45+08:00"
-              content="2020-01-10">
-          01-10
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/archives/ssr-ipv6-proxifier.html" itemprop="url">
-          <span itemprop="name">用 IPv6 来拯救你的校园网</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-    </div>
   </div>
-  
-  
-  
+</div>
 
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>ZS.FYI
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://zs.fyi/archives/docker-portainer.html" title="Docker 搭建 Portainer">https://zs.fyi/archives/docker-portainer.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Docker/" rel="tag"><i class="fa fa-tag"></i> Docker</a>
+              <a href="/tags/Portainer/" rel="tag"><i class="fa fa-tag"></i> Portainer</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/archives/docker-npm.html" rel="prev" title="Docker 搭建 Nginx Proxy Manager">
+                  <i class="fa fa-angle-left"></i> Docker 搭建 Nginx Proxy Manager
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
 </div>
   </main>
 
@@ -329,7 +390,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://zs.fyi/tags/IPv6/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://zs.fyi/archives/docker-portainer.html"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"zsfyi/youtube","issue_term":"pathname","theme":"github-light"}</script>
 <script src="/js/third-party/comments/utterances.js"></script>

@@ -278,6 +278,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Docker 搭建 Portainer</title>
+    <url>/archives/docker-portainer.html</url>
+    <content><![CDATA[<p>Portainer 是一个用户友好的图形化界面工具，用于轻松管理 Docker 容器和容器编排，无需深入命令行操作。</p>
+<span id="more"></span>
+
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.3&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">portainer-ee:</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;8000:8000&#x27;</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;9443:9443&#x27;</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">portainer</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">        <span class="attr">volumes:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;/var/run/docker.sock:/var/run/docker.sock&#x27;</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;portainer_data:/data&#x27;</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">&#x27;portainer/portainer-ee:latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">    <span class="attr">portainer_data:</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.portainer.io/">Portainer 官方网站</a></p>
+]]></content>
+      <tags>
+        <tag>Docker</tag>
+        <tag>Portainer</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker 搭建 RSSHub</title>
     <url>/archives/docker-rsshub.html</url>
     <content><![CDATA[<p>RSSHub 是一个开源、简单易用、易于扩展的 RSS 生成器，可以给任何奇奇怪怪的内容生成 RSS 订阅源。</p>
