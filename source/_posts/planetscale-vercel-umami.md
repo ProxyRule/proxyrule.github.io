@@ -21,7 +21,7 @@ tags:
 
 在面板创建一个数据库，命名为 umami-db
 
-![创建数据库](https://img.shuaizheng.org/2308/planetscale.webp)
+![创建数据库](https://img.zs.fyi/2308/planetscale.webp)
 
 ### GitHub 设置
 
@@ -39,7 +39,7 @@ Fork [umami] 项目到自己账号，同时建议安装 GitHub 应用 [Pull]
 
 至于框架，可能名称与下图不完全相同，选中带有 Prisma 的即可
 
-![数据库关联](https://img.shuaizheng.org/2308/integrate.webp)
+![数据库关联](https://img.zs.fyi/2308/integrate.webp)
 
 ### Umami 设置
 

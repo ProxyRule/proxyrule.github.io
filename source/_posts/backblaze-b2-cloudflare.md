@@ -22,25 +22,25 @@ tags:
 
 创建一个存储桶，文件公开还是私密访问视需求而定。如果是用于博客图片的话，选择公开即可。其他默认。
 
-![创建存储桶](https://img.shuaizheng.org/2308/6O2l6ELCQY.png)
+![创建存储桶](https://img.zs.fyi/2308/6O2l6ELCQY.png)
 
 上传一个文件，点击左侧的浏览文件，获取“友好 URL”
 
-![友好 URL](https://img.shuaizheng.org/2308/4nLxvoQJfb.png)
+![友好 URL](https://img.zs.fyi/2308/4nLxvoQJfb.png)
 
 点击刚刚创建的桶，设置桶的缓存时间为 `{"cache-control":"max-age=720000"}`
 
-![桶缓存时间](https://img.shuaizheng.org/2308/gKaVpmPQQ2.png)
+![桶缓存时间](https://img.zs.fyi/2308/gKaVpmPQQ2.png)
 
 ### Cloudflare 设置
 
 一、添加一条 CNAME 解析，比如 img.example.com，目标地址即为“友好 URL”图中所示
 
-![CNAME](https://img.shuaizheng.org/2308/0pbNHUnjYz.png)
+![CNAME](https://img.zs.fyi/2308/0pbNHUnjYz.png)
 
 二、添加一条页面规则，URL 为 `img.example.com/*`，SSL 选择严格，缓存级别为“缓存所有内容”，边缘缓存 TTL 为“1 个月”
 
-![页面规则](https://img.shuaizheng.org/2308/875SUdYNzB.png)
+![页面规则](https://img.zs.fyi/2308/875SUdYNzB.png)
 
 三、添加一条转换规则 - 重写 URL
 
@@ -48,7 +48,7 @@ tags:
 
 下方选择“主机名”“等于” `img.example.com` 即可
 
-![表达式](https://img.shuaizheng.org/2308/I68OSKYLaL.png)
+![表达式](https://img.zs.fyi/2308/I68OSKYLaL.png)
 
 然后选择“重写到”“Dynamic 动态”，框中填
 
@@ -58,7 +58,7 @@ concat("/file/bucketName", http.request.uri.path)
 
 将 bucketName 更改为你一开始设置的桶名称
 
-![重写](https://img.shuaizheng.org/2308/POqzrOd9Kp.png)
+![重写](https://img.zs.fyi/2308/POqzrOd9Kp.png)
 
 四、添加一条修改响应头规则
 
@@ -82,19 +82,19 @@ x-bz-info-src_last_modified_millis
 x-bz-upload-timestamp
 ```
 
-![修改响应头](https://img.shuaizheng.org/2308/zPZXHPkUJd.png)
+![修改响应头](https://img.zs.fyi/2308/zPZXHPkUJd.png)
 
 ### ShareX 设置
 
 先到 Backblaze 后台创建一个应用密钥，建议下拉选择刚刚创建的桶，限制密钥的作用范围
 
-![创建密钥](https://img.shuaizheng.org/2308/roTfv4ihcI.png)
+![创建密钥](https://img.zs.fyi/2308/roTfv4ihcI.png)
 
 记下 applicationKey，仅会出现一次
 
 到 ShareX 中找到 Backblaze 设置，依次填入存储桶的 keyID，applicationKey，桶名。设置上传路径偏好，并填入自定义域名 img.example.com
 
-![ShareX 设置](https://img.shuaizheng.org/2308/e4LrXnkNmr.png)
+![ShareX 设置](https://img.zs.fyi/2308/e4LrXnkNmr.png)
 
 ### 本文参考
 

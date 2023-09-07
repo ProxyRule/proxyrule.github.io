@@ -14,7 +14,9 @@ Hi folks, if you have been referred from this [question][Microsoft Visual C++ 14
 
 1. Ensure that you have the latest version of setuptools installed. Any version above 34.4.0 should work fine.
 2. Download and install Microsoft C++ Build Tools from this [page][Microsoft C++ Build Tools] and wait for the installation to complete.
-3. Modify and install the necessary components by checking the "C++ build tools" checkbox on the left side and installing the modules that are checked by default on the right side (please refer to the screenshot below). Then proceed with the installation.
+3. Modify and install the necessary components by checking the "Desktop development with C++" workload (previously called "C++ build tools") checkbox on the left side and installing the modules that are checked by default on the right side (please refer to the screenshot below). Then proceed with the installation.
+
+![Visual Studio Build Tools 2022](https://img.zs.fyi/2309/ULEAdYbnBV.png)
 
 ### Python 版本
 
