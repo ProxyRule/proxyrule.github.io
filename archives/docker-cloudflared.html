@@ -19,28 +19,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zs.fyi","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="这次重装系统（为何要重装有兴趣的可翻看上上篇）我是一万个不愿意的，因为我知道系统重装的成本有多大。就单纯装个系统来说可能只需要十几分钟，但是装系统前的准备工作（主要是备份和制作安装启动 U 盘）以及系统装完后的恢复备份、软件安装调试、系统设置等，要想完全恢复之前的使用环境，差不多得需要一天的时间。现在是晚上的 10:42，先记录下该做的一些工作，按步骤来就不会出错。">
+    <meta name="description" content="Cloudflare Tunnel 除了最基本的内网穿透（隧道）功能外，还带有一套身份认证功能用于保护应用安全，且非常简单易用。">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="重装系统的成本及前后工作">
-<meta property="og:url" content="https://zs.fyi/archives/the-price-of-windows-reinstallation.html">
+<meta property="og:title" content="Docker 搭建 Cloudflare Tunnel">
+<meta property="og:url" content="https://zs.fyi/archives/docker-cloudflared.html">
 <meta property="og:site_name" content="知识参考">
-<meta property="og:description" content="这次重装系统（为何要重装有兴趣的可翻看上上篇）我是一万个不愿意的，因为我知道系统重装的成本有多大。就单纯装个系统来说可能只需要十几分钟，但是装系统前的准备工作（主要是备份和制作安装启动 U 盘）以及系统装完后的恢复备份、软件安装调试、系统设置等，要想完全恢复之前的使用环境，差不多得需要一天的时间。现在是晚上的 10:42，先记录下该做的一些工作，按步骤来就不会出错。">
+<meta property="og:description" content="Cloudflare Tunnel 除了最基本的内网穿透（隧道）功能外，还带有一套身份认证功能用于保护应用安全，且非常简单易用。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-01-17T14:31:07.000Z">
-<meta property="article:modified_time" content="2023-09-07T15:37:05.664Z">
+<meta property="article:published_time" content="2023-09-07T15:25:10.000Z">
+<meta property="article:modified_time" content="2023-09-07T15:37:05.660Z">
 <meta property="article:author" content="ZS.FYI">
-<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Cloudflare">
+<meta property="article:tag" content="Docker">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://zs.fyi/archives/the-price-of-windows-reinstallation.html">
+<link rel="canonical" href="https://zs.fyi/archives/docker-cloudflared.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zs.fyi/archives/the-price-of-windows-reinstallation.html","path":"archives/the-price-of-windows-reinstallation.html","title":"重装系统的成本及前后工作"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zs.fyi/archives/docker-cloudflared.html","path":"archives/docker-cloudflared.html","title":"Docker 搭建 Cloudflare Tunnel"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>重装系统的成本及前后工作 | 知识参考</title>
+<title>Docker 搭建 Cloudflare Tunnel | 知识参考</title>
   
 
 
@@ -132,7 +133,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -145,7 +146,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-U-%E7%9B%98"><span class="nav-number">1.1.</span> <span class="nav-text">安装 U 盘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A9%B1%E5%8A%A8"><span class="nav-number">1.3.</span> <span class="nav-text">驱动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6"><span class="nav-number">1.4.</span> <span class="nav-text">统计安装软件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.</span> <span class="nav-text">安装系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%81%A2%E5%A4%8D%E5%B7%A5%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">恢复工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%99%85%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E5%8F%8A%E8%A7%82%E5%AF%9F"><span class="nav-number">4.</span> <span class="nav-text">实际安装步骤及观察</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -207,7 +207,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zs.fyi/archives/the-price-of-windows-reinstallation.html">
+    <link itemprop="mainEntityOfPage" href="https://zs.fyi/archives/docker-cloudflared.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -220,12 +220,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="重装系统的成本及前后工作 | 知识参考">
+      <meta itemprop="name" content="Docker 搭建 Cloudflare Tunnel | 知识参考">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          重装系统的成本及前后工作
+          Docker 搭建 Cloudflare Tunnel
         </h1>
 
         <div class="post-meta-container">
@@ -235,15 +235,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2020-01-17 22:31:07" itemprop="dateCreated datePublished" datetime="2020-01-17T22:31:07+08:00">2020-01-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-09-07 23:37:05" itemprop="dateModified" datetime="2023-09-07T23:37:05+08:00">2023-09-07</time>
+      <time title="创建时间：2023-09-07 23:25:10 / 修改时间：23:37:05" itemprop="dateCreated datePublished" datetime="2023-09-07T23:25:10+08:00">2023-09-07</time>
     </span>
 
   
@@ -255,103 +249,12 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>这次重装系统（为何要重装有兴趣的可翻看上上篇）我是一万个不愿意的，因为我知道系统重装的成本有多大。就单纯装个系统来说可能只需要十几分钟，但是装系统前的准备工作（主要是备份和制作安装启动 U 盘）以及系统装完后的恢复备份、软件安装调试、系统设置等，要想完全恢复之前的使用环境，差不多得需要一天的时间。现在是晚上的 10:42，先记录下该做的一些工作，按步骤来就不会出错。</p>
+    <div class="post-body" itemprop="articleBody"><p>Cloudflare Tunnel 除了最基本的内网穿透（隧道）功能外，还带有一套身份认证功能用于保护应用安全，且非常简单易用。</p>
 <span id="more"></span>
 
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="安装-U-盘"><a href="#安装-U-盘" class="headerlink" title="安装 U 盘"></a>安装 U 盘</h4><p>使用 <a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/software-download/windows10">Windows Media Creation Tool</a> 制作安装 U 盘 ---&gt; 完成</p>
-<h4 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h4><p>备份<code>桌面</code>文件。右键选中<code>桌面</code>文件夹，在属性中将文件移动到其他盘 ---&gt; 未完成</p>
-<p>备份<code>文档</code>文件，参照上述方法 ---&gt; 未完成</p>
-<p>用户目录下的一些 dotfile 如 ssh 密钥、gpg 密钥和配置文件等 ---&gt; 未完成</p>
-<h4 id="驱动"><a href="#驱动" class="headerlink" title="驱动"></a>驱动</h4><p>从官网下载驱动 ---&gt; 完成</p>
-<h4 id="统计安装软件"><a href="#统计安装软件" class="headerlink" title="统计安装软件"></a>统计安装软件</h4><p>按上次重装系统后软件安装顺序排序如下：</p>
-<p>✅ 已安装 - 谷歌浏览器 ---&gt; 下载万物，当然得先用 IE&#x2F;Edge 下载它</p>
-<p>✅ 已安装 - 微信</p>
-<p>✅ 已安装 - 坚果云 ---&gt; 论文同步</p>
-<p>❌ 未安装 - Zoommy ---&gt; 貌似万年没打开过了</p>
-<p>✅ 已安装 - TIM</p>
-<p>✅ 已安装 - EndNote X8 ---&gt; 文献管理，白嫖的中科大授权，严格意义上的盗版</p>
-<p>✅ 已安装 - Tableau ---&gt; 向官方申请的教育授权，本地反激活完成</p>
-<p>✅ 已安装 - 火狐浏览器</p>
-<p>✅ 已安装 - JetBrains Toolbox ---&gt; 向官方申请的教育授权，无需反激活</p>
-<p>✅ 已安装 - 1Password ---&gt; 别忘记主密码</p>
-<p>✅ 已安装 - R</p>
-<p>✅ 已安装 - RStudio</p>
-<p>❌ 未安装 - Fences ---&gt; 购买的正版密钥，本地反激活完成</p>
-<p>✅ 已安装 - Listary ---&gt; 购买的正版密钥，无法&#x2F;不需反激活</p>
-<p>✅ 已安装 - Internet Download Manager ---&gt; 购买的正版密钥，无法&#x2F;不需反激活</p>
-<p>✅ 已安装 - Notion ---&gt; 通过 Scoop 安装</p>
-<p>✅ 已安装 - MATLAB ---&gt; 学校购买授权，帐号登录</p>
-<p>✅ 已安装 - Navicat ---&gt; 学校邮箱申请密钥，反激活完成</p>
-<p>✅ 已安装 - Axure ---&gt; 教育授权，本地反激活完成</p>
-<p>✅ 已安装 - MS Office 家庭和学生版 2016 ---&gt; 购买机器附送的，绑定账号</p>
-<p>✅ 已安装 - 幕布 ---&gt; 通过 Scoop 安装</p>
-<p>✅ 已安装 - 印象笔记 ---&gt; 登录国内和国际版两个账号</p>
-<p>✅ 已安装 - MindManager</p>
-<p>✅ 已安装 - PicGo ---&gt; 通过 Scoop 安装</p>
-<p>✅ 已安装 - MS Visio 专业版 2019 ---&gt; 购买，绑定账号</p>
-<p>✅ 已安装 - WinRAR</p>
-<p>✅ 已安装 - Python 3.7 ---&gt; 不要装 3.8，无法正常运行 Jupyter Notebook</p>
-<p>❌ 未安装 - XMeters ---&gt; 购买的正版密钥，无法&#x2F;不需反激活 ---&gt; 先不装了</p>
-<p>✅ 已安装 - PotPlayer ---&gt; 竟然被 Scoop extras bucket 收录了</p>
-<p>✅ 已安装 - ManicTime ---&gt; 购买的正版密钥，本地反激活完成</p>
-<p>✅ 已安装 - Rtools</p>
-<p>✅ 已安装 - Spotify</p>
-<p>✅ 已安装 - TeX Live ---&gt; 配置文件还原</p>
-<h3 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h3><p>最简单，略过，选项该关闭该保留全凭个人喜好</p>
-<p>不过有一点要记住，安装时先创建一个本地账户而不要登录微软账号，否则用户文件夹名会恶心你</p>
-<h3 id="恢复工作"><a href="#恢复工作" class="headerlink" title="恢复工作"></a>恢复工作</h3><ul>
-<li><p>驱动安装 ---&gt; 可选，看看官网有没有适配最新系统的驱动发布</p>
-</li>
-<li><p>备份文件恢复 ---&gt; 移动文件</p>
-</li>
-<li><p>安装软件 ---&gt; 无尽的下载……下载……载……想到 MATLAB 和 TeX Live 就头疼</p>
-</li>
-<li><p>环境变量设置 ---&gt; 绝大部分交由 Scoop 完成，剩余的软件安装过程中就可做到</p>
-</li>
-<li><p>自定义 DNS ---&gt; 可选</p>
-</li>
-<li><p>一些软件设置，如语言工具设置国内镜像源</p>
-</li>
-</ul>
-<p>现在已经凌晨 12:18 了，明天继续。</p>
-<h3 id="实际安装步骤及观察"><a href="#实际安装步骤及观察" class="headerlink" title="实际安装步骤及观察"></a>实际安装步骤及观察</h3><ol>
-<li><p>安装完系统后，联网，等待一段时间，自动安装驱动及补丁</p>
-</li>
-<li><p>修改设备名称后，重启</p>
-</li>
-<li><p>通过蓝牙连接鼠标和键盘</p>
-</li>
-<li><p>解决英文操作系统下中文乱码问题：<code>Control Panel - Clock and Region - Region - Administrative - Language for non-Unicode programs</code>，将其改为简体中文即可</p>
-</li>
-<li><p>登录微软账号同步设置和 OneDrive 文件，先进行简单设置和覆盖原有设置，如去掉固定在任务栏的快捷图标，将默认输入语言设置为中文、默认应用语言和系统显示语言设置为英文</p>
-</li>
-<li><p>安装 Scoop，参考的是之前写的 <a href="https://zs.fyi/archives/scoop-guidebook.html">Scoop 不完全上手指南</a>。安装完后，用户文件夹下多了一个 <code>.config</code> 文件夹，里面有 Scoop 的配置文件</p>
-</li>
-<li><p>先通过 Scoop 安装 shadowsocksr-csharp，前提是添加 extras bucket，而添加 extras bucket 的前提是安装 git 和 7zip。这一过程是异常痛苦的，网络环境并不太好，只能看着下载进度条慢慢地走……</p>
-</li>
-<li><p>垃圾小米笔记本，安装 git 时自动休眠睡死了，转向处理这一问题的 bug 分支。</p>
-</li>
-<li><p><del>初步判断是集成显卡驱动问题</del>并不是，可能跟主板芯片和电池管理驱动有关，所以老老实实把所有驱动打了一遍。为了加快驱动下载速度，安装 Internet Download Manager，而密钥存储在 1Password 中，先下载安装 1P。</p>
-</li>
-<li><p>安装 git 后，将原来的 <code>.gitconfig</code> 文件复制到用户目录下覆盖新生成的配置文件</p>
-</li>
-<li><p>安装完谷歌浏览器后，登录账号同步设置及插件，复制机场的订阅地址到小飞机，开启飞行模式</p>
-</li>
-<li><p>之前通过 Scoop 安装的一些软件虽然可以<a href="https://zs.fyi/archives/windows-open-with.html#Scoop-%E8%BF%81%E7%A7%BB%E5%8F%8A%E9%87%8D%E8%A3%85%E5%90%8E%E6%81%A2%E5%A4%8D%E4%BD%BF%E7%94%A8">无损迁移恢复使用</a>，但最终还是决定全部重装一遍，完整记录下来。</p>
-</li>
-<li><p>Scoop install: adb | android-sdk | anki | annie | aria2 | autohotkey | blender | bluescreenview | captura | chromedriver | concfg | curl | dark | dropit | everything | ffmpeg | figlet | fork | geckodriver | geekuninstaller | gimp | gpg | graphviz | honeyview | hugo | inkscape | joplin | lessmsi | motrix | msys2 | neovim | nodejs-lts | nvm | openjdk13 | openshot | pandoc | pandownload | php | proxifier-portable | pshazz | racket | screentogif | sharex | sqlite | sudo | sumatrapdf | telegram | time | touch | v2ray | v2rayn | vnote | vscode | which | winscp | yarn | youtube-dl | zotero</p>
-</li>
-<li><p>go 改为手动安装</p>
-</li>
-<li><p>将之前备份的文件还原回去</p>
-</li>
-<li><p>之后就剩一些「大块头」的软件以及收尾工作</p>
-</li>
-<li><p>最后就是系统设置</p>
-</li>
-<li><p>done</p>
-</li>
-</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&quot;3.9&quot;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">tunnel:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">cloudflared_tunnel</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">cloudflare/cloudflared</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">tunnel</span> <span class="string">--no-autoupdate</span> <span class="string">run</span> <span class="string">--token</span> <span class="string">&lt;token&gt;</span> <span class="comment"># 将 &lt;token&gt; 替换为你的</span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.cloudflare.com/products/tunnel/">产品介绍</a> 和 <a target="_blank" rel="noopener" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/">使用文档</a></p>
 
     </div>
 
@@ -385,7 +288,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://zs.fyi/archives/the-price-of-windows-reinstallation.html" title="重装系统的成本及前后工作">https://zs.fyi/archives/the-price-of-windows-reinstallation.html</a>
+      <a href="https://zs.fyi/archives/docker-cloudflared.html" title="Docker 搭建 Cloudflare Tunnel">https://zs.fyi/archives/docker-cloudflared.html</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -394,21 +297,19 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
+              <a href="/tags/Cloudflare/" rel="tag"><i class="fa fa-tag"></i> Cloudflare</a>
+              <a href="/tags/Docker/" rel="tag"><i class="fa fa-tag"></i> Docker</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/archives/early-start.html" rel="prev" title="如何让应用在进入桌面前启动">
-                  <i class="fa fa-angle-left"></i> 如何让应用在进入桌面前启动
+                <a href="/archives/docker-portainer.html" rel="prev" title="Docker 搭建 Portainer">
+                  <i class="fa fa-angle-left"></i> Docker 搭建 Portainer
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/archives/computer-font.html" rel="next" title="计算机字体初了解">
-                  计算机字体初了解 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -489,7 +390,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://zs.fyi/archives/the-price-of-windows-reinstallation.html"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://zs.fyi/archives/docker-cloudflared.html"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"zsfyi/youtube","issue_term":"pathname","theme":"github-light"}</script>
 <script src="/js/third-party/comments/utterances.js"></script>
