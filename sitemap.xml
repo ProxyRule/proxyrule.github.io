@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zs.fyi/archives/ssr-ipv6-proxifier.html</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zs.fyi/archives/start-over.html</loc>
     
     <lastmod>2023-09-10</lastmod>
@@ -318,15 +327,6 @@
   
   <url>
     <loc>https://zs.fyi/archives/ssh-proxycommand-proxyjump.html</loc>
-    
-    <lastmod>2023-09-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/ssr-ipv6-proxifier.html</loc>
     
     <lastmod>2023-09-10</lastmod>
     

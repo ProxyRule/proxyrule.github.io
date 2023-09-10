@@ -1,3 +1,4 @@
+https://zs.fyi/archives/ssr-ipv6-proxifier.html
 https://zs.fyi/archives/start-over.html
 https://zs.fyi/archives/task-scheduler-cpu.html
 https://zs.fyi/archives/the-price-of-windows-reinstallation.html
@@ -34,7 +35,6 @@ https://zs.fyi/archives/proxy-configurations.html
 https://zs.fyi/archives/python-vc-14-0-error.html
 https://zs.fyi/archives/scoop-guidebook.html
 https://zs.fyi/archives/ssh-proxycommand-proxyjump.html
-https://zs.fyi/archives/ssr-ipv6-proxifier.html
 https://zs.fyi/404.html
 https://zs.fyi/GDPR/index.html
 https://zs.fyi/
