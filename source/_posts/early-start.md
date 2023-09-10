@@ -27,7 +27,7 @@ Windows 10 上安装了 [Fences](https://www.stardock.com/products/fences/) 用�
 
 注意：如果你写入上述文件的某一行程序路径无效的话，那么在这之后指定的任何程序都不会被 earlystart
 
-1. 重启观察是否有变化
+6. 重启观察是否有变化
 
 ### 如何卸载
 
