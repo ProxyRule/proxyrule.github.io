@@ -490,7 +490,7 @@ utterances:
 # ============================================================= #
 
 # Cloudflare Web Analytics
-cloudflare_analytics: 6a76903e336e4cc58924a3300de1ad69
+# cloudflare_analytics: 6a76903e336e4cc58924a3300de1ad69
 
 # Umami Analytics
 umami:
