@@ -2,78 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zs.fyi/tags/index.html</loc>
-    
-    <lastmod>2023-09-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/early-start.html</loc>
-    
-    <lastmod>2023-09-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/excel-2016-blank.html</loc>
-    
-    <lastmod>2023-09-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/next-tag-plugins.html</loc>
-    
-    <lastmod>2023-09-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/planetscale-vercel-umami.html</loc>
-    
-    <lastmod>2023-09-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/proxy-aggregation-and-conversion.html</loc>
-    
-    <lastmod>2023-09-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/proxy-configurations.html</loc>
-    
-    <lastmod>2023-09-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zs.fyi/archives/python-vc-14-0-error.html</loc>
-    
-    <lastmod>2023-09-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://zs.fyi/archives/scoop-guidebook.html</loc>
     
     <lastmod>2023-09-10</lastmod>
@@ -254,6 +182,15 @@
   </url>
   
   <url>
+    <loc>https://zs.fyi/tags/index.html</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zs.fyi/archives/add-ipv4-for-ipv6-only-vps.html</loc>
     
     <lastmod>2023-09-10</lastmod>
@@ -327,6 +264,78 @@
   
   <url>
     <loc>https://zs.fyi/archives/docker-tutorial.html</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/early-start.html</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/excel-2016-blank.html</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/next-tag-plugins.html</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/planetscale-vercel-umami.html</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/proxy-aggregation-and-conversion.html</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/proxy-configurations.html</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/archives/python-vc-14-0-error.html</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zs.fyi/404/index.html</loc>
     
     <lastmod>2023-09-10</lastmod>
     

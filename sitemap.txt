@@ -1,11 +1,3 @@
-https://zs.fyi/tags/index.html
-https://zs.fyi/archives/early-start.html
-https://zs.fyi/archives/excel-2016-blank.html
-https://zs.fyi/archives/next-tag-plugins.html
-https://zs.fyi/archives/planetscale-vercel-umami.html
-https://zs.fyi/archives/proxy-aggregation-and-conversion.html
-https://zs.fyi/archives/proxy-configurations.html
-https://zs.fyi/archives/python-vc-14-0-error.html
 https://zs.fyi/archives/scoop-guidebook.html
 https://zs.fyi/archives/ssh-proxycommand-proxyjump.html
 https://zs.fyi/archives/ssr-ipv6-proxifier.html
@@ -26,6 +18,7 @@ https://zs.fyi/archives/windows-open-with.html
 https://zs.fyi/archives/windows-sleep-bug.html
 https://zs.fyi/archives/windows-start-program.html
 https://zs.fyi/about/index.html
+https://zs.fyi/tags/index.html
 https://zs.fyi/archives/add-ipv4-for-ipv6-only-vps.html
 https://zs.fyi/archives/backblaze-b2-cloudflare.html
 https://zs.fyi/archives/cheap-proxy-providers.html
@@ -35,6 +28,14 @@ https://zs.fyi/archives/docker-portainer.html
 https://zs.fyi/archives/docker-rsshub.html
 https://zs.fyi/archives/docker-subconverter.html
 https://zs.fyi/archives/docker-tutorial.html
+https://zs.fyi/archives/early-start.html
+https://zs.fyi/archives/excel-2016-blank.html
+https://zs.fyi/archives/next-tag-plugins.html
+https://zs.fyi/archives/planetscale-vercel-umami.html
+https://zs.fyi/archives/proxy-aggregation-and-conversion.html
+https://zs.fyi/archives/proxy-configurations.html
+https://zs.fyi/archives/python-vc-14-0-error.html
+https://zs.fyi/404/index.html
 https://zs.fyi/GDPR/index.html
 https://zs.fyi/
 https://zs.fyi/tags/Cloudflare/
