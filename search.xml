@@ -214,7 +214,7 @@
     <content><![CDATA[<p>RSSHub 是一个开源、简单易用、易于扩展的 RSS 生成器，可以给任何奇奇怪怪的内容生成 RSS 订阅源。</p>
 <span id="more"></span>
 
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">    <span class="attr">rsshub:</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">rsshub_app</span></span><br><span class="line">        <span class="comment"># two ways to enable puppeteer:</span></span><br><span class="line">        <span class="comment"># * comment out marked lines, then use this image instead: diygod/rsshub:chromium-bundled</span></span><br><span class="line">        <span class="comment"># * (consumes more disk space and memory) leave everything unchanged</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">diygod/rsshub</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;1200:1200&#x27;</span></span><br><span class="line">        <span class="attr">environment:</span></span><br><span class="line">            <span class="attr">NODE_ENV:</span> <span class="string">production</span></span><br><span class="line">            <span class="attr">CACHE_TYPE:</span> <span class="string">redis</span></span><br><span class="line">            <span class="attr">REDIS_URL:</span> <span class="string">&#x27;redis://redis:6379/&#x27;</span></span><br><span class="line">            <span class="attr">PUPPETEER_WS_ENDPOINT:</span> <span class="string">&#x27;ws://browserless:3000&#x27;</span>  <span class="comment"># marked</span></span><br><span class="line">        <span class="attr">depends_on:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">redis</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">browserless</span>  <span class="comment"># marked</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">browserless:</span>  <span class="comment"># marked</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">rsshub_browserless</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">browserless/chrome</span>  <span class="comment"># marked</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span>  <span class="comment"># marked</span></span><br><span class="line">        <span class="attr">ulimits:</span>  <span class="comment"># marked</span></span><br><span class="line">          <span class="attr">core:</span>  <span class="comment"># marked</span></span><br><span class="line">            <span class="attr">hard:</span> <span class="number">0</span>  <span class="comment"># marked</span></span><br><span class="line">            <span class="attr">soft:</span> <span class="number">0</span>  <span class="comment"># marked</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">redis:</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">rsshub_redis</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">redis:alpine</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">        <span class="attr">volumes:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">redis_data:/data</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">    <span class="attr">redis_data:</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.9&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">    <span class="attr">rsshub:</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">rsshub_app</span></span><br><span class="line">        <span class="comment"># two ways to enable puppeteer:</span></span><br><span class="line">        <span class="comment"># * comment out marked lines, then use this image instead: diygod/rsshub:chromium-bundled</span></span><br><span class="line">        <span class="comment"># * (consumes more disk space and memory) leave everything unchanged</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">diygod/rsshub</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;1200:1200&#x27;</span></span><br><span class="line">        <span class="attr">environment:</span></span><br><span class="line">            <span class="attr">NODE_ENV:</span> <span class="string">production</span></span><br><span class="line">            <span class="attr">CACHE_TYPE:</span> <span class="string">redis</span></span><br><span class="line">            <span class="attr">REDIS_URL:</span> <span class="string">&#x27;redis://redis:6379/&#x27;</span></span><br><span class="line">            <span class="attr">PUPPETEER_WS_ENDPOINT:</span> <span class="string">&#x27;ws://browserless:3000&#x27;</span>  <span class="comment"># marked</span></span><br><span class="line">            <span class="attr">PROXY_URI:</span> <span class="string">&#x27;socks5h://warp-socks:9091&#x27;</span></span><br><span class="line">        <span class="attr">depends_on:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">redis</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">browserless</span>  <span class="comment"># marked</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">browserless:</span>  <span class="comment"># marked</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">rsshub_browserless</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">browserless/chrome</span>  <span class="comment"># marked</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span>  <span class="comment"># marked</span></span><br><span class="line">        <span class="attr">ulimits:</span>  <span class="comment"># marked</span></span><br><span class="line">          <span class="attr">core:</span>  <span class="comment"># marked</span></span><br><span class="line">            <span class="attr">hard:</span> <span class="number">0</span>  <span class="comment"># marked</span></span><br><span class="line">            <span class="attr">soft:</span> <span class="number">0</span>  <span class="comment"># marked</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">redis:</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">rsshub_redis</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">redis:alpine</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">        <span class="attr">volumes:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">redis_data:/data</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">warp-socks:</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">rsshub_warp</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">monius/docker-warp-socks:latest</span></span><br><span class="line">        <span class="attr">privileged:</span> <span class="literal">true</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">        <span class="attr">volumes:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">/lib/modules:/lib/modules</span></span><br><span class="line">        <span class="attr">cap_add:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">NET_ADMIN</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">SYS_MODULE</span></span><br><span class="line">        <span class="attr">sysctls:</span></span><br><span class="line">            <span class="attr">net.ipv6.conf.all.disable_ipv6:</span> <span class="number">0</span></span><br><span class="line">            <span class="attr">net.ipv4.conf.all.src_valid_mark:</span> <span class="number">1</span></span><br><span class="line">        <span class="attr">healthcheck:</span></span><br><span class="line">            <span class="attr">test:</span> [<span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;curl&quot;</span>, <span class="string">&quot;-f&quot;</span>, <span class="string">&quot;https://www.cloudflare.com/cdn-cgi/trace&quot;</span>]</span><br><span class="line">            <span class="attr">interval:</span> <span class="string">30s</span></span><br><span class="line">            <span class="attr">timeout:</span> <span class="string">10s</span></span><br><span class="line">            <span class="attr">retries:</span> <span class="number">5</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">    <span class="attr">redis_data:</span></span><br></pre></td></tr></table></figure>
 
 <p><a href="https://docs.rsshub.app/">RSSHub 官方网站</a></p>
 ]]></content>
@@ -912,30 +912,6 @@ pie
       </tags>
   </entry>
   <entry>
-    <title>重头再来</title>
-    <url>/archives/start-over.html</url>
-    <content><![CDATA[<p>一次在玩的时候，我把 <code>rm -rf ./etc</code> 敲成了 <code>rm -rf /etc</code> 然后把服务器的配置文件全给误删了。现在想来，其实当时还是有补救的办法的，因为我之前把 <code>/etc</code> 目录 zip 到 root 用户的家目录了，只要当时我不 <code>exit ssh</code> 把文件恢复回去就没事，然而……</p>
-<span id="more"></span>
-
-<p>不记得这是第几次「搬家」了，从之前的另一个域名到这个 top 域名，从 WordPress 到 Typecho 再到 WordPress。这次，我决定使用 Hugo&#x2F;Hexo + GitHub&#x2F;Coding 来搭建静态博客，主动注销网站备案也是不可避免的了。</p>
-<p>说来惭愧，虽然写了几十篇博文，但我感觉似乎并没有输出多少有价值的东西，一是积淀太少，二是表达与写作能力还需提高。另外，我一直有通过 Google Search Console 查看大家都是通过哪些关键词进入本站的，发现最多的是 <code>SSR</code>、<code>IPv6</code>、<code>Proxifier</code>、<code>校园网</code>、<code>免流</code> 之类的，我觉得没多大意思也并非我写博客的本意。</p>
-<p>我都写过什么呢？</p>
-<p>一篇介绍如何通过 SSR 和 IPv6 上网来规避高昂且吝啬的校园网。</p>
-<p>一篇「反某网盘限速的 N 种方法」，提到了 BaiduPCS-Go、客户端破解、PanDownload、Proxyee-down、油猴脚本、爱奇艺万能播放器、速盘这些工具和方法。</p>
-<p>一篇腾讯大王卡与 B 站 33 卡的对比，现在来看也肯定过时了，毕竟目前互联网卡五花八门。</p>
-<p>一篇介绍双拼输入的，我觉得非常值得学习和掌握，正在使用的是<a href="https://www.flypy.com/">小鹤双拼</a>方案。</p>
-<p>几篇介绍电脑和手机使用习惯、密码安全及 Windows 常用软件等，这个也是被写烂了的话题。</p>
-<p>几篇 Python 官方文档的翻译，后来弃坑了，原因是现在已经有社区在做了。</p>
-<p>转载和翻译了几篇我认为还不错的文章。</p>
-<p>几篇年度流水账，讲我这一年买了些啥、花了多少钱在哪些订阅服务上、我认为值不值，云云。</p>
-<p>然后是 Windows 10 使用中我碰到过的一些问题以及相应的解决办法，之前全部整理出来放在语雀上了，详见：<a href="https://www.yuque.com/shuaizheng/blog/windows">专治 Windows 10 各种不服</a></p>
-<p>最后是一些丢掉了也不觉得可惜的日常碎碎念。</p>
-]]></content>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Task Scheduler CPU 占用高</title>
     <url>/archives/task-scheduler-cpu.html</url>
     <content><![CDATA[<h3 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h3><ol>
@@ -970,6 +946,30 @@ pie
 ]]></content>
       <tags>
         <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>重头再来</title>
+    <url>/archives/start-over.html</url>
+    <content><![CDATA[<p>一次在玩的时候，我把 <code>rm -rf ./etc</code> 敲成了 <code>rm -rf /etc</code> 然后把服务器的配置文件全给误删了。现在想来，其实当时还是有补救的办法的，因为我之前把 <code>/etc</code> 目录 zip 到 root 用户的家目录了，只要当时我不 <code>exit ssh</code> 把文件恢复回去就没事，然而……</p>
+<span id="more"></span>
+
+<p>不记得这是第几次「搬家」了，从之前的另一个域名到这个 top 域名，从 WordPress 到 Typecho 再到 WordPress。这次，我决定使用 Hugo&#x2F;Hexo + GitHub&#x2F;Coding 来搭建静态博客，主动注销网站备案也是不可避免的了。</p>
+<p>说来惭愧，虽然写了几十篇博文，但我感觉似乎并没有输出多少有价值的东西，一是积淀太少，二是表达与写作能力还需提高。另外，我一直有通过 Google Search Console 查看大家都是通过哪些关键词进入本站的，发现最多的是 <code>SSR</code>、<code>IPv6</code>、<code>Proxifier</code>、<code>校园网</code>、<code>免流</code> 之类的，我觉得没多大意思也并非我写博客的本意。</p>
+<p>我都写过什么呢？</p>
+<p>一篇介绍如何通过 SSR 和 IPv6 上网来规避高昂且吝啬的校园网。</p>
+<p>一篇「反某网盘限速的 N 种方法」，提到了 BaiduPCS-Go、客户端破解、PanDownload、Proxyee-down、油猴脚本、爱奇艺万能播放器、速盘这些工具和方法。</p>
+<p>一篇腾讯大王卡与 B 站 33 卡的对比，现在来看也肯定过时了，毕竟目前互联网卡五花八门。</p>
+<p>一篇介绍双拼输入的，我觉得非常值得学习和掌握，正在使用的是<a href="https://www.flypy.com/">小鹤双拼</a>方案。</p>
+<p>几篇介绍电脑和手机使用习惯、密码安全及 Windows 常用软件等，这个也是被写烂了的话题。</p>
+<p>几篇 Python 官方文档的翻译，后来弃坑了，原因是现在已经有社区在做了。</p>
+<p>转载和翻译了几篇我认为还不错的文章。</p>
+<p>几篇年度流水账，讲我这一年买了些啥、花了多少钱在哪些订阅服务上、我认为值不值，云云。</p>
+<p>然后是 Windows 10 使用中我碰到过的一些问题以及相应的解决办法，之前全部整理出来放在语雀上了，详见：<a href="https://www.yuque.com/shuaizheng/blog/windows">专治 Windows 10 各种不服</a></p>
+<p>最后是一些丢掉了也不觉得可惜的日常碎碎念。</p>
+]]></content>
+      <tags>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
