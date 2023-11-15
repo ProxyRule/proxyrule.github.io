@@ -11,7 +11,7 @@ RSSHub 是一个开源、简单易用、易于扩展的 RSS 生成器，可以�
 <!-- more -->
 
 ```yml
-version: '3'
+version: '3.9'
 
 services:
     rsshub:
@@ -28,6 +28,7 @@ services:
             CACHE_TYPE: redis
             REDIS_URL: 'redis://redis:6379/'
             PUPPETEER_WS_ENDPOINT: 'ws://browserless:3000'  # marked
+            PROXY_URI: 'socks5h://warp-socks:9091'
         depends_on:
             - redis
             - browserless  # marked
@@ -47,6 +48,25 @@ services:
         restart: always
         volumes:
             - redis_data:/data
+
+    warp-socks:
+        container_name: rsshub_warp
+        image: monius/docker-warp-socks:latest
+        privileged: true
+        restart: always
+        volumes:
+            - /lib/modules:/lib/modules
+        cap_add:
+            - NET_ADMIN
+            - SYS_MODULE
+        sysctls:
+            net.ipv6.conf.all.disable_ipv6: 0
+            net.ipv4.conf.all.src_valid_mark: 1
+        healthcheck:
+            test: ["CMD", "curl", "-f", "https://www.cloudflare.com/cdn-cgi/trace"]
+            interval: 30s
+            timeout: 10s
+            retries: 5
 
 volumes:
     redis_data:
