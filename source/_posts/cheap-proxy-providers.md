@@ -5,6 +5,16 @@ tags:
     - 代理
 ---
 
+如果想要找一些使用体验更好的，我用过和推荐的机场依次有这些：
+
+- [WestData] 属于便宜大碗的，200 一年且经常有 9 折、85 折优惠码
+- [FlowerCloud] 不用说，折扣后 300 以内，很能打
+- [MESL] 比较新的机场，用过感觉还不错，也是差不多的价位
+- [IPLC.VIP] 用过的第一家机场，价格相比之下贵了点，但是服务挺好
+- [Just My Socks] 搬瓦工机场，很久没用了，不太清楚
+
+---
+
 前段时间老是在论坛上看到相关信息，就查了一下，找到了这篇[机场图鉴]。我之前并没有用过，甚至也没听过，更没想过能把价格压到这种程度。
 
 <!-- more -->
@@ -102,3 +112,8 @@ tags:
 [翻墙机场]: https://link.zs.fyi/fqjc
 [赔钱机场]: https://link.zs.fyi/pqjc
 [机场图鉴]: https://aijichang.com/6379/
+[IPLC.VIP]: https://link.zs.fyi/iplc
+[WestData]: https://link.zs.fyi/westdata
+[FlowerCloud]: https://link.zs.fyi/flowercloud
+[MESL]: https://link.zs.fyi/mesl
+[Just My Socks]: https://link.zs.fyi/jms
