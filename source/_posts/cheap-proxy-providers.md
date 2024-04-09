@@ -103,17 +103,17 @@ tags:
 
 套餐更夸张，或许是名字由来吧，年付 7 元每月 1T 流量。其他还有月付 4 元每月 5T 流量以及一次性流量套餐等。
 
-[EFCloud]: https://link.zs.fyi/efcloud
-[一元机场]: https://link.zs.fyi/yyjc
-[三分机场]: https://link.zs.fyi/sfjc
-[两元店]: https://link.zs.fyi/lyd
-[低价机场]: https://link.zs.fyi/djjc
-[性价比机场]: https://link.zs.fyi/xjbjc
-[翻墙机场]: https://link.zs.fyi/fqjc
-[赔钱机场]: https://link.zs.fyi/pqjc
+[EFCloud]: https://yourl.ink/efcloud
+[一元机场]: https://yourl.ink/yyjc
+[三分机场]: https://yourl.ink/sfjc
+[两元店]: https://yourl.ink/lyd
+[低价机场]: https://yourl.ink/djjc
+[性价比机场]: https://yourl.ink/xjbjc
+[翻墙机场]: https://yourl.ink/fqjc
+[赔钱机场]: https://yourl.ink/pqjc
 [机场图鉴]: https://aijichang.com/6379/
-[IPLC.VIP]: https://link.zs.fyi/iplc
-[WestData]: https://link.zs.fyi/westdata
-[FlowerCloud]: https://link.zs.fyi/flowercloud
-[MESL]: https://link.zs.fyi/mesl
-[Just My Socks]: https://link.zs.fyi/jms
+[IPLC.VIP]: https://yourl.ink/iplc
+[WestData]: https://yourl.ink/westdata
+[FlowerCloud]: https://yourl.ink/flowercloud
+[MESL]: https://yourl.ink/mesl
+[Just My Socks]: https://yourl.ink/jms
