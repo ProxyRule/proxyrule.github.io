@@ -1,3 +1,4 @@
+https://zs.fyi/archives/proxy-aggregation-and-conversion.html
 https://zs.fyi/archives/proxy-configurations.html
 https://zs.fyi/archives/python-vc-14-0-error.html
 https://zs.fyi/archives/scoop-guidebook.html
@@ -34,7 +35,6 @@ https://zs.fyi/archives/early-start.html
 https://zs.fyi/archives/excel-2016-blank.html
 https://zs.fyi/archives/next-tag-plugins.html
 https://zs.fyi/archives/planetscale-vercel-umami.html
-https://zs.fyi/archives/proxy-aggregation-and-conversion.html
 https://zs.fyi/404.html
 https://zs.fyi/GDPR/index.html
 https://zs.fyi/
