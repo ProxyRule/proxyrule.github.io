@@ -27,7 +27,15 @@ tags:
 - 机场跑路风险高，当然这不意味着我在用的那些所谓“高端”机场就不会跑路，最好按月购买
 - 隐私和信息安全风险高，有可能的话将几家串成代理链或套一层 WARP，其实对于所有机场都应该这样
 
-我个人在用的包括 EFCloud、一元机场、低价机场、性价比机场和赔钱机场（按流量）
+我个人在用的包括 SWIFT Network、EFCloud、一元机场和赔钱机场。
+
+### SWIFT Network
+
+[注册][SWIFT Network]需验证邮箱，不支持匿名邮箱。
+
+默认佣金比例 20%
+
+费用上从每月 6.8 元 98G 流量（年付 80，两年付 150）到 38.8 元 1TB 流量不等。提供按流量付费套餐，30 块钱 188G 不限时流量，56.8 元 388G 和 118.8 元 1TB 不等。
 
 ### EFCloud
 
@@ -117,3 +125,4 @@ tags:
 [FlowerCloud]: https://yourl.ink/flowercloud
 [MESL]: https://yourl.ink/mesl
 [Just My Socks]: https://yourl.ink/jms
+[SWIFT Network]: https://yourl.ink/swift
