@@ -19,31 +19,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zs.fyi","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="情形 风扇一直转个不停  查看任务管理器，CPU 占用一直是 99%  Task Scheduler 占用 CPU 高达 60%">
+    <meta name="description" content="Yourls 是一款开源的短链接管理软件，可用于为您的博客文章创建简短、易于记忆的链接。它是一个自托管的解决方案，这意味着您可以将其安装在自己的服务器上，并完全控制您的数据。">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Task Scheduler CPU 占用高">
-<meta property="og:url" content="https://zs.fyi/archives/task-scheduler-cpu.html">
+<meta property="og:title" content="Docker 搭建 YOURLS">
+<meta property="og:url" content="https://zs.fyi/archives/docker-yourls.html">
 <meta property="og:site_name" content="知识参考">
-<meta property="og:description" content="情形 风扇一直转个不停  查看任务管理器，CPU 占用一直是 99%  Task Scheduler 占用 CPU 高达 60%">
+<meta property="og:description" content="Yourls 是一款开源的短链接管理软件，可用于为您的博客文章创建简短、易于记忆的链接。它是一个自托管的解决方案，这意味着您可以将其安装在自己的服务器上，并完全控制您的数据。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.zs.fyi/2308/Task-Manager.png">
-<meta property="og:image" content="https://img.zs.fyi/2308/Task-Scheduler.png">
-<meta property="article:published_time" content="2023-07-29T03:39:27.000Z">
-<meta property="article:modified_time" content="2024-04-16T05:55:51.888Z">
+<meta property="article:published_time" content="2024-04-16T05:50:38.000Z">
+<meta property="article:modified_time" content="2024-04-16T05:55:51.884Z">
 <meta property="article:author" content="ZS.FYI">
-<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="YOURLS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.zs.fyi/2308/Task-Manager.png">
 
 
-<link rel="canonical" href="https://zs.fyi/archives/task-scheduler-cpu.html">
+<link rel="canonical" href="https://zs.fyi/archives/docker-yourls.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zs.fyi/archives/task-scheduler-cpu.html","path":"archives/task-scheduler-cpu.html","title":"Task Scheduler CPU 占用高"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zs.fyi/archives/docker-yourls.html","path":"archives/docker-yourls.html","title":"Docker 搭建 YOURLS"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Task Scheduler CPU 占用高 | 知识参考</title>
+<title>Docker 搭建 YOURLS | 知识参考</title>
   
 
 
@@ -147,7 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%BD%A2"><span class="nav-number">1.</span> <span class="nav-text">情形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text">查找解决方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3"><span class="nav-number">3.</span> <span class="nav-text">尝试解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3"><span class="nav-number">4.</span> <span class="nav-text">最终解决</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Yourls-%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">Yourls 的优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-Yourls"><span class="nav-number">2.</span> <span class="nav-text">如何开始使用 Yourls</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -209,7 +207,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zs.fyi/archives/task-scheduler-cpu.html">
+    <link itemprop="mainEntityOfPage" href="https://zs.fyi/archives/docker-yourls.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -222,12 +220,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Task Scheduler CPU 占用高 | 知识参考">
+      <meta itemprop="name" content="Docker 搭建 YOURLS | 知识参考">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Task Scheduler CPU 占用高
+          Docker 搭建 YOURLS
         </h1>
 
         <div class="post-meta-container">
@@ -237,15 +235,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2023-07-29 11:39:27" itemprop="dateCreated datePublished" datetime="2023-07-29T11:39:27+08:00">2023-07-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-04-16 13:55:51" itemprop="dateModified" datetime="2024-04-16T13:55:51+08:00">2024-04-16</time>
+      <time title="创建时间：2024-04-16 13:50:38 / 修改时间：13:55:51" itemprop="dateCreated datePublished" datetime="2024-04-16T13:50:38+08:00">2024-04-16</time>
     </span>
 
   
@@ -257,35 +249,37 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h3><ol>
-<li><p>风扇一直转个不停</p>
-</li>
-<li><p>查看任务管理器，CPU 占用一直是 99%</p>
-</li>
-<li><p>Task Scheduler 占用 CPU 高达 60%</p>
-</li>
-</ol>
+    <div class="post-body" itemprop="articleBody"><p>Yourls 是一款开源的短链接管理软件，可用于为您的博客文章创建简短、易于记忆的链接。它是一个自托管的解决方案，这意味着您可以将其安装在自己的服务器上，并完全控制您的数据。</p>
 <span id="more"></span>
 
-<p><img data-src="https://img.zs.fyi/2308/Task-Manager.png" alt="Task-Manager" loading="lazy"></p>
-<h3 id="查找解决方案"><a href="#查找解决方案" class="headerlink" title="查找解决方案"></a>查找解决方案</h3><ol>
-<li><p>个人博客：<a target="_blank" rel="noopener" href="http://www.tikas.me/task-scheduler-cpu-to-high/">http://www.tikas.me/task-scheduler-cpu-to-high/</a></p>
-</li>
-<li><p>微软社区，有个人提了个相同问题，可惜没人回答</p>
-</li>
-</ol>
-<h3 id="尝试解决"><a href="#尝试解决" class="headerlink" title="尝试解决"></a>尝试解决</h3><ol>
-<li><p><kbd>Start</kbd> + <kbd>X</kbd>，然后按 <kbd>G</kbd>，进入计算机管理</p>
-</li>
-<li><p>定位到<code>任务计划程序库 - Microsoft - Windows - Customer Experience Improvement Program</code>，在右侧可以看到有三个计划任务，都是微软所谓的客户体验改善计划</p>
-</li>
-<li><p>右键将它们全部禁止</p>
-</li>
-<li><p>重启</p>
-</li>
-</ol>
-<p><img data-src="https://img.zs.fyi/2308/Task-Scheduler.png" alt="Task-Scheduler" loading="lazy"></p>
-<h3 id="最终解决"><a href="#最终解决" class="headerlink" title="最终解决"></a>最终解决</h3><p>直接将这三个服务删除</p>
+<p>Yourls 的一些主要功能包括：</p>
+<ul>
+<li>创建自定义短链接</li>
+<li>跟踪链接点击数</li>
+<li>设置密码保护链接</li>
+<li>使用不同的缩短策略</li>
+<li>分享链接到社交媒体</li>
+<li>使用 API 集成到其他应用程序</li>
+</ul>
+<h3 id="Yourls-的优点"><a href="#Yourls-的优点" class="headerlink" title="Yourls 的优点"></a>Yourls 的优点</h3><p>Yourls 使用方便，功能强大，并且可以免费使用。它是博客作者和网站管理员的流行选择，因为它可以帮助他们：</p>
+<ul>
+<li>缩短长而笨重的 URL，使其更易于共享和记忆</li>
+<li>跟踪链接点击数以了解内容的受欢迎程度</li>
+<li>使用自定义短链接来创建品牌一致性</li>
+<li>保护敏感内容（例如下载链接）</li>
+</ul>
+<h3 id="如何开始使用-Yourls"><a href="#如何开始使用-Yourls" class="headerlink" title="如何开始使用 Yourls"></a>如何开始使用 Yourls</h3><p>Yourls 可以轻松安装在任何 Web 服务器上。您可以在 <a target="_blank" rel="noopener" href="https://yourls.org/">https://yourls.org/</a> 下载软件并找到有关安装和配置的说明。</p>
+<p>安装 Yourls 后，您就可以开始创建短链接了。只需输入要缩短的 URL，Yourls 就会为您生成一个短链接。您可以自定义短链接，使其更具品牌特色或易于记忆。</p>
+<p>Yourls 还提供了一些高级功能，例如跟踪链接点击数和设置密码保护链接。要了解有关这些功能的更多信息，请参阅 Yourls 文档。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Yourls 是一款功能强大且易于使用的短链接管理软件。它是博客作者和网站管理员的宝贵工具，可以帮助他们提高内容的可共享性和参与度。</p>
+<p>以下是一些您可以使用 Yourls 改进博客文章的具体方法：</p>
+<ul>
+<li>为每个博客文章创建自定义短链接。这将使您的文章更易于在社交媒体上共享，并使其看起来更专业。</li>
+<li>使用 Yourls 跟踪链接点击数以了解哪些文章最受欢迎。此信息可用于帮助您创建更多读者会喜欢的内容。</li>
+<li>使用密码保护链接来保护敏感内容，例如下载链接或仅供会员访问的页面。</li>
+</ul>
+<p>如果您正在寻找一种方法来改善博客文章的可共享性和参与度，那么 Yourls 值得一试。这是一个免费且易于使用的工具，可以为您提供许多好处。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&quot;3.1&quot;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">yourls:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">yourls_app</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">yourls</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8080</span><span class="string">:80</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">YOURLS_DB_PASS:</span> <span class="string">BM#5ztM3Z9H@zZyY</span></span><br><span class="line">      <span class="attr">YOURLS_SITE:</span> <span class="string">https://link.zs.fyi</span></span><br><span class="line">      <span class="attr">YOURLS_USER:</span> <span class="string">zheng</span></span><br><span class="line">      <span class="attr">YOURLS_PASS:</span> <span class="string">z&amp;t7LEhB7*NX54oCzybGHY4#</span></span><br><span class="line">  <span class="attr">mysql:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">yourls_db</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MYSQL_ROOT_PASSWORD:</span> <span class="string">BM#5ztM3Z9H@zZyY</span></span><br><span class="line">      <span class="attr">MYSQL_DATABASE:</span> <span class="string">yourls</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">dbdata:/var/lib/mysql</span></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">  <span class="attr">dbdata:</span></span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -319,7 +313,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://zs.fyi/archives/task-scheduler-cpu.html" title="Task Scheduler CPU 占用高">https://zs.fyi/archives/task-scheduler-cpu.html</a>
+      <a href="https://zs.fyi/archives/docker-yourls.html" title="Docker 搭建 YOURLS">https://zs.fyi/archives/docker-yourls.html</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -328,21 +322,19 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
+              <a href="/tags/Docker/" rel="tag"><i class="fa fa-tag"></i> Docker</a>
+              <a href="/tags/YOURLS/" rel="tag"><i class="fa fa-tag"></i> YOURLS</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/archives/windows-msn.html" rel="prev" title="Windows 10 开机后浏览器自动打开 MSN 中文网">
-                  <i class="fa fa-angle-left"></i> Windows 10 开机后浏览器自动打开 MSN 中文网
+                <a href="/archives/docker-umami.html" rel="prev" title="Docker 搭建 Umami">
+                  <i class="fa fa-angle-left"></i> Docker 搭建 Umami
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/archives/windows-igfxDTCM-igfxcui.html" rel="next" title="删除 Windows 10 桌面右键菜单中的图形选项和图形属性选项">
-                  删除 Windows 10 桌面右键菜单中的图形选项和图形属性选项 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -423,7 +415,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://zs.fyi/archives/task-scheduler-cpu.html"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://zs.fyi/archives/docker-yourls.html"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"zsfyi/youtube","issue_term":"pathname","theme":"github-light"}</script>
 <script src="/js/third-party/comments/utterances.js"></script>
