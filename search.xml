@@ -141,35 +141,101 @@
 <p>我个人在用的包括 SWIFT Network、EFCloud、一元机场和赔钱机场。</p>
 <h3 id="SWIFT-Network"><a href="#SWIFT-Network" class="headerlink" title="SWIFT Network"></a>SWIFT Network</h3><p><a href="https://yourl.ink/swift">注册</a>需验证邮箱，不支持匿名邮箱。</p>
 <p>默认佣金比例 20%</p>
-<p>费用上从每月 6.8 元 98G 流量（年付 80，两年付 150）到 38.8 元 1TB 流量不等。提供按流量付费套餐，30 块钱 188G 不限时流量，56.8 元 388G 和 118.8 元 1TB 不等。</p>
+<details class="note info"><summary><p>点击查看周期套餐（图片加载需要时间）</p>
+</summary>
+<p><img data-src="https://img.shuaizheng.org/2404/swift.png" alt="SWIFT Network 机场周期套餐" loading="lazy"></p>
+
+</details>
+
+<p>费用上从每月 6.8 元 98G 流量（年付 80，两年付 150）到 38.8 元 1TB 流量不等。提供按流量付费套餐，29.8 块钱 188G 不限时流量，56.8 元 388G 和 118.8 元 1TB 不等。</p>
 <h3 id="EFCloud"><a href="#EFCloud" class="headerlink" title="EFCloud"></a>EFCloud</h3><p><a href="https://yourl.ink/efcloud">注册</a>需验证邮箱，不支持匿名邮箱。</p>
-<p>默认佣金比例 25%</p>
-<p>费用上从每月 1 块钱 100G 流量到 10 块钱 3072G 流量不等。提供按流量付费套餐。</p>
+<p>默认佣金比例 35%</p>
+<details class="note info"><summary><p>点击查看周期套餐（图片加载需要时间）</p>
+</summary>
+<p><img data-src="https://img.shuaizheng.org/2404/efcloud-1.png" alt="EFCloud 机场周期套餐" loading="lazy"></p>
+
+</details>
+
+<details class="note info"><summary><p>点击查看流量套餐（图片加载需要时间）</p>
+</summary>
+<p><img data-src="https://img.shuaizheng.org/2404/efcloud-2.png" alt="EFCloud 机场流量套餐" loading="lazy"></p>
+
+</details>
+
+<p>费用上从每月 6 块钱 100G 流量到 20 块钱 500G 流量不等。提供按流量付费套餐。</p>
 <h3 id="一元机场"><a href="#一元机场" class="headerlink" title="一元机场"></a>一元机场</h3><p><a href="https://yourl.ink/yyjc">注册</a>需验证邮箱，支持 Proton 匿名邮箱。</p>
 <p>默认佣金比例 60%</p>
-<p>套餐上可选每年 11 元且每月 100G 流量，或两年付 19 元。另外，还有按月付费套餐 4 元 1000G 和 6 元 3000G</p>
+<details class="note info"><summary><p>点击查看周期套餐（图片加载需要时间）</p>
+</summary>
+<p><img data-src="https://img.shuaizheng.org/2404/yyjc.png" alt="一元机场周期套餐" loading="lazy"></p>
+
+</details>
+
+<p>套餐上可选每年 12 元且每月 50G 流量，或两年付 20 元。另外，还有季付套餐 15 元 4000G 和每月 7 元 8000G 流量。</p>
 <h3 id="三分机场"><a href="#三分机场" class="headerlink" title="三分机场"></a>三分机场</h3><p><a href="https://yourl.ink/sfjc">注册</a>需验证邮箱，不支持匿名邮箱。</p>
 <p>默认佣金比例 65%</p>
-<p>提供年付 9.5 元每月 200G 流量和月付 5 元每月 5000G 流量套餐。此外，还可 18 元一次性购买 1TB 流量。</p>
+<details class="note info"><summary><p>点击查看周期套餐（图片加载需要时间）</p>
+</summary>
+<p><img data-src="https://img.shuaizheng.org/2404/sfjc.png" alt="三分机场周期套餐" loading="lazy"></p>
+
+</details>
+
+<p>提供年付 9.5 元每月 200G 流量和月付 5 元每月 5000G 流量套餐，新增了中转套餐，最便宜的为每月 14.5 元 300G 流量。此外，还可 18 元一次性购买 1TB 流量。</p>
 <h3 id="两元店"><a href="#两元店" class="headerlink" title="两元店"></a>两元店</h3><p><a href="https://yourl.ink/lyd">注册</a>无需验证邮箱，可使用虚假邮箱。</p>
 <p>默认佣金比例 30%</p>
-<p>只有按周期付费套餐，7 元季付每月 1024G 流量，以及月付 6 元 3072G 流量等。</p>
+<details class="note info"><summary><p>点击查看周期套餐（图片加载需要时间）</p>
+</summary>
+<p><img data-src="https://img.shuaizheng.org/2404/lyd.png" alt="两元店机场周期套餐" loading="lazy"></p>
+
+</details>
+
+<p>只有按周期付费套餐，8 元季付每月 1024G 流量，以及月付 7 元 3072G 流量等。</p>
 <h3 id="五毛机场"><a href="#五毛机场" class="headerlink" title="五毛机场"></a>五毛机场</h3><p>该机场已于 2023 年 5 月 24 日前跑路</p>
-<p>注册无需验证邮箱，可使用虚假邮箱。</p>
-<p>默认佣金比例 10%</p>
-<p>提供的套餐从价格上来说其实不能算廉价了，月付 10 元至 50 元，每月流量从 120G 到 520G 不等。也可一次性购买流量。</p>
+<p><del>注册无需验证邮箱，可使用虚假邮箱。</del></p>
+<p><del>默认佣金比例 10%</del></p>
+<p><del>提供的套餐从价格上来说其实不能算廉价了，月付 10 元至 50 元，每月流量从 120G 到 520G 不等。也可一次性购买流量。</del></p>
 <h3 id="低价机场"><a href="#低价机场" class="headerlink" title="低价机场"></a>低价机场</h3><p><a href="https://yourl.ink/djjc">注册</a>需验证邮箱，支持 Proton 匿名邮箱。</p>
 <p>默认佣金比例 70%</p>
-<p>套餐只有两款，月付 1.5 元 500G 流量和月付 5 元 5000G 流量。</p>
+<details class="note info"><summary><p>点击查看周期套餐（图片加载需要时间）</p>
+</summary>
+<p><img data-src="https://img.shuaizheng.org/2404/djjc.png" alt="低价机场周期套餐" loading="lazy"></p>
+
+</details>
+
+<p>套餐只有两款，年付 11 元每月 100G 流量和月付 7 元 1000G 流量。</p>
 <h3 id="性价比机场"><a href="#性价比机场" class="headerlink" title="性价比机场"></a>性价比机场</h3><p><a href="https://yourl.ink/xjbjc">注册</a>需验证邮箱，不支持匿名邮箱。</p>
 <p>默认佣金比例 20%</p>
-<p>提供的套餐五花八门，最低月付 1 元 100G 流量，最高月付 20 元 4000G 流量。还提供 VIP 套餐（国内中转）和一次性购买流量套餐。</p>
+<details class="note info"><summary><p>点击查看周期套餐（图片加载需要时间）</p>
+</summary>
+<p><img data-src="https://img.shuaizheng.org/2404/xjbjc.png" alt="性价比机场周期套餐" loading="lazy"></p>
+
+</details>
+
+<p>提供的套餐五花八门，最低月付 1 元 50G 流量，最高月付 10 元 575G 流量。还提供 VIP 套餐（国内中转）<del>和一次性购买流量套餐</del>。</p>
 <h3 id="翻墙机场"><a href="#翻墙机场" class="headerlink" title="翻墙机场"></a>翻墙机场</h3><p><a href="https://yourl.ink/fqjc">注册</a>需验证邮箱，不支持匿名邮箱。</p>
 <p>默认佣金比例 10%</p>
+<details class="note info"><summary><p>点击查看周期套餐（图片加载需要时间）</p>
+</summary>
+<p><img data-src="https://img.shuaizheng.org/2404/fqjc.png" alt="翻墙机场周期套餐" loading="lazy"></p>
+
+</details>
+
 <p>最低月费 4 元 1T 流量，按年付则是 40 元。最高月付 8 元 4T 流量，年费 80 元。</p>
 <h3 id="赔钱机场"><a href="#赔钱机场" class="headerlink" title="赔钱机场"></a>赔钱机场</h3><p><a href="https://yourl.ink/pqjc">注册</a>无需验证邮箱，可使用虚假邮箱。</p>
-<p>默认佣金比例 75%</p>
-<p>套餐更夸张，或许是名字由来吧，年付 7 元每月 1T 流量。其他还有月付 4 元每月 5T 流量以及一次性流量套餐等。</p>
+<p>默认佣金比例 70%</p>
+<details class="note info"><summary><p>点击查看周期套餐（图片加载需要时间）</p>
+</summary>
+<p><img data-src="https://img.shuaizheng.org/2404/pqjc240416-1.png" alt="赔钱机场周期套餐" loading="lazy"></p>
+
+</details>
+
+<details class="note info"><summary><p>点击查看流量套餐（图片加载需要时间）</p>
+</summary>
+<p><img data-src="https://img.shuaizheng.org/2404/pqjc240416-2.png" alt="赔钱机场流量套餐" loading="lazy"></p>
+
+</details>
+
+<p><del>套餐更夸张，或许是名字由来吧，年付 7 元每月 1T 流量。其他还有月付 4 元每月 5T 流量以及一次性流量套餐等。</del></p>
 ]]></content>
       <tags>
         <tag>代理</tag>
@@ -206,21 +272,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Docker 搭建 Portainer</title>
-    <url>/archives/docker-portainer.html</url>
-    <content><![CDATA[<p>Portainer 是一个用户友好的图形化界面工具，用于轻松管理 Docker 容器和容器编排，无需深入命令行操作。</p>
-<span id="more"></span>
-
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.3&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">portainer-ee:</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;8000:8000&#x27;</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;9443:9443&#x27;</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">portainer</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">        <span class="attr">volumes:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;/var/run/docker.sock:/var/run/docker.sock&#x27;</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;portainer_data:/data&#x27;</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">&#x27;portainer/portainer-ee:latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">    <span class="attr">portainer_data:</span></span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.portainer.io/">Portainer 官方网站</a></p>
-]]></content>
-      <tags>
-        <tag>Docker</tag>
-        <tag>Portainer</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker 搭建 RSSHub</title>
     <url>/archives/docker-rsshub.html</url>
     <content><![CDATA[<p>RSSHub 是一个开源、简单易用、易于扩展的 RSS 生成器，可以给任何奇奇怪怪的内容生成 RSS 订阅源。</p>
@@ -233,6 +284,21 @@
       <tags>
         <tag>Docker</tag>
         <tag>RSSHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker 搭建 Portainer</title>
+    <url>/archives/docker-portainer.html</url>
+    <content><![CDATA[<p>Portainer 是一个用户友好的图形化界面工具，用于轻松管理 Docker 容器和容器编排，无需深入命令行操作。</p>
+<span id="more"></span>
+
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.3&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">portainer-ee:</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;8000:8000&#x27;</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;9443:9443&#x27;</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">portainer</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">        <span class="attr">volumes:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;/var/run/docker.sock:/var/run/docker.sock&#x27;</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;portainer_data:/data&#x27;</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">&#x27;portainer/portainer-ee:latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">    <span class="attr">portainer_data:</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.portainer.io/">Portainer 官方网站</a></p>
+]]></content>
+      <tags>
+        <tag>Docker</tag>
+        <tag>Portainer</tag>
       </tags>
   </entry>
   <entry>
@@ -1244,6 +1310,18 @@ pie
       </tags>
   </entry>
   <entry>
+    <title>CPU 频率锁定在 0.4GHz</title>
+    <url>/archives/windows-cpu-0-4ghz.html</url>
+    <content><![CDATA[<p>如下图，查到的解决办法各不相同，最后哪一种都没有采用。我目前的做法是，将控制面板中的电池计划选项重置为默认，然后关机重启，勉强解决燃眉之急。</p>
+<span id="more"></span>
+
+<p><img data-src="https://img.zs.fyi/2308/CPU.png" alt="CPU" loading="lazy"></p>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>专治 Windows 10 各种不服</title>
     <url>/archives/windows-bugs.html</url>
     <content><![CDATA[<p>大约从 2015 年开始使用 Windows 10 系统，这是一个不断遇到坑然后想办法填坑的过程，以下便是遇到的各种稀奇古怪的问题以及可能的解决方案。</p>
@@ -1273,18 +1351,6 @@ pie
 <li><p><a href="https://zs.fyi/archives/windows-linux-udisk.html">恢复 Linux U 盘启动盘在 Windows 下的使用</a></p>
 </li>
 </ul>
-]]></content>
-      <tags>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CPU 频率锁定在 0.4GHz</title>
-    <url>/archives/windows-cpu-0-4ghz.html</url>
-    <content><![CDATA[<p>如下图，查到的解决办法各不相同，最后哪一种都没有采用。我目前的做法是，将控制面板中的电池计划选项重置为默认，然后关机重启，勉强解决燃眉之急。</p>
-<span id="more"></span>
-
-<p><img data-src="https://img.zs.fyi/2308/CPU.png" alt="CPU" loading="lazy"></p>
 ]]></content>
       <tags>
         <tag>Windows</tag>
@@ -1338,24 +1404,6 @@ pie
       </tags>
   </entry>
   <entry>
-    <title>恢复 Linux U 盘启动盘在 Windows 下的使用</title>
-    <url>/archives/windows-linux-udisk.html</url>
-    <content><![CDATA[<p>通过 DD 方式制作 Linux 启动盘后，将 U 盘插在 Windows 笔记本上，要么在文件资源管理器中不显示或者显示可用空间只有 200MB，尽管在磁盘管理器中是正常的。而且，此时尝试直接格式化也是没有用的。可通过以下两步解决：</p>
-<span id="more"></span>
-
-<p>第一步，调用 diskpart 命令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">diskpart</span><br><span class="line">list disk</span><br><span class="line">select disk &lt;number&gt;  # &lt;number&gt; 为实际磁盘编号</span><br><span class="line">clean</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://img.zs.fyi/2308/diskpart.png" alt="diskpart" loading="lazy"></p>
-<p>第二步，在磁盘管理器中创建</p>
-<p><img data-src="https://img.zs.fyi/2308/disk-management.png" alt="disk-management" loading="lazy"></p>
-]]></content>
-      <tags>
-        <tag>Windows</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows 10 开机后浏览器自动打开 MSN 中文网</title>
     <url>/archives/windows-msn.html</url>
     <content><![CDATA[<p>重装系统后，遇到这个问题，得到微软社区的解答后问题解决，顺便记录一下。</p>
@@ -1373,6 +1421,24 @@ pie
 ]]></content>
       <tags>
         <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>恢复 Linux U 盘启动盘在 Windows 下的使用</title>
+    <url>/archives/windows-linux-udisk.html</url>
+    <content><![CDATA[<p>通过 DD 方式制作 Linux 启动盘后，将 U 盘插在 Windows 笔记本上，要么在文件资源管理器中不显示或者显示可用空间只有 200MB，尽管在磁盘管理器中是正常的。而且，此时尝试直接格式化也是没有用的。可通过以下两步解决：</p>
+<span id="more"></span>
+
+<p>第一步，调用 diskpart 命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">diskpart</span><br><span class="line">list disk</span><br><span class="line">select disk &lt;number&gt;  # &lt;number&gt; 为实际磁盘编号</span><br><span class="line">clean</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://img.zs.fyi/2308/diskpart.png" alt="diskpart" loading="lazy"></p>
+<p>第二步，在磁盘管理器中创建</p>
+<p><img data-src="https://img.zs.fyi/2308/disk-management.png" alt="disk-management" loading="lazy"></p>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
